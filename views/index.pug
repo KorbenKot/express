@@ -1,0 +1,31 @@
+mixin pet(name)
+    li.pet= name
+
+//end of mixins
+
+include head
+h1= title + ' ' + message
+h2= 'hello 2'
+h3= 'hello 3'
+h4= 'hello 4'
+input(
+        type = 'checkbox'
+        name = 'agreement'
+        checked = true
+    )
+div.card
+    p.card__text= item[0].message
+    img.card__img
+    span.card__caption
+| Hey, check out
+|
+a(href="http://example.biz/kitteh.png") this picture
+|  of my cat!
+br
+|
+ul
+    +pet('cat')
+    +pet('dog')
+    +pet('pig')
+a(href="./about") go to about
+
