@@ -4,7 +4,7 @@
 /* COMPONENTS */
 
 @import "../../views/blocks/button/button.css";
-/* @import "../../views/blocks/news/news.css"; */
+@import "../../views/blocks/news/news.css";
 /* @import "../../views/blocks/notification/notification.css"; */
 /* @import "../../views/blocks/promo/promo.css"; */
 
@@ -45,8 +45,8 @@ body {
     font-family: $opensans;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.5;
-    background-color: blue;
+    line-height: 2;
+    background-color: darkorange;
 }
 
 a {

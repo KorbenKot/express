@@ -1,3 +1,4 @@
+"use strict";
 const
         gulp = require ('gulp'),
         browserSync = require ('browser-sync').create(),
@@ -7,9 +8,8 @@ const
         rename = require('gulp-rename'),
         concat = require('gulp-concat'),
         uglify = require('gulp-uglify'),
-        newer = require('gulp-newer');
+        newer = require('gulp-newer'),
         fs = require('file-system');
-
 
 gulp.task('default', ['browser-sync', 'css', 'fonts'], function () { });
 
@@ -17,24 +17,19 @@ gulp.task('browser-sync', ['nodemon'], function () {
     browserSync.init({
         proxy: 'http://localhost:8080',
         browser: 'chrome',
-        files: ['./views/blocks/button/*.css', './src/css/*.css', './views/blocks/*.handlebars',],
+        files: ['./views/blocks/**/*.css', './src/css/*.css', './views/blocks/*.handlebars'],
         port: 3000
     });
 
-    gulp.watch("views/blocks/button/*.css", ['css']);
-
-    gulp.watch("views/blocks/button/*.css").on('change', function () {
-        ['css'];
-        browserSync.reload;
-    });
-    gulp.watch("scr/css/*.css", ['css']);
-    gulp.watch("views/blocks/*.handlebars").on('change', browserSync.reload);
+    gulp.watch(['views/blocks/**/*.css'], ['css']);
+    gulp.watch(['scr/css/*.css'], ['css']);
+    gulp.watch('views/blocks/*.handlebars').on('change', browserSync.reload);
 });
 
 gulp.task('css', function () {
-    let processors = [
-        require("postcss-import"),
-        require("postcss-assets")({
+    const processors = [
+        require('postcss-import'),
+        require('postcss-assets')({
             loadPaths: ['src/img/', 'src/sprite/', 'src/svg/'],
             relative: true
         }),
@@ -42,18 +37,18 @@ gulp.task('css', function () {
         require('postcss-nesting'),
         require('postcss-simple-vars'),
         require('postcss-custom-media'),
-        require("postcss-center"),
-        require("postcss-pxtorem"),
-        require("postcss-svg"),
-        require("postcss-inline-svg"),
-        require("postcss-short"),
-        require("cssnano")({
+        require('postcss-center'),
+        require('postcss-pxtorem'),
+        require('postcss-svg'),
+        require('postcss-inline-svg'),
+        require('postcss-short'),
+        require('cssnano')({
             autoprefixer: false,
             reduceIdents: false
         })
     ];
 
-    return gulp.src('./src/css/*')
+    return gulp.src('./src/css/*.css')
         .pipe(postcss(processors))
         .pipe(concat('style.css'))
         .pipe(rename('style.min.css'))
