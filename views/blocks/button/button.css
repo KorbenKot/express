@@ -1,0 +1,10 @@
+.btn {
+    border: none;
+    border-radius: 5px;
+    min-height: 100px;
+
+    &._primary {
+        background-color: blue;
+        color: $white;
+    }
+}

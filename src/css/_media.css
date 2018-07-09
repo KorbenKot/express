@@ -1,0 +1,29 @@
+/* > 1920 */
+@custom-media --desktop-extra (width > 120em);
+
+/* > 1440 */
+@custom-media --desktop-medium (width > 90em);
+
+/* > 1280 */
+@custom-media --desktop-large (width > 80em);
+
+/* <= 1280 */
+@custom-media --desktop (width <= 80em);
+
+/* < 1024 */
+@custom-media --tablet (width < 64em);
+
+/* < 768 */
+@custom-media --mobile (width < 48em);
+
+/* < 480 */
+@custom-media --mobile-small (width < 30em);
+
+/* retina */
+@custom-media --retina (-webkit-min-device-pixel-ratio: 1.5);
+
+/* > 1024 */
+@custom-media --desktop-only (width >= 64em);
+
+/* 768 to 1024 */
+@custom-media --tablet-only (width >= 48em) and (width < 64em);

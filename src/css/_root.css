@@ -1,0 +1,20 @@
+$opensans: "Open Sans", sans-serif;
+$gotham: "Gotham Pro Regular", sans-serif;
+$gotham-light: "Gotham Pro Light", sans-serif;
+$gotham-bold: "Gotham Pro Bold", sans-serif;
+$white: #fff;
+$black: #333;
+$grey: #888;
+$main-fallback-color: #f5f9fe;
+$input-background: #fdfdfd;
+$border-color: #e1e1e1;
+$focus: #777;
+$error: #ec7063;
+$success: #2ecc71;
+$primary: #22a9d3;
+$visited: #800080;
+$yellow: #fbdd00;
+$shadow: 0px 0px 35px 0px rgba(38, 137, 189, 0.5);
+$shadow-active: 0px 0px 10px 0px rgba(38, 137, 189, 0.5);
+$transition-delay: 0.3s;
+
