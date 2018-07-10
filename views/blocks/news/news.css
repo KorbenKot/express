@@ -1,4 +1,6 @@
 .news {
+    padding: 25px 10px;
+    margin-bottom: 20px;
     min-height: 220px;
-    background-color: darkred;
+    background-color: yellowgreen;
 }

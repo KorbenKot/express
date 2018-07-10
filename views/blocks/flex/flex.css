@@ -1,0 +1,19 @@
+.fx {
+    display: flex;
+    
+    @media (--tablet) {
+        flex-direction: column;
+    }
+    
+    &.fx-col {
+        flex-direction: column;
+    }
+
+    &.fx-sp-between {
+        justify-content: space-between;
+    }
+
+    &.fx-al-center {
+        align-items: center;
+    }
+}

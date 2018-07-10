@@ -29,6 +29,7 @@ gulp.task('browser-sync', ['nodemon'], function () {
 gulp.task('css', function () {
     const processors = [
         require('postcss-import'),
+        require('postcss-custom-media'),
         require('postcss-assets')({
             loadPaths: ['src/img/', 'src/sprite/', 'src/svg/'],
             relative: true
@@ -36,7 +37,6 @@ gulp.task('css', function () {
         require('postcss-nested'),
         require('postcss-nesting'),
         require('postcss-simple-vars'),
-        require('postcss-custom-media'),
         require('postcss-center'),
         require('postcss-pxtorem'),
         require('postcss-svg'),
