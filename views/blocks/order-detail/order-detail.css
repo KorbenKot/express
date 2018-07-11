@@ -1,0 +1,137 @@
+.order-detail {
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding-right: 30px;
+    padding-left: 32px;
+
+    &__stage-1 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__stage-2 {
+        border-top: dashed 1px rgb(0, 0, 0, 0.15);
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    &__header {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    &__order-number {
+        font-size: 19px;
+        line-height: 21px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    &__data-in {
+        line-height: 21px;
+        font-size: 13px;
+        color: rgba(119, 119, 119, 0.54);
+    }
+
+    &__deadline {
+        margin-top: 15px;
+        font-size: 12px;
+        line-height: 21px;
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+
+    &__description {
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    &__message {
+        display: inline-block;
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: rgb(186, 186, 186);
+    }
+
+    &__message-count {
+        display: inline-block;
+        size: 20px;
+        background-color: $primary;
+        border-radius: 50%;
+        color: $white;
+        font-size: 13px;
+        text-align: center;
+
+        & span {
+            line-height: 20px;
+        }
+    }
+
+    &__job, &__job-type {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 24px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    &__price, &__price-prepay {
+        margin: 0;
+        font-size: 34.5px;
+        line-height: 24px;
+
+        &:before {
+            content: '';
+            display: block;
+            border-radius: 50%;
+            left: -17px;
+            top: center;
+            size: 9px;
+        }
+    }
+
+    &__price {
+        color: rgba(0, 0, 0, 0.87);
+
+        &:before {
+            background-color: $primary;
+        }
+    }
+
+    &__price-prepay {
+         color: $error;
+
+         &:before {
+             background-color: $error;
+         }
+     }
+
+    &__price-total {
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    &__price-old {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.38);
+        text-decoration: line-through;
+    }
+
+    &__btn {
+    }
+
+    &__files {}
+
+    & [class*="col-"]:first-child {
+        padding-left: 0;
+    }
+
+    & [class*="col-"]:last-child {
+        padding-right: 0;
+    }
+
+
+}

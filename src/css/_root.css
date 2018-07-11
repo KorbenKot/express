@@ -9,14 +9,26 @@ $main-fallback-color: #f5f9fe;
 $input-background: #fdfdfd;
 $border-color: #e1e1e1;
 $focus: #777;
-$error: #ec7063;
-$success: #2ecc71;
 
-$primary: #22a9d3;
-$primary-hov: #007aa2;
-$primary-act: #69dbff;
+$gray-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+$gray-shadow-hov: 0 0 15px 0px rgba(0, 0, 0, 0.4);
+
+$error: rgb(246, 71, 68);
+$error-hov: rgb(248, 126, 124);
+$error-act: rgb(251, 181, 180);
+
+$success: rgb(88, 211, 137);
+$success-hov: rgb(138, 224, 172);
+$success-act: rgb(188, 237, 207);
+
+
+$primary: rgb(34, 169, 211);
+$primary-hov: rgb(100, 194, 224);
+$primary-act: rgb(100, 194, 224);
 
 $visited: #800080;
+
+
 $yellow: #fbdd00;
 $shadow: 0px 0px 35px 0px rgba(38, 137, 189, 0.5);
 $shadow-active: 0px 0px 10px 0px rgba(38, 137, 189, 0.5);

@@ -17,16 +17,34 @@
     &_primary {
         background-color: $primary;
         color: $white;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: $gray-shadow;
 
         &:hover {
             background-color: $primary-hov;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: $gray-shadow-hov;
         }
 
         &:active {
             background-color: $primary-act;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        &:before, &:after {
+            background-color: $white;
+        }
+    }
+
+    &_error {
+        background-color: $error;
+        color: $white;
+        box-shadow: $gray-shadow;
+
+        &:hover {
+            background-color: $error-hov;
+            box-shadow: $gray-shadow-hov;
+        }
+
+        &:active {
+            background-color: $error-act;
         }
 
         &:before, &:after {
@@ -40,11 +58,11 @@
         color: rgba(0, 0, 0, 0.7);
 
         &:hover {
-            background-color: rgba(0, 0, 0, 0.1);
+            box-shadow: $gray-shadow;
         }
 
         &:active {
-            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: $gray-shadow-hov;
         }
 
         &:before, &:after {

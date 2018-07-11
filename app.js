@@ -15,6 +15,7 @@ app.set('view engine', '.handlebars');
 app.set('views',path.join(__dirname,'views'));
 
 app.use(express.static('dest/css'));
+app.use(express.static('dest/js'));
 app.use(express.static('dest/img'));
 app.use(express.static('dest/fonts'));
 

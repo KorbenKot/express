@@ -16,4 +16,21 @@
     &.fx-al-center {
         align-items: center;
     }
+
+    &.fx-justify-center {
+        justify-content: center;
+    }
+
+    &.fx-justify-between {
+        justify-content: space-between;
+    }
+
+    &.fx-center {
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-auto {
+        display: inline-flex;
+    }
 }

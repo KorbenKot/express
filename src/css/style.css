@@ -6,7 +6,11 @@
 @import "../../views/blocks/button/button.css";
 @import "../../views/blocks/news/news.css";
 @import "../../views/blocks/notify-widget/notify-widget.css";
+@import "../../views/blocks/progress-bar/progress-bar.css";
+@import "../../views/blocks/order-detail/order-detail.css";
 @import "../../views/blocks/flex/flex.css";
+
+
 /* @import "../../views/blocks/promo/promo.css"; */
 
 @font-face {
@@ -66,4 +70,8 @@ a {
 
 .text_accent {
     color: $primary;
+
+    &_underline {
+        text-decoration: underline;
+    }
 }
