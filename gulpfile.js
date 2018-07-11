@@ -1,4 +1,5 @@
 "use strict";
+
 const
         gulp = require ('gulp'),
         browserSync = require ('browser-sync').create(),
@@ -11,20 +12,23 @@ const
         newer = require('gulp-newer'),
         fs = require('file-system');
 
-gulp.task('default', ['browser-sync', 'css', 'fonts'], function () { });
+gulp.task('default', ['browser-sync', 'css', 'fonts', 'js'], function () { });
 
 gulp.task('browser-sync', ['nodemon'], function () {
     browserSync.init({
         proxy: 'http://localhost:8080',
         browser: 'chrome',
-        files: ['./views/blocks/**/*.css', './src/css/*.css', './views/blocks/*.handlebars'],
+        files: ['./views/blocks/**/**.css', './views/blocks/**/*.js', './src/css/*.css', './views/blocks/*.handlebars'],
         port: 3000
     });
 
     gulp.watch(['views/blocks/**/*.css'], ['css']);
     gulp.watch(['scr/css/*.css'], ['css']);
+    gulp.watch(['views/blocks/**/*.js'], ['js']);
     gulp.watch('views/blocks/*.handlebars').on('change', browserSync.reload);
 });
+
+// CSS
 
 gulp.task('css', function () {
     const processors = [
@@ -67,9 +71,24 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest('./dest/fonts'));
 });
 
+
+// JS
+
+gulp.task('js', function () {
+
+        return gulp.src('./views/blocks/**/**.js')
+            .pipe(newer('./dest/js/main.min.js'))
+            .pipe(concat('main.js'))
+            .pipe(uglify())
+            .pipe(rename('main.min.js'))
+            .pipe(debug({title: 'javascript : '}))
+            .pipe(gulp.dest('./dest/js'))
+            .pipe(browserSync.stream());
+});
+
 gulp.task('nodemon', function (cb) {
 
-    var started = false;
+    let started = false;
 
     return nodemon({
         script: 'app.js'
