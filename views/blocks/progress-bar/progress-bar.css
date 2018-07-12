@@ -21,7 +21,7 @@
             width: 30%;
         }
 
-        &_waiting {
+        &_wait {
             background-color: rgb(69, 93, 121);
             width: 20%;
         }
@@ -55,27 +55,23 @@
         background-size: 16px;
         background-position: center;
         
-        &_1 {
+        &_card {
             background-image: svg-load("./iconmonstr-credit-card.svg", fill=$white);
         }
 
-        &_2 {
+        &_clock {
             background-image: svg-load("./iconmonstr-time.svg", fill=$white);
         }
 
-        &_3 {
+        &_info {
             background-image: svg-load("./iconmonstr-info.svg", fill=$white);
         }
 
-        &_4 {
+        &_pencil {
             background-image: svg-load("./iconmonstr-pencil.svg", fill=$white);
         }
 
-        &_5 {
-            background-image: svg-load("./iconmonstr-credit-card.svg", fill=$white);
-        }
-
-        &_6 {
+        &_check {
             background-image: svg-load("./check.svg", fill=$white);
         }
     }

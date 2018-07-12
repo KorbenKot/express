@@ -1,4 +1,7 @@
 {{!--
+
+ ***** Text on non-fill of bar ******
+
     2 main templates:
         1) if text on empty
         2) if text on fill
@@ -7,52 +10,17 @@
         progress-bar__caption (text inside)
         progress-bar__icon_* (* - type of process. number)
         progress-bar__fill_* (* - type of process. text)
+    ready css
+        type: prepay, wait, specify, wip, need-pay, ready
+        icon: card, clock, info, pencil, check
+        caption: *something*
 --}}
 
-{{!-- Текст внутри --}}
-
-<div class=" progress-bar js-pBar">
+<div class="progress-bar">
     <div class="fx fx-al-center progress-bar__container">
-        <div class="fx fx-center progress-bar__fill progress-bar__fill_prepay js-pBar-fill">
-            <div class="progress-bar__icon progress-bar__icon_1"></div>
+        <div class="fx fx-center progress-bar__fill progress-bar__fill_{{type}}">
+            <div class="progress-bar__icon progress-bar__icon_{{icon}}"></div>
         </div>
-        <div class="progress-bar__caption progress-bar__caption_on-empty js-pBar-caption">Ожидаем предоплаты (25%)</div>
+        <div class="progress-bar__caption progress-bar__caption_on-empty">{{caption}}</div>
     </div>
 </div>
-
-
-{{!-- Текст снаружи --}}
-
-{{!--
-
-<div style="width: 20px; height: 20px;"></div>
-
-<div class=" progress-bar js-pBar">
-    <div class="fx fx-al-center progress-bar__container">
-        <div class="fx fx-center progress-bar__fill progress-bar__fill_waiting js-pBar-fill">
-            <div class="progress-bar__icon progress-bar__icon_3"></div>
-        </div>
-        <div class="progress-bar__caption progress-bar__caption_on-empty js-pBar-caption">Оценка работы</div>
-    </div>
-</div>
-
-<div style="width: 20px; height: 20px;"></div>
-
---}}
-
-{{!-- Текст внутри --}}
-
-{{!--
-
-<div class=" progress-bar js-pBar">
-    <div class="fx fx-al-center progress-bar__container">
-        <div class="fx fx-center progress-bar__fill progress-bar__fill_ready js-pBar-fill">
-            <div class="progress-bar__icon progress-bar__icon_6"></div>
-            <div class="progress-bar__caption progress-bar__caption_on-fill js-pBar-caption">Поздравляем! Ваша работа готова.</div>
-        </div>
-    </div>
-</div>
-
-<div style="width: 20px; height: 20px;"></div>
-
---}}

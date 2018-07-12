@@ -52,6 +52,25 @@
         }
     }
 
+    &_secondary {
+        background-color: $secondary;
+        color: $white;
+        box-shadow: $gray-shadow;
+
+        &:hover {
+            background-color: $secondary-hov;
+            box-shadow: $gray-shadow-hov;
+        }
+
+        &:active {
+            background-color: $secondary-act;
+        }
+
+        &:before, &:after {
+            background-color: $white;
+        }
+    }
+
     &_bright {
         background-color: $white;
         border: solid 1px #dcdcdc;

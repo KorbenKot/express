@@ -3,26 +3,38 @@
     border-radius: 10px;
     padding-right: 30px;
     padding-left: 32px;
+    overflow: hidden;
+    margin: 20px 0;
 
     &__stage-1 {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 27px;
+        padding-bottom: 20px;
     }
 
     &__stage-2 {
-        border-top: dashed 1px rgb(0, 0, 0, 0.15);
         padding-top: 15px;
         padding-bottom: 15px;
+
+        &_border {
+            border-top: dashed 1px rgb(0, 0, 0, 0.15);
+        }
+    }
+
+    &__info-panel {
+        padding-right: 30px;
     }
 
     &__header {
         margin-top: 0;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         font-size: 16px;
+        line-height: 27px;
         color: rgba(0, 0, 0, 0.87);
+        white-space: nowrap;
     }
 
     &__order-number {
+        margin-top: 5px;
         font-size: 19px;
         line-height: 21px;
         color: rgba(0, 0, 0, 0.87);
@@ -35,7 +47,6 @@
     }
 
     &__deadline {
-        margin-top: 15px;
         font-size: 12px;
         line-height: 21px;
         color: rgba(0, 0, 0, 0.54);
@@ -43,9 +54,13 @@
 
 
     &__description {
+        position: relative;
         font-size: 14px;
+        line-height: 24px;
         font-weight: bold;
         color: rgba(0, 0, 0, 0.87);
+        max-height: 100px;
+        overflow: hidden;
     }
 
     &__message {
@@ -77,36 +92,49 @@
         color: rgba(0, 0, 0, 0.87);
     }
 
-    &__price, &__price-prepay {
-        margin: 0;
-        font-size: 34.5px;
-        line-height: 24px;
-
-        &:before {
-            content: '';
-            display: block;
-            border-radius: 50%;
-            left: -17px;
-            top: center;
-            size: 9px;
-        }
-    }
-
     &__price {
+        position: relative;
+        font-size: 34.5px;
+        font-weight: normal;
+        line-height: 24px;
+        margin: 10px 0 20px 17px;
+        white-space: nowrap;
         color: rgba(0, 0, 0, 0.87);
 
         &:before {
+            content: "";
+            display: block;
+            size: 9px;
+            left: -23px;
+            top: center;
+            border-radius: 50%;
             background-color: $primary;
         }
+
+        &_prepay {
+            color: $error;
+
+            &:before {
+                background-color: $error;
+            }
+        }
+
+        &_ready-date {
+            color: rgba(0, 0, 0, 0.54);
+
+            &:before {
+                background-color: rgba(0, 0, 0, 0.54);
+            }
+        }
+
+        &_need-to-pay {
+            color: $primary;
+
+            &:before {
+                background-color: $primary;
+            }
+        }
     }
-
-    &__price-prepay {
-         color: $error;
-
-         &:before {
-             background-color: $error;
-         }
-     }
 
     &__price-total {
         font-size: 14px;
@@ -121,17 +149,124 @@
     }
 
     &__btn {
+        margin-left: auto;
+        border-radius: 10px;
+        font-size: 22px;
+        line-height: 24px;
+        height: 100%;
+        width: 100%;
+
+        &:hover {
+            box-shadow: $gray-shadow-hov;
+            color: $white;
+        }
+
+        &_wait {
+            background-color: #e8ebee;
+            color: rgba(69, 93, 121, 0.7);
+
+            &:hover {
+                background-color: rgba(69, 93, 121, 0.8);
+            }
+
+            &:hover .spinner div {
+                background: $white;
+            }
+
+            &:active {
+                background-color: rgba(69, 93, 121, 0.5);
+                color: $white;
+            }
+        }
+
+        &_info {
+            background-color: rgb(238, 232, 232);
+            color: $secondary;
+
+            &:hover {
+                background-color: $secondary;
+            }
+        }
     }
 
-    &__files {}
+    &__btn-icon {
+        margin-right: 15px;
 
-    & [class*="col-"]:first-child {
-        padding-left: 0;
+        @media  (--desktop) {
+            margin: auto;
+        }
+
+        &_info {
+            size: 30px;
+            background-size: 30px;
+            background-image: svg-load("./iconmonstr-info.svg", fill=$error);
+        }
     }
 
-    & [class*="col-"]:last-child {
-        padding-right: 0;
+    &__btn-caption {
+        margin: 5px;
     }
 
+    &__small-caption {
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        color: rgb(168, 168, 168);
+        margin: auto;
+    }
+}
 
+/* MOVE TO PARTIAL */
+
+.file-list {
+    display: inline-block;
+    max-height: 100px;
+    list-style: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    padding-right: 10px;
+
+    &__item {
+        line-height: 27px;
+    }
+
+    &__name {
+        position: relative;
+        color: $primary;
+        padding-left: 30px;
+        font-size: 13px;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: center;
+            left: 0;
+            size: 17px;
+            background-size: 17px;
+            background-image: svg-load("./iconmonstr-download.svg", fill=$primary);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $primary;
+
+    &:hover {
+        background-color: $primary-hov;
+    }
 }

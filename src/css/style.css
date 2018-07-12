@@ -3,11 +3,13 @@
 
 /* COMPONENTS */
 
+@import "../../views/blocks/grid/grid.css";
 @import "../../views/blocks/button/button.css";
 @import "../../views/blocks/news/news.css";
 @import "../../views/blocks/notify-widget/notify-widget.css";
 @import "../../views/blocks/progress-bar/progress-bar.css";
 @import "../../views/blocks/order-detail/order-detail.css";
+@import "../../views/blocks/spinner/spinner.css";
 @import "../../views/blocks/flex/flex.css";
 
 
@@ -63,7 +65,7 @@ a {
 }
 
 .wrapper {
-    max-width: 1170px;
+    max-width: 1280px;
     margin: * auto;
     padding: * 15px;
 }

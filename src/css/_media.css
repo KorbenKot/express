@@ -8,7 +8,7 @@
 @custom-media --desktop-large (min-width: 80em);
 
 /* <= 1280 */
-@custom-media --desktop (min-width: 80em);
+@custom-media --desktop (max-width: 80em);
 
 /* < 1024 */
 @custom-media --tablet (max-width: 64em);
