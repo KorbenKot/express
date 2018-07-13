@@ -1,45 +1,109 @@
 .messages {
+    right: -45px;
+    top: 40px;
     position: absolute;
     width: 370px;
     max-height: 450px;
-    overflow-y: auto;
-    overflow-x: hidden;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
     border-radius: 10px;
+    background-color: $white;
+
+    &_hide {
+        display: none;
+    }
+
+    &:after, &:before {
+        position: absolute;
+        content: " ";
+        bottom: 100%;
+        size: 0;
+        border: solid transparent;
+        pointer-events: none;
+        right: 10%;
+        margin-left: -20px;
+    }
+
+    &:after {
+        border-color: transparent;
+        border-bottom-color: #ffffff;
+        border-width: 20px;
+    }
 
     &:before {
+        border-width: 20px;
+        border-color: rgba(113, 158, 206, 0);
+        border-bottom-color: rgba(0, 0, 0, 0.25);
+    }
 
+    &__inner {
+        position: relative;
+        max-height: 450px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-radius: 10px;
+
+        &_dash {
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 40px;
+                width: 3px;
+                border-left: 2px dotted rgb(202, 202, 202);
+                height: 100%;
+            }
+        }
     }
 
     &__head {
         display: inline-block;
+        margin: 0;
         font-size: 26px;
+        font-weight: normal;
         line-height: 20px;
         text-align: left;
         color: rgb(0, 0, 0);
-    }
-
-    &__theme {
-        margin-bottom: 10px;
     }
 
     &__msg-text {
         font-size: 14px;
         line-height: 22px;
         color: rgba(0, 0, 0, 0.87);
+
+        &_notify {
+
+            &:after {
+                position: absolute;
+                content: "";
+                display: block;
+                size: 14px;
+                left: -10px;
+                top: 0;
+                border-radius: 50%;
+                background-color: $error;
+            }
+        }
     }
 
     &__head-container {
-        padding: 23px 15px 21px 15px;
+        padding: 30px 15px 22px;
+
+        &_notify {
+            padding-left: 65px;
+        }
     }
 
     &__msg-container {
-        padding: 23px 15px 21px 15px;
+        padding: 12px 15px 13px;
         background-color: $white;
         border-top: solid 1px rgb(222, 222, 222);
 
         &_new {
             background-color: rgb(248, 248, 248);
+        }
+
+        &_notify {
+            padding-left: 65px;
         }
     }
 
@@ -75,4 +139,61 @@
             background-image: svg-load("./iconmonstr-gear.svg", fill=rgba(0, 0, 0, 0.58));
         }
     }
+}
+
+.icon {
+    margin: 50px;
+    display: inline-block;
+    size: 24px;
+    position: relative;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: $transition-delay;
+
+    &_msg {
+        background-image: svg-load("./iconmonstr-speech-bubble.svg", fill=rgba(0, 0, 0, 0.28));
+
+        &:hover {
+            background-image: svg-load("./iconmonstr-speech-bubble.svg", fill=rgba(0, 0, 0, 0.58));
+        }
+    }
+
+    &_notify {
+        background-image: svg-load("./iconmonstr-bell.svg", fill=rgba(0, 0, 0, 0.28));
+
+        &:hover {
+            background-image: svg-load("./iconmonstr-bell.svg", fill=rgba(0, 0, 0, 0.58));
+        }
+    }
+}
+
+.msg-count {
+    position: absolute;
+    display: block;
+    size: 18px;
+    border-radius: 50%;
+    right: -19px;
+    top: -17px;
+
+    &_primary {
+        background-color: $primary;
+    }
+
+    &_secondary {
+        background-color: $secondary;
+    }
+}
+
+.msg-count-item {
+    font-size: 13px;
+    position: absolute;
+    top: center;
+    left: center;
+    color: $white;
+    font-weight: bold;
+}
+
+.messages .notify {
+
 }
