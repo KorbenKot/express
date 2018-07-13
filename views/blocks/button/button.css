@@ -3,7 +3,6 @@
     border: none;
     cursor: pointer;
     min-height: 50px;
-    border-radius: 25px;
     font-family: $opensans;
     font-weight: 600;
     font-size: 16px;
@@ -12,6 +11,14 @@
 
     &:focus {
         outline: none;
+    }
+
+    &_std {
+        border-radius: 25px;
+    }
+
+    &_rect {
+        border-radius: 10px;
     }
 
     &_primary {
@@ -93,6 +100,7 @@
         size: 50px;
         padding: 5px;
         background-size: 15px;
+        border-radius: 50%;
     }
 
     &_close, &_plus {

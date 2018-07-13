@@ -32,5 +32,7 @@ app.get('/', (req, res) => res.render('index',
 app.get('/about', (req, res) => res.render('about'));
 app.get('/balance', (req, res) => res.render('balance'));
 app.get('/cart', (req, res) => res.render('cart'));
+app.get('/messages', (req, res) => res.render('messages'));
+app.get('/orders', (req, res) => res.render('orders'));
 
 app.listen(8080, () => console.log('My test app running on port 8080!'));

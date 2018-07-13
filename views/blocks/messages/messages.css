@@ -1,0 +1,78 @@
+.messages {
+    position: absolute;
+    width: 370px;
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+
+    &:before {
+
+    }
+
+    &__head {
+        display: inline-block;
+        font-size: 26px;
+        line-height: 20px;
+        text-align: left;
+        color: rgb(0, 0, 0);
+    }
+
+    &__theme {
+        margin-bottom: 10px;
+    }
+
+    &__msg-text {
+        font-size: 14px;
+        line-height: 22px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    &__head-container {
+        padding: 23px 15px 21px 15px;
+    }
+
+    &__msg-container {
+        padding: 23px 15px 21px 15px;
+        background-color: $white;
+        border-top: solid 1px rgb(222, 222, 222);
+
+        &_new {
+            background-color: rgb(248, 248, 248);
+        }
+    }
+
+    &__status {
+        position: relative;
+        padding-left: 10px;
+        font-size: 11px;
+        line-height: 20px;
+        text-align: left;
+        color: rgba(34, 169, 211, 0.54);
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: center;
+            left: -10px;
+            size: 10px;
+            border-radius: 50%;
+            background-color: $primary;
+        }
+    }
+
+    &__set-icon {
+        display: inline-block;
+        size: 20px;
+        background-size: 20px;
+        background-image: svg-load("./iconmonstr-gear.svg", fill=rgba(0, 0, 0, 0.28));
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: $transition-delay;
+
+        &:hover {
+            background-image: svg-load("./iconmonstr-gear.svg", fill=rgba(0, 0, 0, 0.58));
+        }
+    }
+}

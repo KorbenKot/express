@@ -1,42 +1,32 @@
-<div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
+<div class="wrapper">
+    <h1 style="text-align: center;">Main window</h1>
+    <ul>
+        <li><a href="/messages">Шаблон сообщений</a></li>
+        <li><a href="/cart">Шаблон корзины</a></li>
+    </ul>
 
-<div class="main-block">
-    <h1 class="header main-block__header">hello world!!!)</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque fugiat harum minima nobis nostrum
-    pariatur repudiandae soluta! Ad dolores quibusdam reiciendis tempora temporibus. Dignissimos explicabo
-    illo quam saepe. Quisquam, vero.
-    </p>
-</div>
+    <div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
 
-<div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
+    <h2 style="text-align: center;">Buttons template</h2>
+    {{> button theme="primary" type="std" caption="Primary btn" }}
+    {{> button theme="error" type="std" caption="Error btn" }}
+    {{> button theme="secondary" type="std" caption="Secondary btn" }}
+    {{> button theme="bright" type="std" caption="Bright btn" }}
 
-{{> order-detail }}
+    {{> button theme="primary" type="rect" caption="Primary btn" }}
+    {{> button theme="error" type="rect" caption="Error btn" }}
+    {{> button theme="secondary" type="rect" caption="Secondary btn" }}
+    {{> button theme="bright" type="rect" caption="Bright btn" }}
 
-<div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
+    {{> button theme="bright" type="round" icon="close"}}
+    {{> button theme="primary" type="round" icon="close" }}
+    {{> button theme="secondary" type="round" icon="plus" }}
 
-<div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
+    <div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
 
-{{> progress-bar }}
+    {{> news }}
 
-<div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
+    <div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
 
-{{> button }}
-
-<div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
-
-{{> news }}
-
-<div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
-
-
-{{> notify-widget }}
-
-<div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
-
-<div class="container" style="background-color: #444">
-    <div class="row">
-        <div class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam inventore labore temporibus placeat cupiditate nesciunt nobis, repudiandae beatae animi omnis!</div>
-        <div class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt repudiandae, quisquam debitis libero voluptate a omnis fuga itaque dolorum delectus cum, veniam maxime laudantium ut alias tempora fugit eveniet ad consequuntur rem quos. Eveniet officia, nemo ex quia totam. Labore molestias voluptas quod harum fugit dolorem ea cumque quas unde!</div>
-        <div class="col-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo tempore inventore repellat laudantium recusandae eos, voluptatum, commodi quod, aliquid fugit blanditiis, nam. Libero eum enim perferendis dolore delectus quae nihil officia maxime ullam harum deserunt, provident, sequi, eligendi? Necessitatibus, nesciunt. Exercitationem cum, odit id rem voluptatem corporis sequi, itaque modi, officiis ipsam aut aspernatur.</div>
-    </div>
+    {{> notify-widget }}
 </div>
