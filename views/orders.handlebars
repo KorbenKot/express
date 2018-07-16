@@ -1,5 +1,13 @@
+<div class="row page-header">
+    <div class="col fx fx-col fx-justify-between wrapper">
+        <div class="container">
+            {{> breadcrumbs }}
+            <div class="page-title">{{pageTitle}}</div>
+            {{> navigation }}
+        </div>
+    </div>
+</div>
+
 <div class="wrapper">
-    <h1 style="text-align: center;">Шаблон Orders</h1>
-    <a href="/">To main window</a>
-    {{> order-datail }}
+    {{> order-detail }}
 </div>

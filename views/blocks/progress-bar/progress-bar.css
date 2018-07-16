@@ -2,6 +2,7 @@
     display: inline-block;
     position: relative;
     width: 100%;
+    min-width: 290px;
 
     &__container {
         width: 100%;
@@ -79,6 +80,11 @@
     &__caption {
         padding-right: 10px;
         font-size: 14px;
+
+        @media (--mobile) {
+            font-size: 13px;
+            line-height: normal;
+        }
 
         &_on-fill {
             color: rgba(255, 255, 255, 0.7);

@@ -11,12 +11,10 @@
 @import "../../views/blocks/order-detail/order-detail.css";
 @import "../../views/blocks/spinner/spinner.css";
 @import "../../views/blocks/flex/flex.css";
-@import "../../views/blocks/messages/messages.css";
-
-
-
-
-/* @import "../../views/blocks/promo/promo.css"; */
+@import "../../views/blocks/dropdown-menu/dropdown-menu.css";
+@import "../../views/blocks/dropdown-btn/dropdown-btn.css";
+@import "../../views/blocks/navigation/navigation.css";
+@import "../../views/blocks/breadcrumbs/breadcrumbs.css";
 
 @font-face {
     font-family: "Gotham Pro Regular";
@@ -68,9 +66,13 @@ a {
 }
 
 .wrapper {
-    max-width: 1170px;
+    max-width: 1269px;
     margin: * auto;
     padding: * 15px;
+
+    @media (--mobile) {
+        padding: * 20px;
+    }
 }
 
 .text_accent {
@@ -78,5 +80,20 @@ a {
 
     &_underline {
         text-decoration: underline;
+    }
+}
+
+.page-header {
+    background-image: linear-gradient(to right, rgb(12, 15, 41), rgb(43, 58, 99) 50%, rgb(12, 15, 41));
+    overflow: hidden;
+}
+
+.page-title {
+    font-size: 50px;
+    font-weight: 300;
+    color: rgba(254, 254, 254, 0.7);
+
+    @media (--mobile) {
+        font-size: 28px;
     }
 }

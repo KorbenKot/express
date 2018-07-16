@@ -8,6 +8,13 @@
     font-size: 16px;
     padding: 5px 32px;
     transition: $transition-delay;
+    width: 100%;
+
+    @media (--mobile) {
+        font-size: 14px;
+        padding: 10px 18px;
+        min-height: 40px;
+    }
 
     &:focus {
         outline: none;

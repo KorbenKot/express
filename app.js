@@ -21,19 +21,18 @@ app.use(express.static('dest/fonts'));
 
 app.get('/', (req, res) => res.render('index',
     {
-        title: 'Test express application',
-        message: 'Express message',
-        item: [{
-            message: 'Item message'
-        }]
+        pageTitle: 'Главная'
     }
 ));
-
 app.get('/about', (req, res) => res.render('about'));
 app.get('/balance', (req, res) => res.render('balance'));
 app.get('/cart', (req, res) => res.render('cart'));
 app.get('/messages', (req, res) => res.render('messages'));
-app.get('/orders', (req, res) => res.render('orders'));
+app.get('/orders', (req, res) => res.render('orders',
+    {
+        pageTitle: 'Мои заказы'
+    }
+));
 app.get('/notifications', (req, res) => res.render('notifications'));
 
 app.listen(8080, () => console.log('My test app running on port 8080!'));

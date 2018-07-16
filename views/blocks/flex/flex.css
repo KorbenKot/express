@@ -1,9 +1,5 @@
 .fx {
     display: flex;
-    
-    @media (--mobile) {
-        flex-direction: column;
-    }
 
     &.fx-row {
         margin-right: -15px;
@@ -15,7 +11,7 @@
         flex-direction: column;
     }
 
-        &.fx-al-center {
+    &.fx-al-center {
         align-items: center;
     }
 
@@ -39,19 +35,126 @@
     &-auto {
         display: inline-flex;
     }
+
+    @media (--mobile) {
+
+        &.fx-sm-center {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @media (--tablet) {
+
+        &.fx-md-center {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @media (--desktop) {
+
+        &.fx-lg-center {
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
 
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+/* FX MEDIA */
+
+@media (--mobile) {
+
+    .fx-sm {display: flex;}
 }
 
-.row {
-    display: flex;
-    margin-right: -15px;
-    margin-left: -15px;
-    flex-wrap: wrap;
+@media (--tablet) {
+
+    .fx-md {display: flex;}
+}
+
+@media (--desktop) {
+
+    .fx-lg {display: flex;}
+}
+
+/* FX ALIGN MEDIA */
+
+@media (--mobile) {
+
+    .fx-sm-justify-between {justify-content: space-between;}
+}
+
+@media (--tablet) {
+
+    .fx-md-justify-between {justify-content: space-between;}
+}
+
+@media (--desktop) {
+
+    .fx-lg-justify-between {justify-content: space-between;}
+}
+
+/* ROW TO COL */
+
+@media (--mobile) {
+
+    .fx-sm-col {flex-direction: column;}
+}
+
+@media (--tablet) {
+
+    .fx-md-col {flex-direction: column;}
+}
+
+@media (--desktop) {
+
+    .fx-lg-col {flex-direction: column;}
+}
+
+/* CENTER */
+
+.center {margin: auto;}
+
+@media (--mobile) {
+
+    .sm-center {margin: auto;}
+}
+
+@media (--tablet) {
+
+    .md-center {margin: auto;}
+}
+
+@media (--desktop) {
+
+    .lg-center {margin: auto;}
+}
+
+
+/* ORDERS */
+
+.fx-order-1 {order: 1;}
+.fx-order-2 {order: 2;}
+.fx-order-3 {order: 3;}
+
+@media (--mobile) {
+
+    .fx-sm-order-1 {order: 1;}
+    .fx-sm-order-2 {order: 2;}
+    .fx-sm-order-3 {order: 3;}
+}
+
+@media (--tablet) {
+
+    .fx-md-order-1 {order: 1;}
+    .fx-md-order-2 {order: 2;}
+    .fx-md-order-3 {order: 3;}
+}
+
+@media (--desktop) {
+
+    .fx-lg-order-1 {order: 1;}
+    .fx-lg-order-2 {order: 2;}
+    .fx-lg-order-3 {order: 3;}
 }
