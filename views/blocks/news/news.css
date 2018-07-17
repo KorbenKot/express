@@ -2,10 +2,14 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    background-color: $primary;
+    background-color: $white;
 
     @media (--mobile) {
         border-radius: 0;
+    }
+
+    &__card {
+        background-color: $primary;
     }
 
     &__card:nth-child(2) {
