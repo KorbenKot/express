@@ -10,6 +10,11 @@
     transition: $transition-delay;
     width: 100%;
 
+    @media (--desktop) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     @media (--mobile) {
         font-size: 14px;
         padding: 10px 18px;
@@ -30,20 +35,30 @@
 
     &_round {
         size: 50px;
+        min-width: 50px;
         padding: 5px;
         background-size: 15px;
         border-radius: 50%;
+
+        @media (--mobile) {
+            size: 40px;
+            min-width: 40px;
+        }
     }
 
     &_close, &_plus {
 
         &:before, &:after {
+            content: '';
             position: absolute;
             top: 50%;
             left: 35%;
-            content: '';
             height: 2px;
             width: 15px;
+
+            @media (--mobile) {
+                left: 32%;
+            }
         }
     }
 
@@ -59,7 +74,6 @@
     }
 
     &_plus {
-
 
         &:after {
             transform: rotateZ(90deg);

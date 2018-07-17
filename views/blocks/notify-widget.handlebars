@@ -1,56 +1,51 @@
-<div class="fx fx-sp-between fx-al-center notify-widget" data-template="invite-friends">
-    <div class="fx fx-col notify-widget__content-block">
-        <h3 class="notify-widget__head">По <span class="text_accent">2 бесплатной</span> курсовой вам и друзьям</h3>
-        <div class="notify-widget__content">Зовите к нам друзей! Дарим по 2 курсовой вам и другу после первой оплаты
-            работы
+{{!-- ПРИГЛАСИТЬ ДРУГА --}}
+
+<div class="container notify-widget fx fx-justify-between fx-al-center" data-template="invite-friends">
+    <div class="row notify-widget__content-row">
+        <div class="col-7 col-sm-12 fx fx-al-center notify-widget__content-col">
+            <div class=" notify-widget__content-block">
+                <h3 class="notify-widget__head">По <span class="text_accent">2 бесплатной</span> курсовой вам и друзьям</h3>
+                <div class="notify-widget__content">Зовите к нам друзей! Дарим по 2 курсовой вам и другу после первой оплаты
+                    работы
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="fx fx-row fx-al-center notify-widget__controls-block">
-        <div class="notify-widget__img"></div>
-        {{> button type="std" theme="primary" caption="Пригласить друга"}}
-        {{> button type="round" theme="bright" icon="close"}}
+        <div class="col-5 col-sm-12 fx fx-al-center notify-widget__content-col">
+            <div class="fx fx-justify-between fx-al-center fx-sm-center notify-widget__controls-block notify-widget__controls-block_img">
+                <div class="notify-widget__img"></div>
+                {{> button type="std" theme="bright" caption="Пригласить друга" addClass="notify-widget__btn md-center" }}
+                {{> button type="round" theme="bright" icon="close" addClass="notify-widget__btn-close" }}
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
+{{!-- ПРИВЕТСТВИЕ --}}
 
-<div class="fx fx-sp-between fx-al-center notify-widget" data-template="">
-    <div class="fx fx-col notify-widget__content-block">
-        <h3 class="notify-widget__head">По <span class="text_accent">2 бесплатной</span> курсовой вам и друзьям</h3>
-        <div class="notify-widget__content">Зовите к нам друзей! Дарим по 2 курсовой вам и другу после первой оплаты
-            работы
-        </div>
-    </div>
-    <div class="fx fx-row fx-al-center notify-widget__controls-block">
-        <button class="btn btn_bright notify-widget__btn">Пригласить друга</button>
-        <button class="btn btn_bright btn_round btn_close notify-widget__close-btn"></button>
-    </div>
-</div>
-
-<div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
-
-<div class="fx fx-sp-between fx-al-center notify-widget" data-template="">
-    <div class="fx fx-col notify-widget__content-block">
+<div class="container notify-widget fx fx-justify-between fx-al-center" data-template="hello-user">
+    <div class="notify-widget__content-block">
         <h2 class="notify-widget__head">Виталий, добрый вечер!</h2>
         <div class="notify-widget__content">Пятничная музыкальная подборка от Zaochnik. И пусть выходные пройдут
             отлично!
         </div>
     </div>
-    <div class="fx fx-row fx-al-center notify-widget__controls-block">
-        <button class="btn btn_bright btn_round btn_close notify-widget__close-btn"></button>
-    </div>
+    {{> button type="round" theme="bright" icon="close" addClass="notify-widget__btn-close" }}
 </div>
 
-<div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
+{{!-- НЕТ ЗАКАЗОВ --}}
 
-<div class="fx fx-sp-between fx-al-center notify-widget" data-template="new-order-notify">
-    <div class="fx fx-row fx-al-center notify-widget__content-block">
-        <div class="notify-widget__icon"></div>
-        <div class="notify-widget__content">В данный момент активных заказов нет.</div>
-    </div>
-    <div class="fx fx-row fx-al-center notify-widget__controls-block">
-        <div class="notify-widget__controls-caption">Оформить новый заказ</div>
-        <button class="btn btn_primary btn_round btn_plus notify-widget__plus-btn"></button>
+<div class="container notify-widget notify-widget_no-padding fx fx-justify-between fx-align-stretch" data-template="new-order-notify">
+    <div class="row notify-widget__content-row">
+        <div class="col-7 col-sm-12 fx fx-al-center notify-widget__content-col">
+            <div class=" notify-widget__content-block">
+                <div class="notify-widget__content">В данный момент активных заказов нет.</div>
+            </div>
+        </div>
+        <div class="col-5 col-sm-12 fx fx-al-center notify-widget__content-col">
+            <div class="fx fx-justify-between fx-al-center fx-sm-center notify-widget__controls-block notify-widget__controls-block_img">
+                <div class="center notify-widget__controls-caption">Оформить новый заказ</div>
+                {{> button type="round" theme="primary" icon="plus" addClass="notify-widget__btn-close" }}
+            </div>
+        </div>
     </div>
 </div>
-

@@ -1,16 +1,6 @@
 .fx {
     display: flex;
 
-    &.fx-row {
-        margin-right: -15px;
-        margin-left: -15px;
-        flex-wrap: wrap;
-    }
-
-    &.fx-col {
-        flex-direction: column;
-    }
-
     &.fx-al-center {
         align-items: center;
     }
@@ -103,33 +93,53 @@
 
 /* FX ALIGN MEDIA CROSS AXIS*/
 
+.fx-align-stretch {align-items: stretch;}
+
 @media (--mobile) {
+
     .fx-sm-align-start {align-items: flex-start;}
+    .fx-sm-align-stretch {align-items: stretch;}
 }
 
 @media (--tablet) {
+
     .fx-md-align-start {align-items: flex-start;}
+    .fx-md-align-stretch {align-items: stretch;}
 }
 
 @media (--desktop) {
+
     .fx-lg-align-start {align-items: flex-start;}
+    .fx-lg-align-stretch {align-items: stretch;}
 }
 
-/* ROW TO COL */
+/* ROW TO COL / COL TO ROW*/
+
+.fx-col {flex-direction: column;}
+.fx-row {flex-direction: row;}
 
 @media (--mobile) {
 
     .fx-sm-col {flex-direction: column;}
+    .fx-sm-row {flex-direction: row;}
 }
 
 @media (--tablet) {
 
     .fx-md-col {flex-direction: column;}
+    .fx-md-row {flex-direction: row;}
 }
 
 @media (--desktop) {
 
     .fx-lg-col {flex-direction: column;}
+    .fx-lg-row {flex-direction: row;}
+}
+
+@media (--desktop-large) {
+
+    .fx-xl-col {flex-direction: column;}
+    .fx-xl-row {flex-direction: row;}
 }
 
 /* CENTER */
