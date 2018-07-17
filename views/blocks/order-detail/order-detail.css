@@ -183,6 +183,14 @@
         color: rgba(0, 0, 0, 0.87);
     }
 
+    &__price-col {
+        padding-right: 20px;
+    }
+
+    &__files-col {
+        padding: 0;
+    }
+
     &__price {
         display: inline-block;
         position: relative;

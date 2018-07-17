@@ -1,1 +1,21 @@
-<button class="btn btn_{{type}} btn_{{theme}} btn_{{icon}}">{{caption}}</button>
+{{!--
+    types:
+        std
+        rect
+        round
+
+    icon:
+        close
+        plus
+
+    themes:
+        primary
+        error
+        secondary
+        bright
+
+    caption:
+        text
+--}}
+
+<button class="btn btn_{{type}} btn_{{theme}} btn_{{icon}} {{addClass}}">{{caption}}</button>

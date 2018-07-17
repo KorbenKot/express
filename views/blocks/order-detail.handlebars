@@ -20,7 +20,7 @@
                         Aspernatur delectus maiores officia perspiciatis quos sed similique. Dolor harum illum, incidunt
                         iusto optio sed suscipit veritatis.
                     </div>
-                    {{!-- Для умной обрезки вставить в шаблон {{ value | truncatewords: 7 }} --}}
+                    {{!-- Для умной обрезки вставить в шаблон {{ value | truncatewords: 7-10 }} --}}
                 </div>
             </div>
         </div>
@@ -39,11 +39,11 @@
     </div>
     <div class="row fx fx-al-center fx-justify-between fx-md-center order-detail__stage-2 order-detail__stage-2_border">
         <div class="col-8 col-sm-12">
-            <div class="row fx fx-justify-between fx-al-center">
+            <div class="row fx fx-justify-start fx-al-center">
                 <div class="col-6 col-sm-12">
                     {{> progress-bar type="prepay" icon="card" caption="Ожидаем предоплаты (25%)"}}
                 </div>
-                <div class="col-6 col-sm-12">
+                <div class="col-auto col-sm-12">
                     <a href="#" class="order-detail__message">
                         <div class="order-detail__message-count"><span>1</span></div>
                         <span class="text_accent text_accent_underline">Новое сообщение</span> от менеджера
@@ -99,11 +99,11 @@
     </div>
     <div class="row fx fx-al-center fx-justify-between fx-md-center order-detail__stage-2 order-detail__stage-2_border">
         <div class="col-8 col-sm-12">
-            <div class="row fx fx-justify-between fx-al-center">
+                <div class="row fx fx-justify-start fx-al-center">
                 <div class="col-6 col-sm-12">
                     {{> progress-bar type="wait" icon="clock" caption="Оценка работы"}}
                 </div>
-                <div class="col-6 col-sm-12">
+                <div class="col-auto col-sm-12">
                     <a href="#" class="order-detail__message">
                         <div class="order-detail__message-count"><span>1</span></div>
                         <span class="text_accent text_accent_underline">Новое сообщение</span> от менеджера
@@ -156,11 +156,11 @@
     </div>
     <div class="row fx fx-al-center fx-justify-between fx-md-center order-detail__stage-2 order-detail__stage-2_border">
         <div class="col-8 col-sm-12">
-            <div class="row fx fx-justify-between fx-al-center">
+            <div class="row fx fx-justify-start fx-al-center">
                 <div class="col-6 col-sm-12">
                     {{> progress-bar type="specify" icon="info" caption="Поясните задание"}}
                 </div>
-                <div class="col-6 col-sm-12">
+                <div class="col-auto col-sm-12">
                     <a href="#" class="order-detail__message">
                         <div class="order-detail__message-count"><span>1</span></div>
                         <span class="text_accent text_accent_underline">Новое сообщение</span> от менеджера
@@ -222,11 +222,11 @@
     </div>
     <div class="row fx fx-al-center fx-justify-between fx-md-center order-detail__stage-2 order-detail__stage-2_border">
         <div class="col-8 col-sm-12">
-            <div class="row fx fx-justify-between fx-al-center">
+            <div class="row fx fx-justify-start fx-al-center">
                 <div class="col-6 col-sm-12">
                     {{> progress-bar_filled type="wip" icon="pencil" caption="Выполнение работы"}}
                 </div>
-                <div class="col-6 col-sm-12">
+                <div class="col-auto col-sm-12">
                     <a href="#" class="order-detail__message">
                         <div class="order-detail__message-count"><span>1</span></div>
                         <span class="text_accent text_accent_underline">Новое сообщение</span> от менеджера
@@ -287,11 +287,11 @@
     </div>
     <div class="row fx fx-al-center fx-justify-between fx-md-center order-detail__stage-2 order-detail__stage-2_border">
         <div class="col-8 col-sm-12">
-            <div class="row fx fx-justify-between fx-al-center">
+            <div class="row fx fx-justify-start fx-al-center">
                 <div class="col-6 col-sm-12">
                     {{> progress-bar_filled type="need-pay" icon="card" caption="Оплатите готовую работу"}}
                 </div>
-                <div class="col-6 col-sm-12">
+                <div class="col-auto col-sm-12">
                     <a href="#" class="order-detail__message">
                         <div class="order-detail__message-count"><span>1</span></div>
                         <span class="text_accent text_accent_underline">Новое сообщение</span> от менеджера
@@ -340,11 +340,11 @@
         </div>
         <div class="col-4 col-md-12 order-detail__second-panel">
             <div class="row">
-                <div class="col col-sm-auto order-detail__data-info">
+                <div class="col col-sm-auto order-detail__data-info order-detail__price-col">
                     <h2 class="order-detail__header">Цена <span class="order-detail__price-old">20 000 р</span></h2>
                     <h2 class="order-detail__price">19 332 Р</h2>
                 </div>
-                <div class="col-auto col-sm-auto order-detail__data-info">
+                <div class="col-auto col-sm-auto order-detail__data-info order-detail__files-col">
                     <h2 class="order-detail__header">Файлы</h2>
                     <ul class="file-list">
                         <li class="file-list__item"><a href="#" class="file-list__name">Дипломная работа.word</a></li>
@@ -358,11 +358,11 @@
     </div>
     <div class="row fx fx-al-center fx-justify-between fx-md-center order-detail__stage-2 order-detail__stage-2_border">
         <div class="col-8 col-sm-12">
-            <div class="row fx fx-justify-between fx-al-center">
+            <div class="row fx fx-justify-start fx-al-center">
                 <div class="col-6 col-sm-12">
                     {{> progress-bar_filled type="need-pay" icon="card" caption="Оплатите готовую работу"}}
                 </div>
-                <div class="col-6 col-sm-12">
+                <div class="col-auto col-sm-12">
                     <a href="#" class="order-detail__message">
                         <div class="order-detail__message-count"><span>1</span></div>
                         <span class="text_accent text_accent_underline">Новое сообщение</span> от менеджера

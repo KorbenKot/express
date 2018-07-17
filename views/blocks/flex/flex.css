@@ -78,21 +78,41 @@
     .fx-lg {display: flex;}
 }
 
-/* FX ALIGN MEDIA */
+/* FX ALIGN MEDIA MAIN AXIS*/
 
 @media (--mobile) {
 
     .fx-sm-justify-between {justify-content: space-between;}
+    .fx-sm-start {justify-content: flex-start;}
+    .fx-sm-end {justify-content: flex-end;}
 }
 
 @media (--tablet) {
 
     .fx-md-justify-between {justify-content: space-between;}
+    .fx-md-start {justify-content: flex-start;}
+    .fx-md-end {justify-content: flex-end;}
 }
 
 @media (--desktop) {
 
     .fx-lg-justify-between {justify-content: space-between;}
+    .fx-lg-start {justify-content: flex-start;}
+    .fx-lg-end {justify-content: flex-end;}
+}
+
+/* FX ALIGN MEDIA CROSS AXIS*/
+
+@media (--mobile) {
+    .fx-sm-align-start {align-items: flex-start;}
+}
+
+@media (--tablet) {
+    .fx-md-align-start {align-items: flex-start;}
+}
+
+@media (--desktop) {
+    .fx-lg-align-start {align-items: flex-start;}
 }
 
 /* ROW TO COL */
