@@ -21,7 +21,8 @@ app.use(express.static('dest/fonts'));
 
 app.get('/', (req, res) => res.render('index',
     {
-        pageTitle: 'Главная'
+        pageTitle: 'Главная',
+        username: 'Sasha'
     }
 ));
 app.get('/about', (req, res) => res.render('about'));

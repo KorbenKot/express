@@ -15,6 +15,7 @@
 @import "../../views/blocks/dropdown-btn/dropdown-btn.css";
 @import "../../views/blocks/navigation/navigation.css";
 @import "../../views/blocks/breadcrumbs/breadcrumbs.css";
+@import "../../views/blocks/bar/bar.css";
 
 @font-face {
     font-family: "Gotham Pro Regular";

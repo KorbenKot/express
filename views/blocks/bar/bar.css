@@ -1,0 +1,225 @@
+.bar {
+    position: relative;
+    height: 90px;
+    background-color: $white;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+    padding: * 32px;
+
+    &__logo {
+        margin-right: 10px;
+    }
+
+    &__social-link-bar {
+        margin-top: 10px;
+
+        @media (--tablet) {
+            display: none;
+        }
+    }
+
+    &__social-link {
+        line-height: 30px;
+        vertical-align: middle;
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        @media (--desktop) {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+
+    &__order-btn {
+        width: auto;
+
+        @media (--tablet) {
+            display: none;
+        }
+    }
+
+    &__phone-number {
+        color: $black;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+
+        @media (--tablet) {
+            display: none;
+        }
+    }
+}
+
+.logo {
+    display: inline-block;
+    size: 216px 44px;
+    background-size: 216px 44px;
+    background-repeat: no-repeat;
+
+    @media (--mobile) {
+        size: 200px 40px;
+        background-size: 200px 40px;
+    }
+
+    &_com {
+        background-image: svg-load("./logo.svg", fill=#464646);
+    }
+
+    &_com&_invert {
+        background-image: svg-load("./logo.svg", fill=$white);
+    }
+
+    &_ru {
+        background-image: svg-load("./logo-ru.svg", fill=#464646);
+    }
+
+    &_ru&_invert {
+        background-image: svg-load("./logo-ru.svg", fill=$white);
+    }
+}
+
+
+.user-panel {
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.user-panel__user-ava {
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.user-panel__username_accent {
+    color: #777;
+}
+.user-panel__username {
+    color: #000;
+}
+
+.user-menu-btn {
+    align-self: center;
+}
+
+/********** user-menu ************/
+
+.user-menu {
+    display: none;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 20px 30px;
+    position: absolute;
+    right: 20px;
+    top: calc(100% + 5px);
+    z-index: 3;
+}
+
+.user-menu__tris {
+    position: absolute;
+    border-color: transparent;
+    border-bottom-color: #fff;
+    border-style: dashed dashed solid;
+    border-width: 0 15px 15px;
+    right: 30px;
+    top: -15px;
+    height: 0;
+    width: 0;
+}
+
+.user-menu__icon {
+    color: #bdbdbd;
+    margin-right: 25px;
+}
+
+.pill {
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.pill_small {
+    font-size: 13px;
+    line-height: 18px;
+    height: 18px;
+    width: 18px;
+}
+
+.pill_mid {
+    font-size: 12px;
+    line-height: 25px;
+    height: 25px;
+    width: 25px;
+}
+
+.pill__text {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.pill__notifications {
+    position: absolute;
+    right: -5px;
+    top: -7px;
+}
+
+.pill_primary {
+    background-color: #00bcd4;
+}
+
+.pill_warn {
+    background-color: #e05f5f;
+}
+
+.user-menu__pill {
+    background-color: #bdbdbd;
+    margin-left: 10px;
+}
+
+.user-menu__link.mat-button {
+    color: #000;
+    font-size: 16px;
+    padding: 5px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.user-menu__balance {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+.isVisible {
+    display: block;
+}
+
+/* alerts */
+
+.user-msg-menu {
+    color: #000;
+}
+
+.user-msg-menu__header {
+    color: #000;
+}
+.order {
+    color: #00bcd4;
+}
+
+.user-msg-menu__subheader {
+    font-size: 14px;
+}
+
+.user-msg-menu__text {
+    font-size: 12px;
+}
+
+.user-msg-menu__icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
