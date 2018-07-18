@@ -1,11 +1,23 @@
 .dropdown {
-    right: -45px;
-    top: 40px;
+    display: none;
+    top: center;
+    left: center;
     position: absolute;
-    width: 370px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     background-color: $white;
+
+    &-open {
+        display: block;
+    }
+
+    &-relative {
+        position: relative;
+    }
+
+    &-close {
+        display: none;
+    }
 
     &:after, &:before {
         position: absolute;
@@ -28,6 +40,14 @@
         border-width: 20px;
         border-color: rgba(113, 158, 206, 0);
         border-bottom-color: rgba(0, 0, 0, 0.25);
+    }
+
+    &_notify, &_msg {
+        width: 370px;
+    }
+
+    &_user {
+        width: auto;
     }
 
     &__inner {
@@ -194,3 +214,48 @@
     border-top: 1px solid rgba(0, 0, 0, 0.24);
 }
 
+/* TEST */
+
+/*
+.jq-dropdown {
+    display: none;
+    position: absolute;
+    margin: 20px * * -30px;
+    z-index: 9;
+
+    &-anchor-right {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    &-menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        padding: 10px 0;
+        min-width: 160px;
+        max-width: 280px;
+        background: var(--white);
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        overflow: visible;
+    }
+
+    &-menu a {
+        display: block;
+        padding: 10px 30px;
+        color: var(--black);
+        white-space: nowrap;
+        transition: color var(--transition-delay);
+
+        &:hover {
+            color: #a5a5a5;
+            cursor: pointer;
+        }
+    }
+
+    &-scroll &-menu {
+        max-height: 180px;
+        overflow: auto;
+    }
+}*/

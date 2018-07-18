@@ -1,44 +1,58 @@
+{{> head }}
+
+{{> sidebar }}
+
 {{> bar }}
 
-<div class="row page-header">
-    <div class="col fx fx-col fx-justify-between wrapper">
-        <div class="page-title">{{pageTitle}}</div>
-        {{> navigation }}
-    </div>
+<div class="content">
+
 </div>
 
 <div class="wrapper">
-    <ul>
-        <li><a href="/messages">Шаблон сообщений</a></li>
-        <li><a href="/notifications">Notifications</a></li>
-        <li><a href="/order">Notifications</a></li>
-        <li><a href="/messages">Шаблон сообщений</a></li>
-        <li><a href="/cart">Шаблон корзины</a></li>
-    </ul>
 
-    <div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
+    <div class="page-header">
+        <div class="wrapper">
+            <div class="page-title">{{ pageTitle }}</div>
+            {{> navigation }}
+        </div>
+    </div>
 
-    <h2 style="text-align: center;">Buttons template</h2>
-    {{> button theme="primary" type="std" caption="Primary btn" }}
-    {{> button theme="error" type="std" caption="Error btn" }}
-    {{> button theme="secondary" type="std" caption="Secondary btn" }}
-    {{> button theme="bright" type="std" caption="Bright btn" }}
+    <div class="wrapper">
+        <ul>
+            <li><a href="/messages">Шаблон сообщений</a></li>
+            <li><a href="/notifications">Notifications</a></li>
+            <li><a href="/order">Notifications</a></li>
+            <li><a href="/messages">Шаблон сообщений</a></li>
+            <li><a href="/cart">Шаблон корзины</a></li>
+            <li><a href="/user">Юзверь!</a></li>
+        </ul>
 
-    {{> button theme="primary" type="rect" caption="Primary btn" }}
-    {{> button theme="error" type="rect" caption="Error btn" }}
-    {{> button theme="secondary" type="rect" caption="Secondary btn" }}
-    {{> button theme="bright" type="rect" caption="Bright btn" }}
+        <div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
 
-    {{> button theme="bright" type="round" icon="close"}}
-    {{> button theme="primary" type="round" icon="close" }}
-    {{> button theme="secondary" type="round" icon="plus" }}
+        <h2 style="text-align: center;">Buttons template</h2>
+        {{> button theme="primary" type="std" caption="Primary btn" }}
+        {{> button theme="error" type="std" caption="Error btn" }}
+        {{> button theme="secondary" type="std" caption="Secondary btn" }}
+        {{> button theme="bright" type="std" caption="Bright btn" }}
 
-    <div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
+        {{> button theme="primary" type="rect" caption="Primary btn" }}
+        {{> button theme="error" type="rect" caption="Error btn" }}
+        {{> button theme="secondary" type="rect" caption="Secondary btn" }}
+        {{> button theme="bright" type="rect" caption="Bright btn" }}
 
-    {{> news }}
+        {{> button theme="bright" type="round" icon="close"}}
+        {{> button theme="primary" type="round" icon="close" }}
+        {{> button theme="secondary" type="round" icon="plus" }}
 
-    <div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
+        <div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
 
-    {{> notify-widget }}
+        {{> news }}
 
+        <div class="div" style="margin: 20px; border-bottom: 1px solid greenyellow"></div>
+
+        {{> notify-widget }}
+    </div>
 </div>
+
+
+{{> footer }}

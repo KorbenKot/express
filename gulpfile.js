@@ -10,7 +10,48 @@ const
         concat = require('gulp-concat'),
         uglify = require('gulp-uglify'),
         newer = require('gulp-newer'),
-        fs = require('file-system');
+        fs = require('file-system'),
+        through = require('through2'),
+        hb = require('gulp-hb'),
+        argv = require('yargs').argv,
+        path = require('path');
+
+let project = argv.project;
+
+// SOURCE PATHS
+
+let src = {
+    templates: "views/blocks/",
+    hb: {
+        data: {
+            all: "src/data/all.json",
+            templates: "src/data/partials/"
+        },
+        partials: "views/blocks/"
+    },
+    static: {
+        css: "src/css/",
+        js: "src/js/",
+        img: "src/img/**",
+        fonts: "src/fonts/*",
+    }
+};
+
+// DESTINATION PATHS
+
+let dist = {
+    dir: "./dest",
+    templates: "./dest"
+};
+
+let dest = {
+    css: dist.dir + "css/",
+    img: dist.dir + "img/",
+    fonts: dist.dir + "fonts/",
+    js: dist.dir + "js/",
+};
+
+/* MAIN TASK */
 
 gulp.task('default', ['browser-sync', 'css', 'fonts', 'js'], function () { });
 
@@ -26,6 +67,21 @@ gulp.task('browser-sync', ['nodemon'], function () {
     gulp.watch(['scr/css/*.css'], ['css']);
     gulp.watch(['views/blocks/**/*.js'], ['js']);
     gulp.watch('views/blocks/*.handlebars').on('change', browserSync.reload);
+});
+
+// HANDLEBARS TO HTML
+
+gulp.task('hb', function () {
+
+    return gulp.src("views/*.handlebars")
+
+        .pipe(hb()
+            .partials('views/blocks/*.handlebars')
+            .data('src/data/all.json')
+        )
+        .pipe(rename({extname: ".html"}))
+        .pipe(debug({title: 'template:'}))
+        .pipe(gulp.dest(dist.templates))
 });
 
 // CSS
@@ -85,6 +141,8 @@ gulp.task('js', function () {
             .pipe(gulp.dest('./dest/js'))
             .pipe(browserSync.stream());
 });
+
+// NODEMON
 
 gulp.task('nodemon', function (cb) {
 

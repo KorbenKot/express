@@ -1,4 +1,5 @@
 .btn {
+    background-color: transparent;
     position: relative;
     border: none;
     cursor: pointer;
@@ -23,6 +24,34 @@
 
     &:focus {
         outline: none;
+    }
+
+    &_triangle-down {
+        padding: 0;
+        size: 0;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: center;
+            left:center;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top-width: 6px;
+            border-top-style: solid;
+        }
+
+        &._primary:after {
+            border-top-color: $primary;
+        }
+
+        &._secondary:after {
+            border-top-color: $secondary;
+        }
+
+        &._error:after {
+            border-top-color: $error;
+        }
     }
 
     &_std {

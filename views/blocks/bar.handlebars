@@ -1,4 +1,4 @@
-<div class="fx fx-justify-between fx-al-center bar">
+<div class="fx fx-justify-between fx-align-center bar">
 
     <a class="bar__logo logo logo_com" href="/"></a>
 
@@ -11,30 +11,30 @@
     </div>
 
     <a class="bar__phone-number" href="tel:88003338544">
-        <div class="im im-phone bar__phone-number-icon"></div>
+        <span class="bar__phone-number-icon"></span>
         8-800-333-85-44
     </a>
 
     {{> button type="std" theme="primary" caption="Хочу новый заказ" addClass="bar__order-btn" }}
 
-    {{!-- user-ava --}}
-
-    <div class="col-auto">
-        <div class="fx fx-justify-between fx-al-center container">
-            <div class="fx fx-al-center user-panel">
-                <div class="fx fx-center text-center user-panel__user">
-                    <span class="user-panel__username_accent">Привет,</span>
-                    <span class="user-panel__username">{{ username }}</span>
-                </div>
-
-                {{!-- user-ava --}}
-
-                {{!-- btn user --}}
-
-                {{!-- user-menu --}}
-
+    <div class="fx user-panel">
+        <div class="fx fx-center user-panel__controls">
+            {{> dropdown-btn type="msg" color="primary" count="3" addClass="user-panel__dropdown-btn" addAttr='data-jq-dropdown="#jq-dropdown-1"'}}
+            {{> dropdown-btn type="notify" color="secondary" count="5" addClass="user-panel__dropdown-btn" addAttr='data-jq-dropdown="#jq-dropdown-2"'}}
+        </div>
+        <div class="fx fx-center">
+            <div class="fx fx-center text-center user-panel__user">
+                <div class="user-panel__hello">Привет, <span class="user-panel__username">{{ username }}</span></div>
+            </div>
+            <div class="fx fx-center user-panel__avatar-container" data-jq-dropdown="#jq-dropdown-3">
+                <div class="avatar user-panel__avatar"></div>
+                <span class="arrow-down arrow-down_primary user-panel__arrow-down"></span>
             </div>
         </div>
     </div>
-
 </div>
+
+{{> notifications }}
+{{> messages }}
+{{> dropdown-user-menu }}
+

@@ -1,9 +1,17 @@
 .bar {
     position: relative;
-    height: 90px;
+    max-height: 90px;
     background-color: $white;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
-    padding: * 32px;
+    padding: 10px 32px;
+
+    @media (--desktop)  {
+        padding: * 22px;
+    }
+
+    @media (--tablet)  {
+        padding: * 12px;
+    }
 
     &__logo {
         margin-right: 10px;
@@ -12,7 +20,7 @@
     &__social-link-bar {
         margin-top: 10px;
 
-        @media (--tablet) {
+        @media (--desktop) {
             display: none;
         }
     }
@@ -21,19 +29,19 @@
         line-height: 30px;
         vertical-align: middle;
         display: inline-block;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
 
-        @media (--desktop) {
-            padding-left: 5px;
-            padding-right: 5px;
+        @media (--desktop-large) {
+            padding-left: 10px;
+            padding-right: 10px;
         }
     }
 
     &__order-btn {
         width: auto;
 
-        @media (--tablet) {
+        @media (--desktop) {
             display: none;
         }
     }
@@ -44,61 +52,83 @@
         font-weight: 600;
         text-decoration: none;
 
-        @media (--tablet) {
+        @media (--desktop) {
             display: none;
         }
     }
 }
 
-.logo {
-    display: inline-block;
-    size: 216px 44px;
-    background-size: 216px 44px;
-    background-repeat: no-repeat;
+.arrow-down {
+    size: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top-width: 6px;
+    border-top-style: solid;
 
-    @media (--mobile) {
-        size: 200px 40px;
-        background-size: 200px 40px;
+    &_primary {
+        border-top-color: $primary;
     }
 
-    &_com {
-        background-image: svg-load("./logo.svg", fill=#464646);
+    &_secondary {
+        border-top-color: $secondary;
     }
 
-    &_com&_invert {
-        background-image: svg-load("./logo.svg", fill=$white);
-    }
-
-    &_ru {
-        background-image: svg-load("./logo-ru.svg", fill=#464646);
-    }
-
-    &_ru&_invert {
-        background-image: svg-load("./logo-ru.svg", fill=$white);
+    &_error {
+        border-top-color: $error;
     }
 }
 
+.avatar {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("./user-ava.jpg");
+    border-radius: 50%;
+}
 
 .user-panel {
     position: relative;
     font-size: 18px;
     font-weight: 600;
-}
 
-.user-panel__user-ava {
-    border-radius: 50%;
-    margin-left: 5px;
-}
+    &__avatar-container {
+        position: relative;
+        cursor: pointer;
+    }
 
-.user-panel__username_accent {
-    color: #777;
-}
-.user-panel__username {
-    color: #000;
-}
+    &__avatar {
+         size: 48px;
+         margin: 10px 17px;
+     }
 
-.user-menu-btn {
-    align-self: center;
+    &__dropdown-btn {
+        margin: 10px;
+        margin-right: 19px;
+    }
+
+    &__controls {
+        margin-right: 80px;
+
+        @media (--desktop) {
+            margin-right: 10px;
+        }
+    }
+
+    &__arrow-down {
+        margin-right: 5px;
+    }
+
+    &__hello {
+        color: rgba(119, 119, 119, 0.87);
+
+        @media (--mobile) {
+            display: none;
+        }
+    }
+
+    &__username {
+        color: rgba(0, 0, 0, 0.87);
+    }
 }
 
 /********** user-menu ************/
