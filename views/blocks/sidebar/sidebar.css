@@ -1,13 +1,20 @@
 .sidebar {
-    bottom: 0;
     background-color: $white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     padding-bottom: 5px;
-    padding-top: 130px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    min-width: 256px;
+    padding-top: 90px;
     width: 256px;
+
+    @media (--tablet) {
+        display: none;
+    }
+
+    &__inner {
+        margin-top: 38px;
+        position: sticky;
+        top: 90px;
+    }
 
     &__link {
         margin-left: 30px;
@@ -81,20 +88,4 @@
         background-color: $black;
         width: 90%;
     }
-}
-
-.all-wrap {
-    min-height: 100vh;
-}
-
-.page-wrap {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.content-wrap {
-    background-color: #fff;
-    flex: 1 1 auto;
-    margin-left: 256px;
 }

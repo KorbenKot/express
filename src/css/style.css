@@ -69,6 +69,18 @@ a {
     }
 }
 
+.page-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .wrapper {
     max-width: 1269px;
     margin: * auto;
@@ -88,8 +100,13 @@ a {
 }
 
 .page-header {
+    margin-top: 90px;
     background-image: linear-gradient(to right, rgb(12, 15, 41), rgb(43, 58, 99) 50%, rgb(12, 15, 41));
     overflow: hidden;
+
+    @media (--mobile) {
+        margin-top: 60px;
+    }
 }
 
 .page-title {

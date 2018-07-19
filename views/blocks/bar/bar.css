@@ -1,9 +1,11 @@
 .bar {
-    position: relative;
+    position: fixed;
     max-height: 90px;
     background-color: $white;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
     padding: 10px 32px;
+    z-index: 100;
+    width: 100%;
 
     @media (--desktop)  {
         padding: * 22px;
@@ -99,6 +101,11 @@
     &__avatar {
          size: 48px;
          margin: 10px 17px;
+
+        @media (--mobile) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
      }
 
     &__dropdown-btn {
