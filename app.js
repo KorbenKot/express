@@ -50,6 +50,14 @@ app.get('/orders', (req, res) => res.render('orders',
         pageTitle: 'Мои заказы'
     }
 ));
+app.get('/orders-files', (req, res) => res.render('orders-files',
+    {
+        worktype: 'Дипломная работа',
+        theme: 'По предмету: «Корпоративные скандалы как индикатор...',
+        orderNumber: '1 010 601'
+
+    }
+));
 app.get('/notifications', (req, res) => res.render('notifications'));
 
 app.listen(8080, () => console.log('My test app running on port 8080!'));
