@@ -21,13 +21,13 @@ let project = argv.project;
 // SOURCE PATHS
 
 let src = {
-    templates: "views/blocks/",
+    templates: "src/views/blocks/",
     hb: {
         data: {
             all: "src/data/all.json",
             templates: "src/data/partials/"
         },
-        partials: "views/blocks/"
+        partials: "src/views/blocks/"
     },
     static: {
         css: "src/css/",
@@ -59,24 +59,24 @@ gulp.task('browser-sync', ['nodemon'], function () {
     browserSync.init({
         proxy: 'http://localhost:8080',
         browser: 'chrome',
-        files: ['./views/blocks/**/**.css', './views/blocks/**/*.js', './src/css/*.css', './views/blocks/*.handlebars'],
+        files: ['./src/views/blocks/**/**.css', './src/views/blocks/**/*.js', './src/css/*.css', './src/views/blocks/*.handlebars'],
         port: 3000
     });
 
-    gulp.watch(['views/blocks/**/*.css'], ['css']);
+    gulp.watch(['src/views/blocks/**/*.css'], ['css']);
     gulp.watch(['scr/css/*.css'], ['css']);
-    gulp.watch(['views/blocks/**/*.js'], ['js']);
-    gulp.watch('views/blocks/*.handlebars').on('change', browserSync.reload);
+    gulp.watch(['src/views/blocks/**/*.js'], ['js']);
+    gulp.watch('src/views/blocks/*.handlebars').on('change', browserSync.reload);
 });
 
 // HANDLEBARS TO HTML
 
 gulp.task('hb', function () {
 
-    return gulp.src("views/*.handlebars")
+    return gulp.src("src/views/*.handlebars")
 
         .pipe(hb()
-            .partials('views/blocks/*.handlebars')
+            .partials('src/views/blocks/*.handlebars')
             .data('src/data/all.json')
         )
         .pipe(rename({extname: ".html"}))
@@ -132,7 +132,7 @@ gulp.task('fonts', function () {
 
 gulp.task('js', function () {
 
-        return gulp.src('./views/blocks/**/**.js')
+        return gulp.src('./src/views/blocks/**/**.js')
             .pipe(newer('./dest/js/main.min.js'))
             .pipe(concat('main.js'))
             .pipe(uglify())

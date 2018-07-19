@@ -3,22 +3,23 @@
 
 /* COMPONENTS */
 
-@import "../../views/blocks/grid/grid.css";
-@import "../../views/blocks/button/button.css";
-@import "../../views/blocks/news/news.css";
-@import "../../views/blocks/notify-widget/notify-widget.css";
-@import "../../views/blocks/progress-bar/progress-bar.css";
-@import "../../views/blocks/order-detail/order-detail.css";
-@import "../../views/blocks/spinner/spinner.css";
-@import "../../views/blocks/flex/flex.css";
-@import "../../views/blocks/dropdown-menu/dropdown-menu.css";
-@import "../../views/blocks/dropdown-btn/dropdown-btn.css";
-@import "../../views/blocks/navigation/navigation.css";
-@import "../../views/blocks/breadcrumbs/breadcrumbs.css";
+@import "../views/blocks/grid/grid.css";
+@import "../views/blocks/button/button.css";
+@import "../views/blocks/link/link.css";
+@import "../views/blocks/news/news.css";
+@import "../views/blocks/notify-widget/notify-widget.css";
+@import "../views/blocks/progress-bar/progress-bar.css";
+@import "../views/blocks/order-detail/order-detail.css";
+@import "../views/blocks/spinner/spinner.css";
+@import "../views/blocks/flex/flex.css";
+@import "../views/blocks/dropdown-menu/dropdown-menu.css";
+@import "../views/blocks/dropdown-btn/dropdown-btn.css";
+@import "../views/blocks/navigation/navigation.css";
+@import "../views/blocks/breadcrumbs/breadcrumbs.css";
+@import "../views/blocks/bar/bar.css";
+@import "../views/blocks/logo/logo.css";
+@import "../views/blocks/sidebar/sidebar.css";
 
-@import "../../views/blocks/bar/bar.css";
-@import "../../views/blocks/logo/logo.css";
-@import "../../views/blocks/sidebar/sidebar.css";
 
 @font-face {
     font-family: "Gotham Pro Regular";
@@ -117,4 +118,14 @@ a {
     @media (--mobile) {
         font-size: 28px;
     }
+}
+
+.pill-label {
+    border-radius: 50%;
+    color: $white;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    transition: all $transition-delay;
 }

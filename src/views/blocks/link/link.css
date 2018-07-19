@@ -1,0 +1,89 @@
+.link {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    transition: all $transition-delay;
+
+    &:hover {
+        color: $primary-hov;
+    }
+
+    &:hover &__icon_gear {
+        background-image: svg-load("../../../svg/iconmonstr-gear.svg", fill=$primary-hov);
+    }
+    &:hover &__icon_gear {
+        background-image: svg-load("../../../svg/iconmonstr-gear.svg", fill=$primary-hov);
+    }
+    &:hover &__icon_home {
+        background-image: svg-load("../../../svg/iconmonstr-home.svg", fill=$primary-hov);
+    }
+    &:hover &__icon_folder {
+        background-image: svg-load("../../../svg/iconmonstr-folder.svg", fill=$primary-hov);
+    }
+    &:hover &__icon_card {
+        background-image: svg-load("../../../svg/iconmonstr-credit-card.svg", fill=$primary-hov);
+    }
+    &:hover &__icon_gift {
+        background-image: svg-load("../../../svg/iconmonstr-christmas.svg", fill=$primary-hov);
+    }
+    &:hover &__icon_book {
+        background-image: svg-load("../../../svg/iconmonstr-book.svg", fill=$primary-hov);
+    }
+    &:hover &__icon_exit {
+        background-image: svg-load("../../../svg/iconmonstr-log-out.svg", fill=$primary-hov);
+    }
+    &:hover &__icon_speech {
+        background-image: svg-load("../../../svg/iconmonstr-speech-bubble.svg", fill=$primary-hov);
+    }
+    &:hover &__icon_speech-2 {
+        background-image: svg-load("../../../svg/iconmonstr-speech-bubble-2.svg", fill=$primary-hov);
+    }
+
+    &_active {
+        color: $primary;
+    }
+
+    &__icon {
+        position: absolute;
+        left: 0;
+        top: center;
+        size: 24px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: all $transition-delay;
+
+        &_gear {
+            background-image: svg-load("../../../svg/iconmonstr-gear.svg", fill=rgba(0, 0, 0, 0.5));
+        }
+
+        &_home {
+            background-image: svg-load("../../../svg/iconmonstr-home.svg", fill=rgba(0, 0, 0, 0.5));
+        }
+
+        &_folder {
+            background-image: svg-load("../../../svg/iconmonstr-folder.svg", fill=rgba(0, 0, 0, 0.5));
+        }
+
+        &_card {
+            background-image: svg-load("../../../svg/iconmonstr-credit-card.svg", fill=rgba(0, 0, 0, 0.5));
+        }
+
+        &_gift {
+            background-image: svg-load("../../../svg/iconmonstr-christmas.svg", fill=rgba(0, 0, 0, 0.5));
+        }
+
+        &_book {
+            background-image: svg-load("../../../svg/iconmonstr-book.svg", fill=rgba(0, 0, 0, 0.5));
+        }
+
+        &_exit {
+            background-image: svg-load("../../../svg/iconmonstr-log-out.svg", fill=rgba(0, 0, 0, 0.5));
+        }
+
+        &_speech {
+            background-image: svg-load("../../../svg/iconmonstr-speech-bubble-2.svg", fill=rgba(0, 0, 0, 0.5));
+        }
+    }
+}

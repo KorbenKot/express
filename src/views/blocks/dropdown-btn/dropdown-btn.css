@@ -1,0 +1,52 @@
+.dropdown-btn {
+    display: inline-block;
+    size: 24px;
+    position: relative;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: $transition-delay;
+
+    &_msg {
+        background-image: svg-load("../../../svg/iconmonstr-speech-bubble.svg", fill=rgba(0, 0, 0, 0.28));
+
+        &:hover {
+            background-image: svg-load("../../../svg/iconmonstr-speech-bubble.svg", fill=rgba(0, 0, 0, 0.58));
+        }
+    }
+
+    &_notify {
+        background-image: svg-load("../../../svg/iconmonstr-bell.svg", fill=rgba(0, 0, 0, 0.28));
+
+        &:hover {
+            background-image: svg-load("../../../svg/iconmonstr-bell.svg", fill=rgba(0, 0, 0, 0.58));
+        }
+    }
+
+    &__label {
+        position: absolute;
+        display: block;
+        size: 18px;
+        border-radius: 50%;
+        right: -19px;
+        top: -17px;
+
+        &_primary {
+            background-color: $primary;
+        }
+
+        &_secondary {
+            background-color: $secondary;
+        }
+    }
+
+    &__label-number {
+        font-size: 13px;
+        position: absolute;
+        top: center;
+        left: center;
+        color: $white;
+        font-weight: bold;
+    }
+}
+

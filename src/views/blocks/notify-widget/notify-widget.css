@@ -1,0 +1,242 @@
+.notify-widget {
+    position: relative;
+    padding-left: 27px;
+    padding-right: 27px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    min-height: 96px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    border: solid 1px #dcdcdc;
+    overflow: hidden;
+    transition: $transition-delay;
+
+    @media (--tablet) {
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    @media (--mobile) {
+        padding: 12px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    &:hover {
+        box-shadow: $gray-shadow;
+        background-color: $white;
+    }
+
+    &:hover &__controls-block_img:before {
+        background-image: svg-load("../../../svg/wave.svg", fill=$white);
+    }
+
+    &__content-col, &__content-row {
+        background-color: inherit;
+
+        @media (--mobile) {
+            position: static;
+        }
+    }
+
+    & h2, h3 {
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    & h2 {
+        font-size: 24px;
+        line-height: 1.25;
+
+        @media (--mobile) {
+            font-size: 18px;
+        }
+    }
+
+    & h3 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    &__head {
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        @media (--tablet) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__content-block {
+
+        @media (--mobile) {
+            margin-right: 50px;
+        }
+    }
+
+    &__controls-block {
+        position: relative;
+        background-color: inherit;
+
+        @media (--mobile) {
+            margin-top: 5px;
+            position: static;
+        }
+
+        &_img {
+
+            &:before {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 20px;
+                height: 100%;
+                left: -10px;
+                top: center;
+                background-position: top left;
+                background-repeat: repeat-y;
+                background-image: svg-load("../../../svg/wave.svg", fill=#f9f9f9);
+                z-index: 10;
+
+                @media (--tablet) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__controls-caption {
+        font-size: 16px;
+        font-weight: 600;
+        color: $white;
+    }
+
+    &__content-row {
+        flex: 1 1 auto;
+    }
+
+    &__content {
+        font-size: 15px;
+        line-height: 1.8;
+        color: rgba(0, 0, 0, 0.54);
+
+        @media (--mobile) {
+            font-size: 13px;
+            line-height: 21px;
+        }
+    }
+
+    &__btn {
+        width: auto;
+        margin-right: 10px;
+        flex: 0 1 auto;
+        white-space: nowrap;
+    }
+
+    &__btn-close {
+
+        @media (--mobile) {
+            position: absolute;
+            right: 7px;
+            top: 17px;
+        }
+    }
+
+    &__img {
+        position: relative;
+        size: 157px 96px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        background-color: inherit;
+        background-size: cover;
+        background: url('./3@2x.jpg') no-repeat center;
+
+        @media (--tablet) {
+            display: none;
+        }
+
+        &:before, &:after {
+            position: absolute;
+            content: "";
+            display: block;
+        }
+
+        &:before {
+            width: 4px;
+            left: 27px;
+            height: 100%;
+            background-color: transparent;
+            border-left: 1px dashed #f9f9f9;
+        }
+
+        &:after {
+            background-color: inherit;
+            border-radius: 50%;
+            size: 88px;
+            right: -60px;
+            top: center;
+        }
+    }
+
+    &__icon {
+        background: url('./new-order-icon.png') no-repeat center;
+        background-size: 39px 48px;
+        size: 39px 48px;
+        margin-right: 30px;
+    }
+
+    &__controls-block {
+        flex: 1 1 auto;
+    }
+}
+
+[data-template = "new-order-notify"] {
+
+    .notify-widget {
+
+        &__content-col {
+
+            @media (--mobile) {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+
+        &__content {
+            font-size: 18px;
+
+            @media (--mobile) {
+                font-size: 14px;
+            }
+        }
+
+
+
+        &__controls-block_img {
+            height: 100%;
+        }
+
+        &__btn-close {
+            border: 2px solid #f3f3f3;
+        }
+
+        &__controls-block {
+            padding-right: 27px;
+            margin-right: -27px;
+            background-color: $primary;
+            background: url('./new-order.png') no-repeat center;
+            background-size: cover;
+
+            @media (--tablet) {
+                margin-right: -20px;
+            }
+
+            @media (--mobile) {
+                margin-left: -12px;
+                margin-right: -12px;
+            }
+        }
+    }
+}
