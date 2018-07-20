@@ -3,8 +3,36 @@
 <div class="page-header">
     <div class="wrapper">
         {{> breadcrumbs }}
-        <div class="worktype"></div>
-        <div class="page-title">{{ worktype }}</div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <div class="order-number">Заказ #{{ orderNumber }}</div>
+                    <div class="page-title">{{ worktype }}</div>
+                    <div class="subject">По предмету: &laquo;{{ subject }}&raquo;</div>
+                </div>
+                <div class="col-5">
+                    <div class="row page-header__widget-row">
+                        {{> progress-bar_filled type="dark" icon="dot" caption="Ожидаем предоплату" }}
+                        <div class="col-auto page-header__widget-col">
+                            <div class="widget-price">
+                                {{> widget-price type="" heading="Цена" summ="19 332" oldSumm="20 000" oldPriceVisible="show" currency="Р" }}
+                            </div>
+                            {{> button type="std" theme="transp" border="bright" caption="Оплатить полностью" addClass="page-header__btn" }}
+                        </div>
+                        <div class="col-auto page-header__widget-col">
+                            <div class="widget-price">
+                                {{> widget-price type="prepay" heading="Предоплата" heading-part="25%" summ="803" oldPriceVisible="hide" currency="Р" }}
+                            </div>
+                            {{> button type="std" theme="secondary" caption="Внести предоплату" addClass="page-header__btn" }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="widget-countdown"></div>
+                </div>
+            </div>
+        </div>
         {{> navigation }}
     </div>
 </div>

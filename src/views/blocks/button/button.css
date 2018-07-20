@@ -9,7 +9,6 @@
     font-size: 16px;
     padding: 5px 32px;
     transition: $transition-delay;
-    width: 100%;
 
     @media (--desktop) {
         padding-left: 15px;
@@ -24,6 +23,23 @@
 
     &:focus {
         outline: none;
+    }
+
+    &_border {
+        border-width: 1px;
+        border-style: solid;
+
+        &_white {
+            border-color: $white;
+        }
+
+        &_primary {
+            border-color: $primary;
+        }
+
+        &_secondary {
+            border-color: $secondary;
+        }
     }
 
     &_triangle-down {
@@ -173,6 +189,25 @@
 
         &:hover {
             box-shadow: $gray-shadow;
+        }
+
+        &:active {
+            box-shadow: $gray-shadow-hov;
+        }
+
+        &:before, &:after {
+            background-color: $black;
+        }
+    }
+
+    &_transp {
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.5);
+
+        &:hover {
+            box-shadow: $gray-shadow;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: rgba(255, 255, 255, 0.5);
         }
 
         &:active {

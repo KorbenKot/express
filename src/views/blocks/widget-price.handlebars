@@ -1,0 +1,29 @@
+{{!--
+
+VARIABLES:
+
+types:
+    prepay        secondary color
+    ready-date    gray color
+    need-to-pay   primary color
+
+    heading:      text
+    heading-part: text (25%)
+    summ:         number
+    oldSumm:      number
+    currency:     text
+    addClass:     some additional class
+
+    oldPrice:
+        show
+        hide
+
+        {{> widget-price type="" heading="" heading-part="" summ="" oldSumm="" oldPriceVisible="show" currency="Р" addClass=""}}
+--}}
+
+<div class="widget-price {{ addClass }}">
+    <h2 class="widget-price__header">{{ heading }} {{heading-part}}
+        <span class="widget-price__price-old widget-price__price-old_{{oldPrice}}">{{ oldSumm }} {{ currency }}</span>
+    </h2>
+    <h2 class="widget-price__price widget-price__price_{{ type }}">{{ summ }} {{ currency }}</h2>
+</div>

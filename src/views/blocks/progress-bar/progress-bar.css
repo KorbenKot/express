@@ -46,6 +46,11 @@
             background-color: $success;
             width: 100%;
         }
+
+        &_dark {
+            background-color: rgba(0, 0, 0, 0.45);
+            width: 50%;
+        }
     }
 
     &__icon {
@@ -74,6 +79,12 @@
 
         &_check {
             background-image: svg-load("../../../svg/check.svg", fill=$white);
+        }
+
+        &_dot {
+            background-color: $secondary;
+            size: 7px;
+            border-radius: 50%;
         }
     }
 

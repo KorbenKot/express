@@ -1,0 +1,85 @@
+.page-header {
+    margin-top: 90px;
+    background-image: linear-gradient(to right, rgb(12, 15, 41), rgb(43, 58, 99) 50%, rgb(12, 15, 41));
+    color: $white;
+    overflow: hidden;
+
+    @media (--mobile) {
+        margin-top: 60px;
+    }
+
+    &__widget-row {
+        margin-top: -50px;
+    }
+
+    &__widget-col {
+        padding-right: 28px;
+        padding-left: 0;
+    }
+    
+    & .page-title {
+        font-size: 40px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.87);
+        line-height: normal;
+        margin-top: 8px;
+        margin-bottom: 10px;
+    }
+
+    & .order-number {
+        font-size: 14px;
+        color: rgba(254, 254, 254, 0.5);
+    }
+
+    & .subject {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 13px;
+        line-height: normal;
+        font-weight: 300;
+    }
+
+    & .btn {
+        padding: 5px 20px;
+    }
+
+    & .progress-bar {
+        margin-bottom: 20px;
+
+        &__container {
+            background-color: rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    & .widget-price {
+
+        &__header {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        &__price {
+            margin-left: 24px;
+            margin-top: 22px;
+            margin-bottom: 33px;
+        }
+    }
+
+    & .breadcrumbs {
+        margin-bottom: 22px;
+        margin-top: 23px;
+        padding-left: 15px;
+    }
+}
+
+.page-title {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: normal;
+    color: rgba(254, 254, 254, 0.7);
+
+    @media (--mobile) {
+        font-size: 28px;
+        line-height: normal;
+    }
+}

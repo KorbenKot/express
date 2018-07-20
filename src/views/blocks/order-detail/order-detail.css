@@ -50,7 +50,8 @@
     &__info-panel {
         padding-right: 30px;
 
-        @media (--mobile) {
+        @media (--desktop) {
+            padding-right: 12px;
         }
 
         & .order-detail__header {
@@ -64,12 +65,12 @@
     &__second-panel {
 
         @media (--tablet) {
-            padding-top: 20px;
-            text-align: center;
-            border-top: dashed 1px rgb(0, 0, 0, 0.15);
+            /*text-align: center;*/
         }
 
         @media (--mobile) {
+            border-top: dashed 1px rgb(0, 0, 0, 0.15);
+            padding-top: 20px;
             text-align: left;
         }
     }
@@ -191,61 +192,6 @@
         padding: 0;
     }
 
-    &__price {
-        display: inline-block;
-        position: relative;
-        font-size: 34.5px;
-        font-weight: normal;
-        line-height: 24px;
-        margin: 10px 0 20px 17px;
-        white-space: nowrap;
-        color: rgba(0, 0, 0, 0.87);
-
-        @media (--tablet) {
-            font-size: 22px;
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-
-        &:before {
-            content: "";
-            display: block;
-            size: 9px;
-            left: -23px;
-            top: center;
-            border-radius: 50%;
-            background-color: $primary;
-
-            @media (--tablet) {
-                left: -16px;
-            }
-        }
-
-        &_prepay {
-            color: $secondary;
-
-            &:before {
-                background-color: $secondary;
-            }
-        }
-
-        &_ready-date {
-            color: rgba(0, 0, 0, 0.54);
-
-            &:before {
-                background-color: rgba(0, 0, 0, 0.54);
-            }
-        }
-
-        &_need-to-pay {
-            color: $primary;
-
-            &:before {
-                background-color: $primary;
-            }
-        }
-    }
-
     &__price-total {
         display: inline-block;
         font-size: 14px;
@@ -257,16 +203,12 @@
         }
     }
 
-    &__price-old {
-        font-size: 14px;
-        color: rgba(0, 0, 0, 0.38);
-        text-decoration: line-through;
-    }
-
-    &__btn {
+    & .btn&__btn {
+        padding: 10px 32px;
         font-size: 22px;
         max-width: 360px;
         height: 100%;
+        width: 100%;
 
         @media  (--tablet) {
             font-size: 18px;
@@ -331,61 +273,28 @@
         color: rgb(168, 168, 168);
         margin: auto;
     }
-}
 
-/* MOVE TO PARTIAL */
+    /* widget-price */
 
-.file-list {
-    text-align:left;
-    display: inline-block;
-    max-height: 90px;
-    list-style: none;
-    overflow-y: auto;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    padding-right: 10px;
+    & .widget-price {
 
-    &__item {
-        line-height: 27px;
-    }
+        &__price {
+            margin: 10px 0 20px 17px;
 
-    &__name {
-        position: relative;
-        color: $primary;
-        padding-left: 30px;
-        font-size: 13px;
+            @media (--tablet) {
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+        }
 
-        &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: center;
-            left: 0;
-            size: 17px;
-            background-size: 17px;
-            background-image: svg-load("../../../svg/iconmonstr-download.svg", fill=$primary);
-            background-repeat: no-repeat;
-            background-position: center;
+        &__price-old {
+            color: rgba(0, 0, 0, 0.38);
         }
     }
-}
 
-::-webkit-scrollbar {
-    width: 6px;
-}
+    /* BTN */
 
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
-}
+    & .btn {
 
-::-webkit-scrollbar-thumb {
-    height: 10px;
-    border-radius: 3px;
-    background-color: rgb(33, 166, 208, 0.3);
-
-    &:hover {
-        background-color: $primary-hov;
     }
 }

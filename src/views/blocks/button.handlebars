@@ -10,13 +10,20 @@
         plus
 
     themes:
-        primary
-        error
-        secondary
         bright
+        primary
+        secondary
+        error
+        transp
+
+     border:
+        bright
+        dark
+        primary
+        secondary
 
     caption:
         text
 --}}
 
-<button class="btn btn_{{type}} btn_{{theme}} btn_{{icon}} {{addClass}}">{{caption}}</button>
+<button class="btn btn_{{ type }} btn_{{ theme }} btn_{{ border }} btn_{{ icon }} {{ addClass }}">{{caption}}</button>

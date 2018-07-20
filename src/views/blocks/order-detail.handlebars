@@ -1,3 +1,4 @@
+
 {{!-- TEMPLATE ОПЛАТИТЕ ГОТОВУЮ РАБОТУ --}}
 
 <div class="container order-detail">
@@ -27,12 +28,10 @@
         <div class="col-4 col-md-12 order-detail__second-panel">
             <div class="row">
                 <div class="col col-sm-auto order-detail__data-info">
-                    <h2 class="order-detail__header">Цена <span class="order-detail__price-old">20 000 р</span></h2>
-                    <h2 class="order-detail__price">19 332 Р</h2>
+                    {{> widget-price type="" heading="Цена" summ="19 332" oldSumm="20 000" oldPriceVisible="show" currency="Р" }}
                 </div>
                 <div class="col col-sm-auto order-detail__data-info">
-                    <h2 class="order-detail__header">Предоплата (25%)</h2>
-                    <h2 class="order-detail__price order-detail__price_prepay">803 Р</h2>
+                    {{> widget-price type="prepay" heading="Предоплата" heading-part="25%" summ="803" oldPriceVisible="hide" }}
                 </div>
             </div>
         </div>
@@ -346,11 +345,11 @@
                 </div>
                 <div class="col-auto col-sm-auto order-detail__data-info order-detail__files-col">
                     <h2 class="order-detail__header">Файлы</h2>
-                    <ul class="file-list">
-                        <li class="file-list__item"><a href="#" class="file-list__name">Дипломная работа.word</a></li>
-                        <li class="file-list__item"><a href="#" class="file-list__name">Курсовая работа.word</a></li>
-                        <li class="file-list__item"><a href="#" class="file-list__name">Научная работа.word</a></li>
-                        <li class="file-list__item"><a href="#" class="file-list__name">Диссер работа.word</a></li>
+                    <ul class="widget-filelist">
+                        <li class="widget-filelist__item"><a href="#" class="widget-filelist__name">Дипломная работа.word</a></li>
+                        <li class="widget-filelist__item"><a href="#" class="widget-filelist__name">Курсовая работа.word</a></li>
+                        <li class="widget-filelist__item"><a href="#" class="widget-filelist__name">Научная работа.word</a></li>
+                        <li class="widget-filelist__item"><a href="#" class="widget-filelist__name">Диссер работа.word</a></li>
                     </ul>
                 </div>
             </div>

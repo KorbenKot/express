@@ -53,7 +53,7 @@ app.get('/orders', (req, res) => res.render('orders',
 app.get('/orders-files', (req, res) => res.render('orders-files',
     {
         worktype: 'Дипломная работа',
-        theme: 'По предмету: «Корпоративные скандалы как индикатор...',
+        subject: 'Корпоративные скандалы как индикатор...',
         orderNumber: '1 010 601'
 
     }

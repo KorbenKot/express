@@ -89,7 +89,17 @@ gulp.task('hb', function () {
 gulp.task('css', function () {
     const processors = [
         require('postcss-import'),
-        require('postcss-custom-media'),
+        require('postcss-custom-media')({/*
+            extensions:{
+                '--mobile-small': '(max-width: 479px)',
+                '--mobile': '(max-width: 767px)',
+                '--tablet': '(max-width: 1024px)',
+                '--desktop': '(max-width: 1280px)',
+                '--desktop-large': '(min-width: 1281px)',
+            },*/
+            preserve: true,
+            appendExtensions: true
+        }),
         require('postcss-assets')({
             loadPaths: ['src/img/', 'src/sprite/', 'src/svg/'],
             relative: true
@@ -98,7 +108,7 @@ gulp.task('css', function () {
         require('postcss-nesting'),
         require('postcss-simple-vars'),
         require('postcss-center'),
-        require('postcss-pxtorem'),
+        // require('postcss-pxtorem'),
         require('postcss-svg'),
         require('postcss-inline-svg'),
         require('postcss-short'),
