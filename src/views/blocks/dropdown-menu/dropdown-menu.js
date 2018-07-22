@@ -40,7 +40,7 @@ if (jQuery) (function ($) {
             jqDropdown = $(trigger.attr('data-jq-dropdown')),
             isOpen = trigger.hasClass('dropdown-open');
 
-        // In some cases we don't want to show it
+               // In some cases we don't want to show it
         if (event) {
             if ($(event.target).hasClass('dropdown-ignore')) return;
 
@@ -49,6 +49,7 @@ if (jQuery) (function ($) {
         } else {
             if (trigger !== object.target && $(object.target).hasClass('dropdown-ignore')) return;
         }
+
         hide();
 
         if (isOpen || trigger.hasClass('dropdown-disabled')) return;
@@ -96,7 +97,7 @@ if (jQuery) (function ($) {
                 .trigger('hide', {jqDropdown: jqDropdown});
         });
 
-        // Remove all jq-dropdown-open classes
+        // Remove all dropdown-open classes
         $(document).find('.dropdown-open').removeClass('dropdown-open');
     }
 
@@ -122,21 +123,21 @@ if (jQuery) (function ($) {
         } else {
 
             var dropdownBtn = $('.dropdown-open'),
-                ava = $('.dropdown-open > .avatar');
+                avatar = $('.dropdown-open > .avatar');
 
-            if (ava.length !== 0) dropdownBtn = ava;
+            if (avatar.length !== 0) dropdownBtn = avatar;
 
             /* OFFSET WITH TRIANGLE POSITION
             20 <- width of trangle
             0.1 = 10% <- right position of trangle on menu
             */
 
-            var hOffset = dropdownBtn.offset().left + (dropdownBtn.width() / 2) - jqDropdown.width() + (jqDropdown.width() * 0.1) + 20;
-            var vOffset = dropdownBtn.offset().top + dropdownBtn.outerHeight(true);
+            var xPos = dropdownBtn.offset().left + (dropdownBtn.width() / 2) - jqDropdown.width() + (jqDropdown.width() * 0.1) + 20;
+            var yPos = dropdownBtn.offset().top + dropdownBtn.outerHeight(true);
 
             jqDropdown.css({
-                left: hOffset,
-                top: vOffset
+                left: xPos,
+                top: yPos
             });
         }
     }

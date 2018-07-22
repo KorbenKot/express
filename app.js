@@ -27,7 +27,10 @@ app.set('view engine', 'html');
 
 */
 
-app.use(express.static(__dirname + '/dest'));
+// app.use(express.static(__dirname + '/dest'));
+// app.use('/static', express.static('dest'))
+
+app.use('/static', express.static(path.join(__dirname, 'dest')))
 app.use(express.static('dest/css'));
 app.use(express.static('dest/js'));
 app.use(express.static('src/img'));
