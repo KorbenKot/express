@@ -2,8 +2,7 @@
 @import "_root.css";
 
 /* LAYOUT & GRIDS */
-@import "../views/blocks/grid/grid.css";
-@import "../views/blocks/flex/flex.css";
+@import "grid.css";
 
 /* COMPLEX BLOCKS */
 @import "../views/blocks/bar/bar.css";
@@ -103,9 +102,9 @@ a {
     margin: * auto;
     padding: * 15px;
 
-    @media (--mobile) {
+/*    @media (--mobile) {
         padding: * 20px;
-    }
+    }*/
 }
 
 .text_accent {

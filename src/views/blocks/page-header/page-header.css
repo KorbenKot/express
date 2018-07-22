@@ -3,18 +3,43 @@
     background-image: linear-gradient(to right, rgb(12, 15, 41), rgb(43, 58, 99) 50%, rgb(12, 15, 41));
     color: $white;
     overflow: hidden;
+    padding-top: 23px;
 
     @media (--mobile) {
         margin-top: 60px;
     }
 
-    &__widget-row {
-        margin-top: -50px;
+    &__col-progress {
+
+        @media (--mobile) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
     }
 
-    &__widget-col {
+    &__row-widget {
+
+        @media (--tablet) {
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            padding-top: 10px;
+        }
+    }
+
+    &__col-info {
+
+        @media (--tablet) {
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__col-widget {
         padding-right: 28px;
         padding-left: 0;
+
+        @media (--desktop) {
+            padding-right: 10px;
+        }
     }
     
     & .page-title {
@@ -24,6 +49,12 @@
         line-height: normal;
         margin-top: 8px;
         margin-bottom: 10px;
+
+        @media (--mobile) {
+            font-size: 28px;
+            line-height: normal;
+            margin-top: 0;
+        }
     }
 
     & .order-number {
@@ -32,6 +63,9 @@
     }
 
     & .subject {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         color: rgba(255, 255, 255, 0.3);
         font-size: 13px;
         line-height: normal;
@@ -40,13 +74,54 @@
 
     & .btn {
         padding: 5px 20px;
+
+        @media (--desktop) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 
     & .progress-bar {
         margin-bottom: 20px;
 
+        @media (--mobile) {
+            min-width: auto;
+            width: 100%;
+            margin-bottom: 0;
+        }
+
         &__container {
             background-color: rgba(0, 0, 0, 0.15);
+        }
+
+        &__caption_on-fill {
+            font-size: 11px;
+        }
+    }
+
+    & .mobile-prev {
+        display: none;
+        border: solid rgba(255, 255, 255, 0.5);
+        border-width: 0 3px 3px 0;
+        padding: 3px;
+        transform: rotate(135deg);
+        transition: $transition-delay;
+        margin-right: 15px;
+
+
+        @media (--mobile) {
+            display: block;
+
+            &:active {
+                border: solid rgba(255, 255, 255, 0.9);
+            }
+        }
+    }
+
+    & .navigation {
+
+        @media (--desktop) {
+            margin-top: 10px;
         }
     }
 
@@ -56,30 +131,28 @@
             color: rgba(255, 255, 255, 0.5);
             font-size: 14px;
             font-weight: normal;
+
+            @media (--tablet) {
+                font-size: 16px;
+            }
         }
 
         &__price {
             margin-left: 24px;
             margin-top: 22px;
             margin-bottom: 33px;
+
+            @media (--tablet) {
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
         }
     }
 
-    & .breadcrumbs {
-        margin-bottom: 22px;
-        margin-top: 23px;
-        padding-left: 15px;
-    }
-}
+    & .widget-countdown {
 
-.page-title {
-    font-size: 50px;
-    font-weight: 300;
-    line-height: normal;
-    color: rgba(254, 254, 254, 0.7);
-
-    @media (--mobile) {
-        font-size: 28px;
-        line-height: normal;
+        @media (--mobile) {
+            display: none;
+        }
     }
 }

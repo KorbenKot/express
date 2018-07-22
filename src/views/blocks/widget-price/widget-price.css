@@ -52,6 +52,7 @@
     }
 
     &__header {
+        position: relative;
         margin-top: 0;
         margin-bottom: 5px;
         font-size: 16px;
@@ -62,9 +63,20 @@
         @media (--tablet) {
             margin: 0;
         }
+
+        &_countoun {
+
+            &:before {
+                content: "";
+                display: inline-block;
+                size: 10px;
+                background: #000;
+            }
+        }
     }
 
     &__price-old {
+        padding-left: 10px;
         font-size: 14px;
         text-decoration: line-through;
 

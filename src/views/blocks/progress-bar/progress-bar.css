@@ -10,9 +10,12 @@
         overflow: hidden;
         border-radius: 15px;
         background-color: rgb(59, 59, 59, 0.15);
+        padding: 0 10px;
     }
 
     &__fill {
+        margin-left: -10px;
+        padding: 0 10px;
         border-radius: 15px;
         height: inherit;
         text-align: center;
@@ -49,14 +52,12 @@
 
         &_dark {
             background-color: rgba(0, 0, 0, 0.45);
-            width: 50%;
+            min-width: 50%;
         }
     }
 
     &__icon {
         size: 16px;
-        margin-left: 10px;
-        margin-right: 10px;
         background-repeat: no-repeat;
         background-size: 16px;
         background-position: center;
@@ -89,7 +90,7 @@
     }
 
     &__caption {
-        padding-right: 10px;
+        white-space: nowrap;
         font-size: 14px;
 
         @media (--mobile) {
@@ -99,6 +100,7 @@
 
         &_on-fill {
             color: rgba(255, 255, 255, 0.7);
+            padding-left: 10px;
         }
 
         &_on-empty {
