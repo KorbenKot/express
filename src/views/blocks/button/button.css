@@ -1,13 +1,16 @@
 .btn {
+    display: inline-block;
     background-color: transparent;
     position: relative;
     border: none;
     cursor: pointer;
     min-height: 50px;
+    line-height: 40px;
     font-family: $opensans;
     font-weight: 600;
     font-size: 16px;
-    padding: 5px 32px;
+    padding: 5px 10px;
+    text-align: center;
     transition: $transition-delay;
 
     @media (--desktop) {
@@ -19,6 +22,7 @@
         font-size: 14px;
         padding: 10px 18px;
         min-height: 40px;
+        line-height: 30px;
     }
 
     &:focus {
@@ -80,29 +84,47 @@
 
     &_round {
         size: 50px;
-        min-width: 50px;
         padding: 5px;
         background-size: 15px;
         border-radius: 50%;
 
+        &_small {
+            size: 15px;
+            min-height: 15px;
+
+            @media (--mobile) {
+                size: 15px;
+            }
+        }
+
         @media (--mobile) {
             size: 40px;
-            min-width: 40px;
         }
     }
 
     &_close, &_plus {
 
-        &:before, &:after {
-            content: '';
+        &:before,
+        &:after {
+            content: "";
             position: absolute;
             top: 50%;
             left: 35%;
             height: 2px;
             width: 15px;
+            transition: all $transition-delay;
 
             @media (--mobile) {
                 left: 32%;
+            }
+        }
+
+        &_primary:before,
+        &_primary:after {
+            background-color: rgba(0, 0, 0, 0.38);
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.58);
             }
         }
     }
@@ -217,5 +239,10 @@
         &:before, &:after {
             background-color: $black;
         }
+    }
+
+    &_disabled {
+        background-color: rgb(219, 220, 224);
+        color: rgba(0, 0, 0, 0.54);
     }
 }

@@ -4,14 +4,9 @@
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
-    margin-top: 50px;
 
-    @media (--tablet) {
-        margin-top: 30px;
-    }
-
-    &__stage-1, &__stage-2 {
+    &__stage-1,
+    &__stage-2 {
 
         @media (--desktop-large) {
             padding-left: 20px;
@@ -177,7 +172,8 @@
         }
     }
 
-    &__job, &__job-type {
+    &__job,
+    &__job-type {
         font-size: 14px;
         font-weight: bold;
         line-height: 24px;
@@ -203,7 +199,7 @@
         }
     }
 
-    & .btn&__btn {
+    &__btn {
         padding: 10px 32px;
         font-size: 22px;
         max-width: 360px;
@@ -290,11 +286,5 @@
         &__price-old {
             color: rgba(0, 0, 0, 0.38);
         }
-    }
-
-    /* BTN */
-
-    & .btn {
-
     }
 }

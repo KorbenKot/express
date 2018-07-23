@@ -108,12 +108,13 @@ if (jQuery) (function ($) {
             hOffset = trigger ? parseInt(trigger.attr('data-horizontal-offset') || 0, 10) : null,
             vOffset = trigger ? parseInt(trigger.attr('data-vertical-offset') || 0, 10) : null;
 
-        if (jqDropdown.length === 0 || !trigger) return;
+        if (jqDropdown.length === 0 || !trigger) {
+            return;
+        }
 
         // Position the jq-dropdown relative-to-parent...
 
         if (jqDropdown.hasClass('dropdown-relative')) {
-            console.log('...Position the jq-dropdown relative-to-parent...');
             jqDropdown.css({
                 left: jqDropdown.hasClass('dropdown-anchor-right') ?
                     trigger.position().left - (jqDropdown.outerWidth(true) - trigger.outerWidth(true)) - parseInt(trigger.css('margin-right'), 10) + hOffset :

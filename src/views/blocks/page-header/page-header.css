@@ -1,13 +1,8 @@
 .page-header {
-    margin-top: 90px;
     background-image: linear-gradient(to right, rgb(12, 15, 41), rgb(43, 58, 99) 50%, rgb(12, 15, 41));
     color: $white;
     overflow: hidden;
     padding-top: 23px;
-
-    @media (--mobile) {
-        margin-top: 60px;
-    }
 
     &__col-progress {
 

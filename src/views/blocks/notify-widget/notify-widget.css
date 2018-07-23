@@ -2,8 +2,6 @@
     position: relative;
     padding-left: 27px;
     padding-right: 27px;
-    margin-top: 30px;
-    margin-bottom: 30px;
     width: 100%;
     min-height: 96px;
     border-radius: 10px;
@@ -11,18 +9,6 @@
     border: solid 1px #dcdcdc;
     overflow: hidden;
     transition: $transition-delay;
-
-    @media (--tablet) {
-        padding: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    @media (--mobile) {
-        padding: 12px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
 
     &:hover {
         box-shadow: $gray-shadow;
@@ -33,7 +19,8 @@
         background-image: svg-load("../../../svg/wave.svg", fill=$white);
     }
 
-    &__content-col, &__content-row {
+    &__content-col,
+    &__content-row {
         background-color: inherit;
 
         @media (--mobile) {
@@ -61,7 +48,7 @@
     }
 
     &__head {
-        margin-top: 0;
+        margin-top: 10px;
         margin-bottom: 10px;
 
         @media (--tablet) {
@@ -118,6 +105,8 @@
     }
 
     &__content {
+        margin-top: 5px;
+        margin-bottom: 5px;
         font-size: 15px;
         line-height: 1.8;
         color: rgba(0, 0, 0, 0.54);
@@ -131,8 +120,15 @@
     &__btn {
         width: auto;
         margin-right: 10px;
-        flex: 0 1 auto;
+        flex-grow: 1;
         white-space: nowrap;
+
+        @media (--mobile) {
+            margin-bottom: 10px;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 6px 20px;
+        }
     }
 
     &__btn-close {
@@ -140,7 +136,7 @@
         @media (--mobile) {
             position: absolute;
             right: 7px;
-            top: 17px;
+            top: 10px;
         }
     }
 
@@ -212,8 +208,6 @@
             }
         }
 
-
-
         &__controls-block_img {
             height: 100%;
         }
@@ -229,13 +223,8 @@
             background: url('./new-order.png') no-repeat center;
             background-size: cover;
 
-            @media (--tablet) {
-                margin-right: -20px;
-            }
-
             @media (--mobile) {
-                margin-left: -12px;
-                margin-right: -12px;
+                margin-left: -27px;
             }
         }
     }

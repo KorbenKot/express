@@ -363,7 +363,7 @@
     }
 }
 
-@media (-xl) {
+@media (--xl) {
     .col-xl {
         flex-basis: 0;
         flex-grow: 1;

@@ -1,8 +1,18 @@
 @import "_media.css";
 @import "_root.css";
 
-/* LAYOUT & GRIDS */
+/* GRID */
 @import "grid.css";
+
+/* SMALL ROOTS BLOCKS */
+@import "../views/blocks/breadcrumbs/breadcrumbs.css";
+@import "../views/blocks/button/button.css";
+@import "../views/blocks/dropdown-btn/dropdown-btn.css";
+@import "../views/blocks/logo/logo.css";
+@import "../views/blocks/link/link.css";
+@import "../views/blocks/navigation/navigation.css";
+@import "../views/blocks/progress-bar/progress-bar.css";
+@import "../views/blocks/spinner/spinner.css";
 
 /* COMPLEX BLOCKS */
 @import "../views/blocks/bar/bar.css";
@@ -13,13 +23,8 @@
 @import "../views/blocks/dropdown-menu/dropdown-menu.css";
 @import "../views/blocks/sidebar/sidebar.css";
 
-/* COMPONENTS */
-@import "../views/blocks/button/button.css";
-@import "../views/blocks/dropdown-btn/dropdown-btn.css";
-@import "../views/blocks/progress-bar/progress-bar.css";
-@import "../views/blocks/breadcrumbs/breadcrumbs.css";
-@import "../views/blocks/navigation/navigation.css";
 @import "../views/blocks/news/news.css";
+@import "../views/blocks/file-card/file-card.css";
 
 /* WIDGETS */
 @import "../views/blocks/notify-widget/notify-widget.css";
@@ -28,11 +33,9 @@
 @import "../views/blocks/widget-filelist/widget-filelist.css";
 @import "../views/blocks/widget-countdown/widget-countdown.css";
 
-/* SMALL ELEMENTS */
-@import "../views/blocks/logo/logo.css";
-@import "../views/blocks/link/link.css";
-@import "../views/blocks/spinner/spinner.css";
-
+/* LAYOUT */
+@import "../views/blocks/index/index.css";
+@import "../views/blocks/my-orders/my-orders.css";
 
 @font-face {
     font-family: "Gotham Pro Regular";
@@ -95,6 +98,17 @@ a {
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
+    padding-top: 88px;
+    padding-bottom: 50px;
+
+    @media (--mobile) {
+        padding-top: 68px;
+    }
+}
+
+.main-wrapper {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .wrapper {
