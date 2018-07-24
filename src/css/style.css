@@ -130,10 +130,6 @@ a {
     max-width: 1269px;
     margin: * auto;
     padding: * 15px;
-
-/*    @media (--mobile) {
-        padding: * 20px;
-    }*/
 }
 
 .text_accent {

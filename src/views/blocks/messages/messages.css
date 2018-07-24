@@ -25,6 +25,7 @@
     &__avatar {
         size: 90px;
         background-color: #76ffd4;
+        background-image: url("./manager-ava.png");
 
         @media (--tablet) {
             margin-top: 15px;
@@ -60,7 +61,7 @@
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
 
     @media (--mobile) {
-        padding-right: 15px;
+        padding-left: 23px;
     }
 
     &__input-container {
@@ -120,9 +121,115 @@
     }
 }
 
+.msg_in {
+    float: left;
+
+    & .msg {
+
+        &__avatar {
+            margin-right: 30px;
+            background-image: url("./manager-ava.png");
+
+            @media (--mobile) {
+                margin-right: 10px;
+                size: 42px;
+                flex-basis: 42px;
+            }
+        }
+
+        &__text-field {
+            background-color: rgb(241, 241, 241);
+            color: rgba(0, 0, 0, 0.87);
+        }
+
+        &__time {
+            margin-right: 27px;
+
+            @media (--mobile) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.msg_out {
+    float: right;
+    flex-direction: row-reverse;
+    
+    @media (--mobile) {
+        flex-direction: column;
+    }
+
+    & .msg {
+
+        &__info, &__info-data {
+            flex-direction: row-reverse;
+
+            @media (--mobile) {
+                align-items: flex-start;
+            }
+        }
+
+        &__info {
+
+            @media (--mobile) {
+                left: 0;
+                top: 68px;
+            }
+        }
+
+        &__name {
+
+            @media (--mobile) {
+                position: absolute;
+                right: 0;
+                top: -13px;
+            }
+        }
+
+        &__info-data {
+
+            @media (--tablet) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        &__time {
+            margin-left: 20px;
+            margin-right: 0;
+
+            @media (--mobile) {
+                margin: 0;
+            }
+        }
+
+        &__text-field {
+            background-color: $primary;
+            color: rgba(255, 255, 255, 0.87);
+
+            @media (--mobile) {
+                margin-top: 15px;
+            }
+        }
+
+        &__avatar {
+            margin-top: 40px;
+            margin-left: 30px;
+            background-image: url("./user-ava.jpg");
+
+            @media (--mobile) {
+                position: relative;
+                margin-left: 0;
+                left: calc(100% - 60px);
+            }
+        }
+    }
+}
+
 .msg {
     position: relative;
     width: 80%;
+    transition: all $transition-delay;
 
     @media (--tablet) {
         width: 90%;
@@ -130,62 +237,6 @@
 
     @media (--mobile) {
         width: 100%;
-    }
-
-    &_in {
-        float: left;
-    }
-
-    &_out {
-        float: right;
-        flex-direction: row-reverse;
-    }
-
-    &_out &__info, &_out &__info-data {
-        flex-direction: row-reverse;
-        align-items: flex-start;
-    }
-
-    &_out &__info-data {
-
-        @media (--tablet) {
-            flex-direction: column-reverse;
-        }
-    }
-
-    &_in &__text-field {
-        background-color: rgb(241, 241, 241);
-        color: rgba(0, 0, 0, 0.87);
-    }
-
-    &_in &__time {
-        margin-right: 27px;
-
-        @media (--mobile) {
-            margin-right: 0;
-        }
-    }
-
-    &_out &__time {
-        margin-bottom: 5px;
-        margin-left: 20px;
-    }
-
-    &_out &__text-field {
-        background-color: $primary;
-        color: rgba(255, 255, 255, 0.87);
-    }
-
-    &_in &__avatar {
-        margin-right: 30px;
-
-        @media (--mobile) {
-            margin-right: 10px;
-        }
-    }
-
-    &_out &__avatar {
-        margin-left: 30px;
     }
 
     &__info {
@@ -218,11 +269,6 @@
         flex-grow: 1;
         flex-shrink: 0;
         margin-top: 10px;
-
-        @media (--mobile) {
-            size: 42px;
-            flex-basis: 42px;
-        }
     }
 
     &__name {
@@ -263,7 +309,7 @@
         margin-left: 18px;
 
         @media (--mobile) {
-            font-size: 12px;
+            font-size: 11px;
             margin: 0;
             margin-top: -5px;
         }
@@ -271,21 +317,25 @@
         &:before {
             content: "";
             position: absolute;
-            top: 5px;
+            top: 8px;
             left: 0;
             display: inline-block;
             size: 15px;
             background-size: 15px;
             background-repeat: no-repeat;
-            background-color: $primary;
-            background-image: svg-load("./check-svg.svg", fill=rgba(0, 0, 0, 0.38));
+            background-image: svg-load("../../../svg/check.svg", fill=rgba(0, 0, 0, 0.28));
+
+            @media (--mobile) {
+                top: 6px;
+            }
         }
 
         &_new {
             color: $primary;
 
             &:before {
-                background-image: svg-load("./iconmonstr-speech-bubble.svg", fill=$primary);
+                top: 6px;
+                background-image: svg-load("../../../svg/iconmonstr-speech-bubble.svg", fill=$primary);
             }
         }
     }

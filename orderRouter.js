@@ -1,6 +1,15 @@
-const
-        express = require('express'),
-        router = express.Router();
+var express = require('express');
+var app = express();
+var router = express.Router();
+var path = require('path');
+
+router.use(function timeLog(req, res, next) {
+    console.log('Time: ', Date.now());
+    next();
+});
+
+// router.use('/static', express.static(path.join(__dirname, 'dest')));
+
 
 router.get('/', (req, res) => res.render('messages',
     {

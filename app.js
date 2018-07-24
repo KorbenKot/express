@@ -6,6 +6,14 @@ const
         cabinetRouter = require('./cabinetRouter'),
         orderRouter = require('./orderRouter');
 
+// STATIC
+app.use('/static', express.static(path.join(__dirname, 'dest')));
+app.use(express.static(path.join(__dirname, 'dest/css')));
+app.use(express.static(path.join(__dirname, 'dest/js')));
+app.use(express.static(path.join(__dirname, 'src/img')));
+app.use(express.static(path.join(__dirname, 'src/svg/img')));
+app.use(express.static(path.join(__dirname, 'src/fonts')));
+
 // HBS VIEW ENGINE
 app.engine('handlebars', expressHbs({
     defaultLayout: 'main',
@@ -25,24 +33,28 @@ app.set('views', './dest');
 app.set('view engine', 'html');
 */
 
-// STATIC
-app.use('/static', express.static(path.join(__dirname, 'dest')));
-app.use(express.static('dest/css'));
-app.use(express.static('dest/js'));
-app.use(express.static('src/img'));
-app.use(express.static('src/svg/img'));
-app.use(express.static('src/fonts'));
-
 // ROUTES
 app.use('/', cabinetRouter);
 app.use('/order123', orderRouter);
 
 
 // 404
-app.use(function (req, res, next) {
-    let error = new Error('Page not found');
+/*app.use(function (req, res, next) {
+    var error = new Error('Page not found');
     error.status = 404;
     next(error);
+});*/
+
+// Handle 404
+app.use(function(req, res) {
+    res.status(400);
+    res.render('404.handlebars', {title: '404: File Not Found'});
+});
+
+// Handle 500
+app.use(function(error, req, res, next) {
+    res.status(500);
+    res.render('500.handlebars',{title:'500: Internal Server Error', error: error});
 });
 
 // PORT
