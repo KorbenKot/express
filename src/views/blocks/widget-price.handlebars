@@ -14,16 +14,53 @@ types:
     currency:     text
     addClass:     some additional class
 
-    oldPrice:
-        show
-        hide
+    {{> widget-price type="" heading="" heading-part="" summ="" oldSumm="" currency="Р" addClass=""}}
 
-        {{> widget-price type="" heading="" heading-part="" summ="" oldSumm="" oldPriceVisible="show" currency="Р" addClass=""}}
 --}}
 
 <div class="widget-price {{ addClass }}">
     <h2 class="widget-price__header">{{ heading }} {{heading-part}}
-        <span class="widget-price__price-old widget-price__price-old_{{oldPrice}}">{{ oldSumm }} {{ currency }}</span>
+        <span class="widget-price__price-old">{{ oldSumm }} {{ currency }}</span>
     </h2>
     <h2 class="widget-price__price widget-price__price_{{ type }}">{{ summ }} {{ currency }}</h2>
 </div>
+
+{{!-- ЦЕНА
+
+<div class="widget-price">
+    <h2 class="widget-price__header">Цена
+        <span class="widget-price__price-old">20 000 Р</span>
+    </h2>
+    <h2 class="widget-price__price widget-price__price_{{ type }}">19 332 Р</h2>
+</div>
+
+--}}
+
+{{!-- ПРЕДОПЛАТА
+
+<div class="widget-price">
+    <h2 class="widget-price__header">Предоплата 25%</h2>
+    <h2 class="widget-price__price widget-price__price_prepay">803 Р</h2>
+</div>
+
+--}}
+
+{{!-- ДОПЛАТИТЬ
+
+<div class="widget-price">
+    <h2 class="widget-price__header">Доплатить</h2>
+    <h2 class="widget-price__price widget-price__price_need-to-pay">803 Р</h2>
+</div>
+
+--}}
+
+{{!-- СРОК ГОТОВНОСТИ
+
+<div class="widget-price">
+    <h2 class="widget-price__header">Срок готовности</h2>
+    <h2 class="widget-price__price widget-price__price_ready-date">15.05.2017</h2>
+</div>
+
+--}}
+
+

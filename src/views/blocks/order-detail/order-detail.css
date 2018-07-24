@@ -75,13 +75,6 @@
         @media (--mobile) {
             line-height: normal;
         }
-
-        & + & {
-
-            @media (--mobile) {
-                padding-left: 20px;
-            }
-        }
     }
 
     &__header {
@@ -152,9 +145,9 @@
         font-weight: 600;
         color: rgb(186, 186, 186);
 
-        @media (--mobile) {
-            padding-top: 15px;
-            padding-bottom: 15px;
+        @media (--tablet) {
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
     }
 
@@ -195,11 +188,12 @@
         color: rgba(0, 0, 0, 0.54);
 
         @media (--mobile) {
-            margin-top: 15px;
+            margin-top: 10px;
         }
     }
 
     &__btn {
+        display: flex;
         padding: 10px 32px;
         font-size: 22px;
         max-width: 360px;
@@ -207,6 +201,7 @@
         width: 100%;
 
         @media  (--tablet) {
+            padding: 5px 32px;
             font-size: 18px;
             margin: auto;
         }
@@ -245,6 +240,7 @@
     }
 
     &__btn-icon {
+        min-width: 30px;
         margin-right: 15px;
 
         @media  (--desktop) {

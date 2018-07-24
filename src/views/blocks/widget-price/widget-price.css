@@ -16,7 +16,7 @@
             content: "";
             display: block;
             size: 9px;
-            left: -23px;
+            left: -16px;
             top: center;
             border-radius: 50%;
             background-color: $primary;
@@ -76,17 +76,10 @@
     }
 
     &__price-old {
+        display: inline-block;
         padding-left: 10px;
         font-size: 14px;
         text-decoration: line-through;
-
-        &_show {
-            display: inline-block;
-        }
-
-        &_hide {
-            display: none;
-        }
     }
 }
 

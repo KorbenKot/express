@@ -1,13 +1,16 @@
-.widget-filelist {
-    text-align:left;
-    display: inline-block;
-    max-height: 90px;
-    list-style: none;
-    overflow-y: auto;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    padding-right: 10px;
+.widget-files {
+
+    &__list {
+        text-align:left;
+        display: inline-block;
+        max-height: 90px;
+        list-style: none;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        padding-right: 10px;
+    }
 
     &__item {
         line-height: 27px;
