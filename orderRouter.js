@@ -2,13 +2,13 @@ const
         express = require('express'),
         router = express.Router();
 
-
 router.get('/', (req, res) => res.render('messages',
     {
         worktype: 'Дипломная работа',
         subject: 'Корпоративные скандалы как индикатор...',
-        orderNumber: '1 010 601'
-
+        orderNumber: '1 010 601',
+        user: 'Ишь Какое Длинное Имя Выбрал',
+        userType: 'президент',
     }
 ));
 

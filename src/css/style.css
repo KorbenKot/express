@@ -5,6 +5,7 @@
 @import "grid.css";
 
 /* SMALL ROOTS BLOCKS */
+@import "../views/blocks/avatar/avatar.css";
 @import "../views/blocks/breadcrumbs/breadcrumbs.css";
 @import "../views/blocks/button/button.css";
 @import "../views/blocks/dropdown-btn/dropdown-btn.css";
@@ -36,6 +37,8 @@
 /* LAYOUT */
 @import "../views/blocks/index/index.css";
 @import "../views/blocks/my-orders/my-orders.css";
+@import "../views/blocks/messages/messages.css";
+
 
 @font-face {
     font-family: "Gotham Pro Regular";
@@ -87,6 +90,12 @@ a {
     }
 }
 
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
 .page-wrap {
     display: flex;
     flex-direction: row;
@@ -109,6 +118,12 @@ a {
 .main-wrapper {
     margin-top: 40px;
     margin-bottom: 40px;
+    width: 100%;
+
+    @media (--tablet) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }
 
 .wrapper {

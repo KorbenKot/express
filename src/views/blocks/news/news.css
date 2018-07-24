@@ -36,6 +36,8 @@
     }
 
     &__card {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
         position: relative;
         padding-top: 23px;
         padding-left: 30px;
@@ -43,6 +45,12 @@
         padding-bottom: 23px;
         font-size: 14px;
         color: $white;
+
+        @media (--tablet) {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+        }
 
         @media (--mobile) {
             border-radius: 10px;

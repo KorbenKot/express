@@ -7,12 +7,12 @@
     z-index: 100;
     width: 100%;
 
-    @media (--desktop)  {
-        padding: * 22px;
+    @media (--desktop) {
+        padding: *22px;
     }
 
-    @media (--tablet)  {
-        padding: * 12px;
+    @media (--tablet) {
+        padding: *12px;
     }
 
     &__logo {
@@ -80,14 +80,6 @@
     }
 }
 
-.avatar {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: url("./user-ava.jpg");
-    border-radius: 50%;
-}
-
 .user-panel {
     position: relative;
     font-size: 18px;
@@ -99,14 +91,15 @@
     }
 
     &__avatar {
-         size: 48px;
-         margin: 10px 17px;
+        background-image: url("./user-ava.jpg");
+        size: 48px;
+        margin: 10px 17px;
 
         @media (--mobile) {
             margin-top: 0;
             margin-bottom: 0;
         }
-     }
+    }
 
     &__dropdown-btn {
         margin: 10px;
@@ -144,7 +137,7 @@
     display: none;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px 30px;
     position: absolute;
     right: 20px;
@@ -243,6 +236,7 @@
 .user-msg-menu__header {
     color: #000;
 }
+
 .order {
     color: #00bcd4;
 }

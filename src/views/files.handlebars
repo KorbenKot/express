@@ -6,7 +6,17 @@
             <div class="row no-gutters">
                 <div class="col-12 col-md-5">
                     <div class="row">
-                        {{> breadcrumbs }}
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a href="/" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Главная</span></a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="/my-orders" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Мои заказы</span></a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="" class="breadcrumbs__ancor breadcrumbs__ancor_current"><span class="breadcrumbs__text">Заказ №100101010</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-12 col-md-5 fx fx-justify-between fx-align-center page-header__col-progress">
@@ -26,9 +36,7 @@
                     <div class="row fx-nowrap page-header__row-widget">
                         <div class="col-auto page-header__col-widget">
                             <div class="widget-price">
-                                <h2 class="widget-price__header">Цена
-                                    <span class="widget-price__price-old">20 000 Р</span>
-                                </h2>
+                                <h2 class="widget-price__header">Цена<span class="widget-price__price-old">20 000 Р</span></h2>
                                 <h2 class="widget-price__price widget-price__price_{{ type }}">19 332 Р</h2>
                             </div>
                             {{> button type="std" theme="transp" border="bright" caption="Оплатить полностью" addClass="page-header__btn" }}
@@ -55,11 +63,19 @@
                 </div>
             </div>
         </div>
-        {{> navigation }}
+        <div class="navigation container">
+            <nav class="row">
+                <ul class="col-12 col-md-4 fx fx-justify-between navigation__list">
+                    <li><a href="/order123" class="navigation__link">Сообщения</a></li>
+                    <li><a href="/order123/details" class="navigation__link">Подробности</a></li>
+                    <li><a href="/order123/files" class="navigation__link navigation__link_active">Файлы</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </div>
 
-<div class="wrapper">
+<div class="wrapper main-wrapper">
 
     <div class="row fx fx-justify-center fx-align-stretch">
         <div class="col">
