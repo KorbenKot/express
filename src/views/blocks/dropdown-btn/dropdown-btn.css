@@ -7,6 +7,10 @@
     background-repeat: no-repeat;
     transition: $transition-delay;
 
+    @media (--mobile) {
+        size: 20px;
+    }
+
     &_msg {
         background-image: svg-load("../../../svg/iconmonstr-speech-bubble.svg", fill=rgba(0, 0, 0, 0.28));
 
@@ -31,6 +35,12 @@
         right: -19px;
         top: -17px;
 
+        @media (--mobile) {
+            size: 15px;
+            right: -9px;
+            top: -15px;
+        }
+
         &_primary {
             background-color: $primary;
         }
@@ -47,6 +57,10 @@
         left: center;
         color: $white;
         font-weight: bold;
+
+        @media (--mobile) {
+            font-size: 11px;
+        }
     }
 }
 

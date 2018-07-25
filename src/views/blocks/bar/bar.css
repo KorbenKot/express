@@ -8,11 +8,11 @@
     width: 100%;
 
     @media (--desktop) {
-        padding: *22px;
+        padding: * 25px;
     }
 
     @media (--tablet) {
-        padding: *12px;
+        padding: * 20px;
     }
 
     &__logo {
@@ -96,14 +96,18 @@
         margin: 10px 17px;
 
         @media (--mobile) {
-            margin-top: 0;
-            margin-bottom: 0;
+            margin: 0;
+            size: 40px;
         }
     }
 
     &__dropdown-btn {
         margin: 10px;
         margin-right: 19px;
+
+        @media (--mobile) {
+            margin-right: 15px;
+        }
     }
 
     &__controls {
@@ -116,6 +120,10 @@
 
     &__arrow-down {
         margin-right: 5px;
+
+        @media (--mobile) {
+            display: none;
+        }
     }
 
     &__hello {

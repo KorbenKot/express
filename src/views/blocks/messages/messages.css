@@ -1,17 +1,20 @@
 [data-template="messages"] {
 
     & .user-block {
-        margin-bottom: 38px;
+        margin-bottom: 30px;
     }
-
 }
 
 .user-block {
 
     @media (--tablet) {
         text-align: center;
-        border-radius: 10px;
+    }
+
+    @media (--mobile) {
+        text-align: center;
         border: solid 1px #dcdcdc;
+        border-radius: 10px;
     }
 
     &__name-col {
@@ -24,12 +27,17 @@
 
     &__avatar {
         size: 90px;
+        flex-basis: 90px;
         background-color: #76ffd4;
         background-image: url("./manager-ava.png");
 
         @media (--tablet) {
             margin-top: 15px;
             margin-bottom: 15px;
+        }
+
+        @media (--mobile) {
+            margin-bottom: 8px;
         }
     }
 
@@ -47,7 +55,16 @@
 
         @media (--tablet) {
             font-size: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+    }
+
+    & .contacts-bar {
+        margin-top: 10px;
+
+        @media (--tablet) {
+            margin-top: 0;
+            margin-bottom: 15px;
         }
     }
 }
@@ -62,6 +79,7 @@
 
     @media (--mobile) {
         padding-left: 23px;
+        padding-bottom: 80px;
     }
 
     &__input-container {
@@ -82,6 +100,13 @@
         border-radius: 10px;
         background-color: $white;
         border: solid 1px #dcdcdc;
+
+        @media (--mobile) {
+            padding: 13px 20px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
     }
 
     &__send-btn {
@@ -92,6 +117,11 @@
         padding: 5px 50px;
         bottom: 30px;
         right: 30px;
+
+        @media (--mobile) {
+            left: center;
+            bottom: -50px;
+        }
     }
 
     &__text {
@@ -264,9 +294,8 @@
 
     &__avatar {
         size: 60px;
-        background-color: #76ffd4;
         flex-basis: 60px;
-        flex-grow: 1;
+        flex-grow: 0;
         flex-shrink: 0;
         margin-top: 10px;
     }
@@ -333,9 +362,20 @@
         &_new {
             color: $primary;
 
+            @media (--mobile) {
+                position: absolute;
+                right: 0;
+                top: 30px;
+            }
+
             &:before {
                 top: 6px;
                 background-image: svg-load("../../../svg/iconmonstr-speech-bubble.svg", fill=$primary);
+
+                @media (--mobile) {
+                    size: 10px;
+                    background-size: 10px;
+                }
             }
         }
     }

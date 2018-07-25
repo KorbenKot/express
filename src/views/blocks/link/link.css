@@ -39,6 +39,15 @@
     &:hover &__icon_speech-2 {
         background-image: svg-load("../../../svg/iconmonstr-speech-bubble-2.svg", fill=$primary-hov);
     }
+    &:hover &__icon_skype {
+        background-image: svg-load("../../../svg/iconmonstr-skype.svg", fill=$white);
+    }
+    &:hover &__icon_telegram {
+        background-image: svg-load("../../../svg/iconmonstr-telegram.svg", fill=$white);
+    }
+    &:hover &__icon_phone {
+        background-image: svg-load("../../../svg/iconmonstr-phone.svg", fill=$white);
+    }
 
     &_active {
         color: $primary;
@@ -49,6 +58,7 @@
         left: 0;
         top: center;
         size: 24px;
+        min-size: 24px;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -84,6 +94,18 @@
 
         &_speech {
             background-image: svg-load("../../../svg/iconmonstr-speech-bubble-2.svg", fill=rgba(0, 0, 0, 0.5));
+        }
+
+        &_skype {
+            background-image: svg-load("../../../svg/iconmonstr-skype.svg", fill=$primary);
+        }
+
+        &_telegram {
+            background-image: svg-load("../../../svg/iconmonstr-telegram.svg", fill=$secondary);
+        }
+
+        &_phone {
+            background-image: svg-load("../../../svg/iconmonstr-phone.svg", fill=#7bc1a1);
         }
     }
 }
