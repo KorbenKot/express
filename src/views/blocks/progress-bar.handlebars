@@ -1,0 +1,28 @@
+{{!--
+
+ ***** Text on non-fill of bar ******
+
+    2 main templates:
+        1) if text on empty
+        2) if text on fill
+
+    template variables:
+        progress-bar__caption (text inside)
+        progress-bar__icon_* (* - type of process. number)
+        progress-bar__fill_* (* - type of process. text)
+    ready css
+        type: prepay, wait, specify, wip, primary, ready
+        icon: card, clock, info, pencil, check
+        caption: *something*
+
+        {{> progress-bar type="dark" icon="dot" caption="Ожидаем предоплату" }}
+--}}
+
+<div class="progress-bar">
+    <div class="fx fx-align-center progress-bar__container">
+        <div class="fx fx-center progress-bar__fill progress-bar__fill_{{type}}">
+            <div class="progress-bar__icon progress-bar__icon_{{icon}}"></div>
+        </div>
+        <div class="progress-bar__caption progress-bar__caption_on-empty">{{caption}}</div>
+    </div>
+</div>

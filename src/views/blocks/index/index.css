@@ -1,0 +1,7 @@
+[data-template="index"] {
+
+    & .notify-widget {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}

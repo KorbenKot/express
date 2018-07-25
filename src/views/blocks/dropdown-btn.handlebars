@@ -1,0 +1,21 @@
+{{!--
+
+types (icons):
+    msg (speech-bubble)
+    notify (bell)
+    user-menu (arrow down)
+
+colors (label color):
+    primary
+    secondary
+
+count (number in color label):
+    int
+
+--}}
+
+<div class="dropdown-btn dropdown-btn_{{ type }} js-dropdown-btn {{addClass}}" data-jq-dropdown="{{{addAttr}}}">
+    <div class="dropdown-btn__label dropdown-btn__label_{{ color }}">
+        <span class="dropdown-btn__label-number">{{ count }}</span>
+    </div>
+</div>

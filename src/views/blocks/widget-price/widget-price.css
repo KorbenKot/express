@@ -1,0 +1,86 @@
+.widget-price {
+
+    &__price {
+        display: inline-block;
+        position: relative;
+        font-size: 34.5px;
+        font-weight: normal;
+        line-height: 24px;
+        white-space: nowrap;
+
+        @media (--tablet) {
+            font-size: 22px;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            size: 9px;
+            left: -16px;
+            top: center;
+            border-radius: 50%;
+            background-color: $primary;
+
+            @media (--tablet) {
+                left: -16px;
+            }
+        }
+
+        &_prepay {
+            color: $secondary;
+
+            &:before {
+                background-color: $secondary;
+            }
+        }
+
+        &_ready-date {
+            color: rgba(0, 0, 0, 0.54);
+
+            &:before {
+                background-color: rgba(0, 0, 0, 0.54);
+            }
+        }
+
+        &_need-to-pay {
+            color: $primary;
+
+            &:before {
+                background-color: $primary;
+            }
+        }
+    }
+
+    &__header {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 27px;
+        color: rgba(0, 0, 0, 0.87);
+        white-space: nowrap;
+
+        @media (--tablet) {
+            margin: 0;
+        }
+
+        &_countoun {
+
+            &:before {
+                content: "";
+                display: inline-block;
+                size: 10px;
+                background: #000;
+            }
+        }
+    }
+
+    &__price-old {
+        display: inline-block;
+        padding-left: 10px;
+        font-size: 14px;
+        text-decoration: line-through;
+    }
+}
+
+

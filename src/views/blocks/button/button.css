@@ -1,0 +1,248 @@
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    min-height: 50px;
+    line-height: 40px;
+    font-family: $opensans;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 5px 23px;
+    text-align: center;
+    transition: $transition-delay;
+
+    @media (--desktop) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @media (--mobile) {
+        font-size: 14px;
+        padding: 5px 18px;
+        min-height: 40px;
+        line-height: 30px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &_border {
+        border-width: 1px;
+        border-style: solid;
+
+        &_white {
+            border-color: $white;
+        }
+
+        &_primary {
+            border-color: $primary;
+        }
+
+        &_secondary {
+            border-color: $secondary;
+        }
+    }
+
+    &_triangle-down {
+        padding: 0;
+        size: 0;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: center;
+            left:center;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top-width: 6px;
+            border-top-style: solid;
+        }
+
+        &._primary:after {
+            border-top-color: $primary;
+        }
+
+        &._secondary:after {
+            border-top-color: $secondary;
+        }
+
+        &._error:after {
+            border-top-color: $error;
+        }
+    }
+
+    &_std {
+        border-radius: 25px;
+    }
+
+    &_rect {
+        border-radius: 10px;
+    }
+
+    &_round {
+        size: 50px;
+        padding: 5px;
+        background-size: 15px;
+        border-radius: 50%;
+
+        &_small {
+            size: 15px;
+            min-height: 15px;
+
+            @media (--mobile) {
+                size: 15px;
+            }
+        }
+
+        @media (--mobile) {
+            size: 40px;
+        }
+    }
+
+    &_close, &_plus {
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            height: 2px;
+            width: 15px;
+            transition: all $transition-delay;
+
+            @media (--mobile) {
+                left: 32%;
+            }
+        }
+
+        &_primary:before,
+        &_primary:after {
+            background-color: rgba(0, 0, 0, 0.38);
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.58);
+            }
+        }
+    }
+
+    &_close {
+
+        &:before {
+            transform: rotateZ(-45deg);
+        }
+
+        &:after {
+            transform: rotateZ(45deg);
+        }
+    }
+
+    &_plus {
+
+        &:after {
+            transform: rotateZ(90deg);
+        }
+    }
+
+    &_primary {
+        background-color: $primary;
+        color: $white;
+        box-shadow: $gray-shadow;
+
+        &:hover {
+            background-color: $primary-hov;
+            box-shadow: $gray-shadow-hov;
+        }
+
+        &:active {
+            background-color: $primary-act;
+        }
+
+        &:before, &:after {
+            background-color: $white;
+        }
+    }
+
+    &_error {
+        background-color: $error;
+        color: $white;
+        box-shadow: $gray-shadow;
+
+        &:hover {
+            background-color: $error-hov;
+            box-shadow: $gray-shadow-hov;
+        }
+
+        &:active {
+            background-color: $error-act;
+        }
+
+        &:before, &:after {
+            background-color: $white;
+        }
+    }
+
+    &_secondary {
+        background-color: $secondary;
+        color: $white;
+        box-shadow: $gray-shadow;
+
+        &:hover {
+            background-color: $secondary-hov;
+            box-shadow: $gray-shadow-hov;
+        }
+
+        &:active {
+            background-color: $secondary-act;
+        }
+
+        &:before, &:after {
+            background-color: $white;
+        }
+    }
+
+    &_bright {
+        background-color: $white;
+        border: solid 1px #dcdcdc;
+        color: rgba(0, 0, 0, 0.7);
+
+        &:hover {
+            box-shadow: $gray-shadow;
+        }
+
+        &:active {
+            box-shadow: $gray-shadow-hov;
+        }
+
+        &:before, &:after {
+            background-color: $black;
+        }
+    }
+
+    &_transp {
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.5);
+
+        &:hover {
+            box-shadow: $gray-shadow;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        &:active {
+            box-shadow: $gray-shadow-hov;
+        }
+
+        &:before, &:after {
+            background-color: $black;
+        }
+    }
+
+    &_disabled {
+        background-color: rgb(219, 220, 224);
+        color: rgba(0, 0, 0, 0.54);
+    }
+}

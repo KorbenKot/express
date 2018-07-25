@@ -1,0 +1,62 @@
+{{> head }}
+
+<div class="page-header">
+    <div class="wrapper">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-12 col-md-5">
+                    <div class="row">
+                        {{> breadcrumbs }}
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 fx fx-justify-between fx-align-center page-header__col-progress">
+                    <a href="#" class="mobile-prev"></a>
+                    {{> progress-bar_filled type="dark" icon="dot" caption="Ожидаем предоплату" }}
+                </div>
+            </div>
+            <div class="row fx-justify-between">
+                <div class="col-12 col-lg-5 page-header__col-info">
+                    <div class="row fx-col">
+                        <div class="order-number">Заказ #{{ orderNumber }}</div>
+                        <div class="page-title">{{ worktype }}</div>
+                        <div class="subject">По предмету: &laquo;{{ subject }}&raquo;</div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-auto col-lg-5">
+                    <div class="row fx-nowrap page-header__row-widget">
+                        <div class="col-auto page-header__col-widget">
+                            <div class="widget-price">
+                                <div class="widget-price">     <h2 class="widget-price__header">Цена         <span class="widget-price__price-old">20 000 Р</span>     </h2>     <h2 class="widget-price__price widget-price__price_{{ type }}">19 332 Р</h2> </div>
+                            </div>
+                            {{> button type="std" theme="transp" border="bright" caption="Оплатить полностью" addClass="page-header__btn" }}
+                        </div>
+                        <div class="col-auto page-header__col-widget">
+                            <div class="widget-price">
+                                {{> widget-price type="prepay" heading="Предоплата" heading-part="25%" summ="803" oldPrice="hide" currency="Р" }}
+                            </div>
+                            {{> button type="std" theme="secondary" caption="Внести предоплату" addClass="page-header__btn" }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-2">
+                    <div class="fx fx-col fx-align-center widget-countdown">
+                        <h3 class="widget-price__header">Работа будет готова</h3>
+                        <div class="widget-countdown__calendar">
+                            <div class="fx widget-countdown__date">
+                                <span class="widget-countdown__day">13</span>
+                                <span class="widget-countdown__mounth">&nbsp;дек</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{> navigation }}
+    </div>
+</div>
+
+<div class="wrapper">
+    <h1>Отзывы</h1>
+</div>
+
+{{> footer }}

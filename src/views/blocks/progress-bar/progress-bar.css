@@ -1,0 +1,109 @@
+.progress-bar {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    min-width: 290px;
+
+    &__container {
+        width: 100%;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 15px;
+        background-color: rgb(59, 59, 59, 0.15);
+    }
+
+    &__fill {
+        padding: 0 10px;
+        border-radius: 15px;
+        height: inherit;
+        text-align: center;
+
+        &_prepay {
+            background-color: rgb(228, 121, 121);
+            width: 30%;
+        }
+
+        &_wait {
+            background-color: rgb(69, 93, 121);
+            width: 20%;
+        }
+
+        &_specify {
+            background-color: $error;
+            width: 25%;
+        }
+
+        &_wip {
+            background-color: rgb(222, 188, 106);
+            width: 70%;
+        }
+
+        &_primary {
+            background-color: $primary;
+            width: 80%;
+        }
+
+        &_ready {
+            background-color: $success;
+            width: 100%;
+        }
+
+        &_dark {
+            background-color: rgba(0, 0, 0, 0.45);
+            min-width: 50%;
+        }
+    }
+
+    &__icon {
+        size: 16px;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: center;
+        
+        &_card {
+            background-image: svg-load("../../../svg/iconmonstr-credit-card.svg", fill=$white);
+        }
+
+        &_clock {
+            background-image: svg-load("../../../svg/iconmonstr-time.svg", fill=$white);
+        }
+
+        &_info {
+            background-image: svg-load("../../../svg/iconmonstr-info.svg", fill=$white);
+        }
+
+        &_pencil {
+            background-image: svg-load("../../../svg/iconmonstr-pencil.svg", fill=$white);
+        }
+
+        &_check {
+            background-image: svg-load("../../../svg/check.svg", fill=$white);
+        }
+
+        &_dot {
+            background-color: $secondary;
+            size: 7px;
+            border-radius: 50%;
+        }
+    }
+
+    &__caption {
+        white-space: nowrap;
+        font-size: 14px;
+
+        @media (--mobile) {
+            font-size: 13px;
+            line-height: normal;
+        }
+
+        &_on-fill {
+            color: rgba(255, 255, 255, 0.7);
+            padding-left: 10px;
+        }
+
+        &_on-empty {
+            color: rgba(0, 0, 0, 0.54);
+            margin: auto;
+        }
+    }
+}

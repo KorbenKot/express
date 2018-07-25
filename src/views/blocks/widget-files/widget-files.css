@@ -1,0 +1,38 @@
+.widget-files {
+
+    &__list {
+        text-align:left;
+        display: inline-block;
+        max-height: 90px;
+        list-style: none;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        padding-right: 10px;
+    }
+
+    &__item {
+        line-height: 27px;
+    }
+
+    &__name {
+        position: relative;
+        color: $primary;
+        padding-left: 30px;
+        font-size: 13px;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: center;
+            left: 0;
+            size: 17px;
+            background-size: 17px;
+            background-image: svg-load("../../../svg/iconmonstr-download.svg", fill=$primary);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

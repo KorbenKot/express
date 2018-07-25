@@ -1,0 +1,28 @@
+{{> head }}
+
+<div data-template="index">
+    <div class="wrapper main-wrapper">
+
+        {{> notify-widget }}
+
+        {{> news }}
+
+        <h2 style="text-align: center;">Buttons template</h2>
+        {{> button theme="primary" type="std" caption="Primary btn" }}
+        {{> button theme="error" type="std" caption="Error btn" }}
+        {{> button theme="secondary" type="std" caption="Secondary btn" }}
+        {{> button theme="bright" type="std" caption="Bright btn" }}
+
+        {{> button theme="primary" type="rect" caption="Primary btn" }}
+        {{> button theme="error" type="rect" caption="Error btn" }}
+        {{> button theme="secondary" type="rect" caption="Secondary btn" }}
+        {{> button theme="bright" type="rect" caption="Bright btn" }}
+
+        {{> button theme="bright" type="round" icon="close"}}
+        {{> button theme="primary" type="round" icon="close" }}
+        {{> button theme="secondary" type="round" icon="plus" }}
+
+    </div>
+</div>
+{{> footer }}
+

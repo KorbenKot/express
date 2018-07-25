@@ -1,0 +1,123 @@
+.news {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: $white;
+
+    @media (--mobile) {
+        border-radius: 0;
+    }
+
+    &__main-title {
+        font-size: 28px;
+        line-height: 28px;
+        font-weight: normal;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    &__read-all {
+        display: inline-block;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    &__card {
+        background-color: $primary;
+    }
+
+    &__card:nth-child(2) {
+        background-color: rgb(63, 63, 63);
+    }
+
+    &__card:nth-child(3) {
+        background-color: $secondary;
+    }
+
+    &__card {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        position: relative;
+        padding-top: 23px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 23px;
+        font-size: 14px;
+        color: $white;
+
+        @media (--tablet) {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+        }
+
+        @media (--mobile) {
+            border-radius: 10px;
+            padding: 10px 20px 17px;
+        }
+    }
+
+    &__card:hover &__go {
+        opacity: 1;
+    }
+
+    &__data {
+        font-size: 14px;
+    }
+
+    &__head {
+        color: rgba(255, 255, 255, 0.5);
+        padding-bottom: 6px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+        @media (--mobile) {
+            padding-bottom: 12px;
+        }
+    }
+
+    &__text {
+        font-weight: bold;
+        line-height: 22px;
+        margin-top: 25px;
+        padding-bottom: 38px;
+
+        @media (--mobile) {
+            margin-top: 15px;
+            padding-bottom: 0;
+        }
+    }
+
+    &__go {
+        color: rgba(255, 255, 255, 0.5);
+        transition: opacity $transition-delay;
+        opacity: 0;
+    }
+
+    & .fx.news__go {
+
+        @media (--mobile) {
+            display: none;
+        }
+    }
+
+    &__go-point {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 50%;
+        size: 30px;
+
+        &:before {
+            position: absolute;
+            display: inline-block;
+            content: "";
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 20px;
+            size: 20px;
+            left: -5px;
+            top: center;
+            background-image: svg-load("../../../svg/iconmonstr-arrow-right.svg", fill=$white);
+        }
+    }
+}

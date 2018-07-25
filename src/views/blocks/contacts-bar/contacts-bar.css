@@ -1,0 +1,53 @@
+.contacts-bar {
+    display: flex;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #dcdcdc;
+    width: 100%;
+
+    @media (--mobile) {
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        height: auto;
+        border: none;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+        border-radius: 25px;
+        height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        transition: all $transition-delay;
+
+        @media (--mobile) {
+            max-width: 100%;
+            flex-basis: 100%;
+            font-size: 14px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        &:hover {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+
+    &__icon {
+        position: static;
+        transform: none;
+        margin-right: 10px;
+
+        @media (--mobile) {
+            margin-right: 5px;
+            size: 20px;
+            min-size: 20px;
+        }
+    }
+}

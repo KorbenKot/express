@@ -1,0 +1,10 @@
+.avatar {
+    size: 30px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    flex-basis: 30px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}

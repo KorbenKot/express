@@ -1,0 +1,264 @@
+.bar {
+    position: fixed;
+    max-height: 90px;
+    background-color: $white;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+    padding: 10px 32px;
+    z-index: 100;
+    width: 100%;
+
+    @media (--desktop) {
+        padding: * 25px;
+    }
+
+    @media (--tablet) {
+        padding: * 20px;
+    }
+
+    &__logo {
+        margin-right: 10px;
+    }
+
+    &__social-link-bar {
+        margin-top: 10px;
+
+        @media (--desktop) {
+            display: none;
+        }
+    }
+
+    &__social-link {
+        line-height: 30px;
+        vertical-align: middle;
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        @media (--desktop-large) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    &__order-btn {
+        width: auto;
+
+        @media (--desktop) {
+            display: none;
+        }
+    }
+
+    &__phone-number {
+        color: $black;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+
+        @media (--desktop) {
+            display: none;
+        }
+    }
+}
+
+.arrow-down {
+    size: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top-width: 6px;
+    border-top-style: solid;
+
+    &_primary {
+        border-top-color: $primary;
+    }
+
+    &_secondary {
+        border-top-color: $secondary;
+    }
+
+    &_error {
+        border-top-color: $error;
+    }
+}
+
+.user-panel {
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+
+    &__avatar-container {
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__avatar {
+        background-image: url("./user-ava.jpg");
+        size: 48px;
+        margin: 10px 17px;
+
+        @media (--mobile) {
+            margin: 0;
+            size: 40px;
+        }
+    }
+
+    &__dropdown-btn {
+        margin: 10px;
+        margin-right: 19px;
+
+        @media (--mobile) {
+            margin-right: 15px;
+        }
+    }
+
+    &__controls {
+        margin-right: 80px;
+
+        @media (--desktop) {
+            margin-right: 10px;
+        }
+    }
+
+    &__arrow-down {
+        margin-right: 5px;
+
+        @media (--mobile) {
+            display: none;
+        }
+    }
+
+    &__hello {
+        color: rgba(119, 119, 119, 0.87);
+
+        @media (--mobile) {
+            display: none;
+        }
+    }
+
+    &__username {
+        color: rgba(0, 0, 0, 0.87);
+    }
+}
+
+/********** user-menu ************/
+
+.user-menu {
+    display: none;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    position: absolute;
+    right: 20px;
+    top: calc(100% + 5px);
+    z-index: 3;
+}
+
+.user-menu__tris {
+    position: absolute;
+    border-color: transparent;
+    border-bottom-color: #fff;
+    border-style: dashed dashed solid;
+    border-width: 0 15px 15px;
+    right: 30px;
+    top: -15px;
+    height: 0;
+    width: 0;
+}
+
+.user-menu__icon {
+    color: #bdbdbd;
+    margin-right: 25px;
+}
+
+.pill {
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.pill_small {
+    font-size: 13px;
+    line-height: 18px;
+    height: 18px;
+    width: 18px;
+}
+
+.pill_mid {
+    font-size: 12px;
+    line-height: 25px;
+    height: 25px;
+    width: 25px;
+}
+
+.pill__text {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.pill__notifications {
+    position: absolute;
+    right: -5px;
+    top: -7px;
+}
+
+.pill_primary {
+    background-color: #00bcd4;
+}
+
+.pill_warn {
+    background-color: #e05f5f;
+}
+
+.user-menu__pill {
+    background-color: #bdbdbd;
+    margin-left: 10px;
+}
+
+.user-menu__link.mat-button {
+    color: #000;
+    font-size: 16px;
+    padding: 5px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.user-menu__balance {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+.isVisible {
+    display: block;
+}
+
+/* alerts */
+
+.user-msg-menu {
+    color: #000;
+}
+
+.user-msg-menu__header {
+    color: #000;
+}
+
+.order {
+    color: #00bcd4;
+}
+
+.user-msg-menu__subheader {
+    font-size: 14px;
+}
+
+.user-msg-menu__text {
+    font-size: 12px;
+}
+
+.user-msg-menu__icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
