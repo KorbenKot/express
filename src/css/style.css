@@ -20,11 +20,11 @@
 @import "../views/blocks/bar/bar.css";
 @import "../views/blocks/page-header/page-header.css";
 @import "../views/blocks/order-detail/order-detail.css";
+@import "../views/blocks/form/form.css";
 
 /* MENUS */
 @import "../views/blocks/dropdown-menu/dropdown-menu.css";
 @import "../views/blocks/sidebar/sidebar.css";
-
 @import "../views/blocks/news/news.css";
 @import "../views/blocks/file-card/file-card.css";
 

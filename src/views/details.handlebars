@@ -75,10 +75,59 @@
     </div>
 </div>
 
-<div class="wrapper">
-    <div class="details">
-        <h1>ORDER123 DETAILS</h1>
-    </div>
+<div class="wrapper main-wrapper" data-template="messages">
+
+    <form name="order-Detail" class="form" >
+        <h2 class="form__title">
+            Подробное описание вашей работы
+        </h2>
+
+        <div class="form__row">
+
+            <div class="form__col form__col_fluid">
+                <div class="text-field text-field_light">
+                    <label class="text-field__label" for="worktype">Тип работы</label>
+                </div>
+            </div>
+
+            <div class="form__col form__col_fluid">
+                <div class="text-field text-field_light">
+                    <label class="text-field__label" for="worktype">Предмет</label>
+                </div>
+            </div>
+
+            <div class="form__col">
+                <div class="text-field">
+                    <input id="order.pagesAll" name="pagesAll" type="number" class="text-field__input" max="9999" min="1" maxlength="4" placeholder="10"/>
+                    <label class="text-field__label" for="order.pagesAll">Объём</label>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="form__row">
+            <div class="form__col form__col_fluid">
+                <div class="text-field text-field_light">
+                    <label class="text-field__label" for="subjectText">Предмет *</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__row">
+            <div class="form__col form__col_fluid">
+                <div class="text-field">
+                <textarea id="order.description" name="description" type="text" class="text-field__input" placeholder="Название темы"></textarea>
+                    <label class="text-field__label" for="order.description">Тема работы <span ng-if="add_theme">*</span></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__action">
+            <button type="submit" class="btn btn_std btn_secondary">Сохранить</button>
+        </div>
+    </form>
+
 </div>
 
 {{> footer }}
