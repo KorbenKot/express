@@ -5,12 +5,16 @@
     background-repeat: no-repeat;
 
     @media (--mobile) {
-        size: 200px 40px;
-        background-size: 200px 40px;
+        size: 37px 32px;
+        background-size: 37px 32px;
     }
 
     &_com {
         background-image: svg-load("../../../svg/logo.svg", fill=#464646);
+        
+        @media (--mobile) {
+            background-image: url("./logo-mobile.png");
+        }
     }
 
     &_com&_invert {

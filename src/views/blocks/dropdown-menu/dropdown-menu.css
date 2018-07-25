@@ -6,17 +6,6 @@
     background-color: $white;
     z-index: 200;
 
-    &-open {
-    }
-
-    &-relative {
-        position: relative;
-    }
-
-    &-close {
-        display: none;
-    }
-
     &:after, &:before {
         position: absolute;
         content: " ";

@@ -8,8 +8,7 @@
                     <div class="row">
                         <ul class="breadcrumbs">
                             <li class="breadcrumbs__item">
-                                <a href="/" class="breadcrumbs__ancor"><span
-                                    class="breadcrumbs__text">Главная</span></a>
+                                <a href="/" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Главная</span></a>
                             </li>
                             <li class="breadcrumbs__item">
                                 <a href="/my-orders" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Мои заказы</span></a>
@@ -80,30 +79,38 @@
 
 <div class="wrapper main-wrapper" data-template="messages">
 
-    <div class="fx fx-col fx-lg-row fx-align-center user-block">
-        <div class="avatar user-block__avatar"></div>
-        <div class="fx fx-col user-block__name-col">
-            <div class="user-block__type">{{ userType }}</div>
-            <div class="user-block__name">{{ user }}</div>
-        </div>
+    <div class="fx fx-col fx-align-center fx-lg-align-start user-block">
 
-        <div class="widget-contacts">
-            <div class="progress-bar">
-                <div class="fx fx-align-center progress-bar__container">
-                    <div class="fx fx-center progress-bar__fill progress-bar__fill_primary">
-                        <div class="progress-bar__icon progress-bar__icon_skype"></div>
-                        <span class="progress-bar__icon progress-bar__icon_skype">aasdasd.user.zaochnik.com</span>
-                    </div>
-                    <div class="progress-bar__caption progress-bar__caption_on-empty">aasdasd.user.zaochnik.com</div>
-                    <div class="progress-bar__caption progress-bar__caption_on-empty">8-800-333-85-44-170</div>
-                </div>
+        <div class="fx fx-col fx-lg-row fx-align-center">
+            <div class="avatar user-block__avatar"></div>
+            <div class="fx fx-col user-block__name-col">
+                <div class="user-block__type">{{ userType }}</div>
+                <div class="user-block__name">{{ user }}</div>
             </div>
         </div>
 
+
+        <div class="contacts-bar">
+            <a href="skype:aasdasd.user.zaochnik.com?call" class="link contacts-bar__link">
+                <span class="link__icon link__icon_skype contacts-bar__icon"></span>
+                aasdasd.user.zaochnik.com
+            </a>
+
+            <a href="tg://resolve?domain=<aasdasd.user.zaochnik.com>" class="link contacts-bar__link">
+                <span class="link__icon link__icon_telegram contacts-bar__icon"></span>
+                aasdasd.user.zaochnik.com
+            </a>
+
+            <a href="tel:88003338544170" class="link contacts-bar__link">
+                <span class="link__icon link__icon_phone contacts-bar__icon"></span>
+                8-800-333-85-44-170
+            </a>
+        </div>
     </div>
 
-    <div class="chat clearfix">
 
+
+    <div class="chat clearfix">
         {{!-- MANAGER MESSAGE --}}
         <div class="fx fx-col fx-md-row msg msg_in chat__msg">
             <div class="avatar msg__avatar"></div>
@@ -134,7 +141,7 @@
             <div class="avatar msg__avatar"></div>
             <div class="fx fx-col">
                 <div class="fx fx-justify-between msg__info">
-                    <div class="fx fx-col fx-sm-row msg__info-data">
+                    <div class="fx fx-col fx-md-row msg__info-data">
                         <span class="msg__name">{{user}}</span>
                         {{!-- <span class="msg__status msg__status_new">Новое сообщение</span>   SHOW IF UNREED --}}
                     </div>
@@ -155,7 +162,7 @@
             <div class="avatar msg__avatar"></div>
             <div class="fx fx-col">
                 <div class="fx fx-justify-between msg__info">
-                    <div class="fx fx-col fx-sm-row msg__info-data">
+                    <div class="fx fx-col fx-md-row msg__info-data">
                         <span class="msg__name">{{user}}</span>
                         {{!-- <span class="msg__status msg__status_new">Новое сообщение</span>   SHOW IF UNREED --}}
                     </div>
@@ -177,7 +184,7 @@
             <div class="avatar msg__avatar"></div>
             <div class="fx fx-col">
                 <div class="fx fx-justify-between msg__info">
-                    <div class="fx fx-col fx-sm-row msg__info-data">
+                    <div class="fx fx-col fx-md-row msg__info-data">
                         <span class="msg__name">Манагер супэр манагер</span>
                          <span class="msg__status msg__status_new">Новое сообщение</span> {{!-- HIDE IF UNREED --}}
                     </div>
