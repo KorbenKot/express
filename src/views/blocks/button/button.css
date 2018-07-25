@@ -244,5 +244,7 @@
     &_disabled {
         background-color: rgb(219, 220, 224);
         color: rgba(0, 0, 0, 0.54);
+        cursor: auto;
+        pointer-events: none;
     }
 }

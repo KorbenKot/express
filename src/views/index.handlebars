@@ -8,21 +8,66 @@
         {{> news }}
 
         <h2 style="text-align: center;">Buttons template</h2>
-        {{> button theme="primary" type="std" caption="Primary btn" }}
-        {{> button theme="error" type="std" caption="Error btn" }}
-        {{> button theme="secondary" type="std" caption="Secondary btn" }}
-        {{> button theme="bright" type="std" caption="Bright btn" }}
 
-        {{> button theme="primary" type="rect" caption="Primary btn" }}
-        {{> button theme="error" type="rect" caption="Error btn" }}
-        {{> button theme="secondary" type="rect" caption="Secondary btn" }}
-        {{> button theme="bright" type="rect" caption="Bright btn" }}
+        {{!-- 20% - 100% round --}}
 
-        {{> button theme="bright" type="round" icon="close"}}
-        {{> button theme="primary" type="round" icon="close" }}
-        {{> button theme="secondary" type="round" icon="plus" }}
+        <label class="slide-toggle slide-toggle_primary slide-toggle_round">
+            <span class="slide-toggle__text-back slide-toggle__text-back_left">20%</span>
+            <span class="slide-toggle__text-back slide-toggle__text-back_right">100%</span>
+            <input class="slide-toggle__input" type="checkbox">
+            <span class="slide-toggle__slider">
+                <span class="slide-toggle__bullet"></span>
+            </span>
+        </label>
 
-    </div>
+        {{!-- EMPTY small --}}
+
+        <label class="slide-toggle slide-toggle_primary slide-toggle_small">
+            <input class="slide-toggle__input" type="checkbox" checked>
+            <span class="slide-toggle__slider">
+                <span class="slide-toggle__bullet"></span>
+            </span>
+        </label>
+
+        {{!-- 20% - 100% rect --}}
+
+        <label class="slide-toggle slide-toggle_primary slide-toggle_rect">
+            <span class="slide-toggle__text-back slide-toggle__text-back_left">20%</span>
+            <span class="slide-toggle__text-back slide-toggle__text-back_right">100%</span>
+            <input class="slide-toggle__input" type="checkbox">
+            <span class="slide-toggle__slider">
+                <span class="slide-toggle__bullet"></span>
+            </span>
+        </label>
+
+
+        {{!-- EMPTY small --}}
+
+        <label class="slide-toggle slide-toggle_primary slide-toggle_small slide-toggle_disabled">
+            <input class="slide-toggle__input" type="checkbox">
+            <span class="slide-toggle__slider">
+                <span class="slide-toggle__bullet"></span>
+            </span>
+        </label>
+
+
+        <div class="row">
+            <div class="col">{{> button theme="primary" type="std" caption="Primary btn" }}</div>
+            <div class="col">{{> button theme="error" type="std" caption="Error btn" }}</div>
+            <div class="col">{{> button theme="secondary" type="std" caption="Secondary btn" }}</div>
+            <div class="col">{{> button theme="bright" type="std" caption="Bright btn" }}</div>
+            <div class="col">{{> button theme="primary" type="rect" caption="Primary btn" }}</div>
+        </div>
+        <div class="row">
+            <div class="col">{{> button theme="error" type="rect" caption="Error btn" }}</div>
+            <div class="col">{{> button theme="secondary" type="rect" caption="Secondary btn" }}</div>
+            <div class="col">{{> button theme="bright" type="rect" caption="Bright btn" }}</div>
+            <div class="col">{{> button theme="bright" type="round" icon="close"}}</div>
+            <div class="col">{{> button theme="secondary" type="round" icon="plus" }}</div>
+            <div class="col"><button class="btn btn_std btn_disabled ">disabled btn</button></div>
+        </div>
+
+        </div>
 </div>
 {{> footer }}
 

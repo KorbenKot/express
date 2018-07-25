@@ -15,6 +15,7 @@
 @import "../views/blocks/progress-bar/progress-bar.css";
 @import "../views/blocks/contacts-bar/contacts-bar.css";
 @import "../views/blocks/spinner/spinner.css";
+@import "../views/blocks/slide-toggle/slide-toggle.css";
 
 /* COMPLEX BLOCKS */
 @import "../views/blocks/bar/bar.css";

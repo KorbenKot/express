@@ -93,11 +93,13 @@
     &__avatar {
         background-image: url("./user-ava.jpg");
         size: 48px;
+        flex-basis: 48px;
         margin: 10px 17px;
 
         @media (--mobile) {
             margin: 0;
             size: 40px;
+            flex-basis: 40px;
         }
     }
 
