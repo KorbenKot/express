@@ -1,6 +1,20 @@
 .widget-price {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 320px;
 
-    &__price {
+    &_promo {
+
+        @media (--mobile) {
+            flex-direction: row;
+            margin-bottom: 22px;
+            margin-top: 5px;
+        }
+    }
+
+    &__value {
         display: inline-block;
         position: relative;
         font-size: 34.5px;
@@ -49,9 +63,29 @@
                 background-color: $primary;
             }
         }
+
+        &_promocode, &_discount {
+            font-size: 50px;
+            font-weight: 300;
+            line-height: normal;
+            color: rgba(254, 254, 254, 0.7);
+
+            &:before {
+                display: none;
+            }
+        }
+
+        &_sup {
+            display: inline-block;
+            font-size: 18px;
+            margin-top: 12px;
+            vertical-align: top;
+        }
     }
 
     &__header {
+        display: flex;
+        align-items: center;
         position: relative;
         margin-top: 0;
         margin-bottom: 5px;
@@ -64,16 +98,74 @@
             margin: 0;
         }
 
-        &_countoun {
+        @media (--mobile) {
+            flex-direction: row-reverse;
+        }
+    }
 
-            &:before {
-                content: "";
-                display: inline-block;
-                size: 10px;
-                background: #000;
+    &__header-icon {
+        size: 16px;
+        display: inline-block;
+        vertical-align: baseline;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        cursor: pointer;
+
+        &_countoun {
+            background-image: svg-load("../../../svg/iconmonstr-countdown.svg", fill=rgba(255, 255, 255, 0.3));
+            margin-right: 10px;
+        }
+
+        &_help {
+            background-image: svg-load("../../../svg/iconmonstr-help.svg", fill=rgba(255, 255, 255, 0.3));
+            margin-left: 20px;
+
+            @media (--mobile) {
+                margin-left: 0;
+                margin-right: 10px;
+            }
+
+            &:hover {
+                background-image: svg-load("../../../svg/iconmonstr-help.svg", fill=rgba(255, 255, 255, 0.8));
             }
         }
     }
+
+    &__detail {
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(254, 254, 254, 0.3);
+
+        &_share {
+
+            @media (--mobile) {
+                display: none;
+            }
+        }
+    }
+    
+    &__detail-share {
+        cursor: pointer;
+        size: 14px;
+        display: inline-block;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: svg-load("../../../svg/iconmonstr-share.svg", fill=rgba(255, 255, 255, 0.3));
+        margin-left: 40px;
+
+        @media (--mobile) {
+            margin-left: 19px;
+            margin-top: 10px;
+        }
+
+        &:hover {
+            background-image: svg-load("../../../svg/iconmonstr-share.svg", fill=rgba(255, 255, 255, 0.8));
+        }
+    }
+    
 
     &__price-old {
         display: inline-block;

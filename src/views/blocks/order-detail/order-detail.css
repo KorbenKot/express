@@ -240,15 +240,10 @@
     }
 
     &__btn-icon {
-        min-width: 30px;
+        size: 30px;
         margin-right: 15px;
 
-        @media  (--desktop) {
-
-        }
-
         &_info {
-            size: 30px;
             background-size: 30px;
             background: svg-load("../../../svg/iconmonstr-info.svg", fill=$error) no-repeat center;
         }
@@ -256,6 +251,7 @@
 
     &__btn-caption {
         margin: 5px;
+        line-height: normal;
     }
 
     &__small-caption {

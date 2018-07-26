@@ -1,0 +1,74 @@
+[data-template="settings"] {
+
+    & .page-header {
+        padding-bottom: 25px;
+
+        &__main-title {
+            font-size: 50px;
+
+            @media (--mobile) {
+                font-size: 28px;
+            }
+        }
+
+        &__col-info {
+            position: relative;
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+            padding-right: 20px;
+
+            @media (--tablet) {
+                margin: 0;
+            }
+        }
+
+        &__row-widget {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+            border: none;
+        }
+    }
+
+    & .widget-price {
+
+        &_promo {
+            padding-right: 15px;
+
+            @media (--mobile) {
+                margin-right: 0;
+            }
+        }
+
+        &__header {
+            font-size: 16px;
+            margin-bottom: 0;
+
+            @media (--mobile) {
+                margin-bottom: 10px;
+            }
+        }
+
+        &__value {
+
+            &_promocode {
+
+                @media (--mobile) {
+                    font-size: 34px;
+                    margin-left: 30px;
+                    margin-top: -10px;
+                }
+            }
+
+            &_discount {
+
+                @media (--mobile) {
+                    position: absolute;
+                    right: 25px;
+                    top: -20px;
+                }
+            }
+        }
+    }
+}

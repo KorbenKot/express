@@ -1,6 +1,6 @@
 {{> head }}
 
-<div class="page-header">
+<div class="page-header" data-template="messages">
     <div class="wrapper">
         <div class="container">
             <div class="row no-gutters">
@@ -29,7 +29,7 @@
                 <div class="col-12 col-lg-5 page-header__col-info">
                     <div class="row fx-col">
                         <div class="order-number">Заказ #{{ orderNumber }}</div>
-                        <div class="page-title">{{ worktype }}</div>
+                        <div class="page-header__main-title">{{ worktype }}</div>
                         <div class="subject">По предмету: &laquo;{{ subject }}&raquo;</div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
     </div>
 </div>
 
-<div class="wrapper main-wrapper" data-template="messages">
+<div class="wrapper main-wrapper">
 
     <div class="fx fx-col fx-align-center fx-lg-align-start user-block">
 
