@@ -262,8 +262,6 @@
         margin: auto;
     }
 
-    /* widget-price */
-
     & .widget-price {
 
         &__price {
@@ -277,6 +275,20 @@
 
         &__price-old {
             color: rgba(0, 0, 0, 0.38);
+        }
+    }
+
+    & .breadcrumbs {
+
+        @media (--mobile) {
+            display: none;
+        }
+    }
+
+    & .go-back {
+
+        @media (--mobile-small) {
+            display: inline-block;
         }
     }
 }

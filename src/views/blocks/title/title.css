@@ -1,0 +1,19 @@
+.title {
+    margin: 0;
+    font-weight: normal;
+
+    &_primary {
+
+    }
+
+    &_secondary {
+        font-size: 28px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.87);
+
+        @media (--mobile) {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+}

@@ -16,6 +16,11 @@
 @import "../views/blocks/contacts-bar/contacts-bar.css";
 @import "../views/blocks/spinner/spinner.css";
 @import "../views/blocks/slide-toggle/slide-toggle.css";
+@import "../views/blocks/title/title.css";
+@import "../views/blocks/text/text.css";
+
+/* FORM ELEMENTS */
+@import "../views/blocks/checkbox/checkbox.css";
 
 /* COMPLEX BLOCKS */
 @import "../views/blocks/bar/bar.css";
@@ -39,6 +44,7 @@
 @import "../views/blocks/my-orders/my-orders.css";
 @import "../views/blocks/messages/messages.css";
 @import "../views/blocks/settings/settings.css";
+@import "../views/blocks/balance/balance.css";
 
 @font-face {
     font-family: "Gotham Pro Regular";
@@ -127,7 +133,7 @@ a {
 }
 
 .wrapper {
-    max-width: 1269px;
+    max-width: 1310px;
     margin: * auto;
     padding: * 15px;
 }

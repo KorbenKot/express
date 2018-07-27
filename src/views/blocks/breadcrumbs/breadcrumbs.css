@@ -1,13 +1,11 @@
 .breadcrumbs {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    list-style: none;
 
-    @media (--mobile) {
-        display: none;
+    &__list {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
-
 
     &__item {
         margin-right: 13px;

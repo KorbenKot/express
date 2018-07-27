@@ -51,6 +51,10 @@
 
     &_active {
         color: $primary;
+
+        &:hover {
+            color: $primary-hov;
+        }
     }
 
     &__icon {

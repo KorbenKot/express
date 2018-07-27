@@ -1,6 +1,6 @@
 {{> head }}
-<div class="balance" data-template="balance">
-    <div class="page-header" >
+<div class="balance" data-template="pay-help">
+    <div class="page-header">
         <div class="wrapper page-header__wrapper">
             {{> breadcrumbs }}
             <a href="#" class="go-back"></a>
@@ -20,7 +20,7 @@
                         </h2>
                     </div>
                 </div>
-                <a class="btn btn_std btn_bright page-header__btn">Пополнить баланс
+                <a href="/balance" class="btn btn_std btn_bright page-header__btn">Пополнить баланс
                     <span class="btn__icon btn__icon_plus">&times;</span>
                 </a>
             </div>
@@ -30,7 +30,8 @@
                         <li><a href="/balance/pay" class="navigation__link">К оплате</a></li>
                         <li><a href="/balance/pay_history" class="navigation__link">История платежей</a></li>
                         <li><a href="/balance/pay_out" class="navigation__link">Вывод средств</a></li>
-                        <li><a href="/balance/pay_help" class="navigation__link">Помощь по оплате</a></li>
+                        <li><a href="/balance/pay_help" class="navigation__link navigation__link_active">Помощь по
+                            оплате</a></li>
                     </ul>
                 </nav>
             </div>
@@ -38,13 +39,6 @@
     </div>
 
     <div class="wrapper main-wrapper">
-        <h2 class="title title_secondary">Введите сумму пополнения</h2>
-
-                <input id="text" type="text" name="summToAdd">
-                <label for="text">Сумма пополнения</label>
-        
-        <h2 class="title title_secondary">Выберете способ оплаты без комиссии:</h2>
-
         <div class="fx row__btn-container">
             <div class="col__btn-container col__btn-container">
                 <button class="btn btn_rect btn_bright btn-icon">
@@ -53,23 +47,12 @@
                 </button>
             </div>
             <div class="col__btn-container">
-                <button class="btn btn_rect btn_bright btn-icon btn-icon_webmoney">
-                    <span class="btn-icon__image"></span>
-                </button>
-            </div>
-            <div class="col__btn-container">
-                <button class="btn btn_rect btn_bright btn-icon btn-icon_wallet">
-                    <span class="btn-icon__caption">Оплата c баланса</span>
-                    <span class="btn-icon__image"></span>
-                </button>
-            </div>
-        </div>
-
-        <h2 class="title title_secondary">Оплата с комиссией (4,5%):</h2>
-
-        <div class="fx row__btn-container">
-            <div class="col__btn-container">
                 <button class="btn btn_rect btn_bright btn-icon btn-icon_qiwi">
+                    <span class="btn-icon__image"></span>
+                </button>
+            </div>
+            <div class="col__btn-container">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_yandex">
                     <span class="btn-icon__image"></span>
                 </button>
             </div>
@@ -84,7 +67,7 @@
                 </button>
             </div>
             <div class="col__btn-container">
-                <button class="btn btn_rect btn_bright btn-icon btn-icon_yandex">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_webmoney">
                     <span class="btn-icon__image"></span>
                 </button>
             </div>
@@ -95,16 +78,27 @@
             </div>
         </div>
 
-        <div class="checkbox">
-            <div class="checkbox-container">
-                <input id="checkbox" type="checkbox" name="checkbox" class="checkbox__input">
-                <span class="checkbox__checkmark"></span>
-            </div>
-            <label for="checkbox" class="checkbox__label">Я ознакомился с договором и политикой конфиденциальности.</label>
-        </div>
+        <h2 class="title title_secondary">Для оплаты со счета мобильного телефона выставьте счет.</h2>
 
-        <button class="btn btn_std btn_primary balance__btn-main">Оплатить</button>
-        
+        <p class="text">
+            <strong>1-ый способ: </strong>
+            Сделать это можно в Вашем личном кабинете, нажав на вкладку <a href="/my-orders" class="link link_active">«Мои заказы»</a> , далее на номер заказа
+            и выбрав раздел «Оплата». Вы выбираете способ оплаты с помощью мобильного телефона. Нажимаете «оплатить».
+            Далее Вы вводите Ваш номер мобильного телефона и адрес электронной почты. Нажимаете «далее».
+        </p>
+        <p class="text">
+            <strong>2-ой способ: </strong>
+            Сделать это можно в Вашем личном кабинете, нажав на вкладку <a href="/my-orders" class="link link_active">«Мои заказы»</a>, далее на номер заказа
+            и выбрав раздел <a href="/my-orders" class="link link_active">«Оплата»</a>. Вы выбираете способ оплаты с помощью Robokassa, нажимаете «далее». В открывшемся
+            меню выберете способ оплаты с необходимого Вам мобильного оператора. Нажимаете далее. Вводите свой номер
+            телефона и адрес электронной почты.
+        </p>
+        <p class="text">
+            К Вам на телефон поступает смс с инструкцией подтверждения оплаты. Пожалуйста, следуйте четко данной
+            инструкции и Ваша оплата пройдет успешно. (Пожалуйста, подождите прихода sms на указанный Вам номер. Для
+            завершения платежа Вам необходимо ответить на входящее sms согласно инструкциям, полученным в
+            сообщении).
+        </p>
     </div>
 </div>
 {{> footer }}

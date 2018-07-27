@@ -53,6 +53,7 @@
     }
     
     &__main-title {
+        position: relative;
         font-size: 40px;
         font-weight: 300;
         color: rgba(255, 255, 255, 0.87);
@@ -64,6 +65,19 @@
             font-size: 28px;
             line-height: normal;
             margin-top: 0;
+        }
+    }
+
+    &__title-currency {
+        font-weight: 300;
+    }
+
+    &__title-balance {
+        color: rgb(254, 254, 254);
+        font-weight: 600;
+
+        &_accent {
+            color: $secondary;
         }
     }
 
@@ -162,25 +176,6 @@
 
         &__caption_on-fill {
             font-size: 11px;
-        }
-    }
-
-    & .mobile-prev {
-        display: none;
-        border: solid rgba(255, 255, 255, 0.5);
-        border-width: 0 3px 3px 0;
-        padding: 3px;
-        transform: rotate(135deg);
-        transition: $transition-delay;
-        margin-right: 15px;
-
-
-        @media (--mobile) {
-            display: block;
-
-            &:active {
-                border: solid rgba(255, 255, 255, 0.9);
-            }
         }
     }
 

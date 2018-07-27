@@ -6,22 +6,25 @@
             <div class="row no-gutters">
                 <div class="col-12 col-md-5">
                     <div class="row">
-                        <ul class="breadcrumbs">
-                            <li class="breadcrumbs__item">
-                                <a href="/" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Главная</span></a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <a href="/my-orders" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Мои заказы</span></a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <a href="" class="breadcrumbs__ancor breadcrumbs__ancor_current"><span
-                                    class="breadcrumbs__text">Заказ №100101010</span></a>
-                            </li>
-                        </ul>
+                        <div class="breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__ancor"><span
+                                        class="breadcrumbs__text">Главная</span></a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a href="/my-orders" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Мои заказы</span></a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a href="" class="breadcrumbs__ancor breadcrumbs__ancor_current"><span
+                                        class="breadcrumbs__text">Заказ №100101010</span></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-5 fx fx-justify-between fx-align-center page-header__col-progress">
-                    <a href="#" class="mobile-prev"></a>
+                    <a href="#" class="go-back"></a>
                     {{> progress-bar_filled type="dark" icon="dot" caption="Ожидаем предоплату" }}
                 </div>
             </div>
@@ -65,9 +68,9 @@
                 </div>
             </div>
         </div>
-        <div class="navigation container">
-            <nav class="row">
-                <ul class="col-12 col-md-4 fx fx-justify-between navigation__list">
+        <div class="navigation">
+            <nav class="navigation__row">
+                <ul class="navigation__list">
                     <li><a href="/order123" class="navigation__link navigation__link_active">Сообщения</a></li>
                     <li><a href="/order123/details" class="navigation__link">Подробности</a></li>
                     <li><a href="/order123/files" class="navigation__link">Файлы</a></li>

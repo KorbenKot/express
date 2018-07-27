@@ -1,15 +1,18 @@
 .btn {
-    display: inline-block;
-    background-color: transparent;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     min-height: 50px;
-    line-height: 40px;
     font-family: $opensans;
     font-weight: 600;
     font-size: 16px;
-    padding: 5px 23px;
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: normal;
     text-align: center;
     transition: $transition-delay;
 
@@ -22,11 +25,24 @@
         font-size: 14px;
         padding: 5px 18px;
         min-height: 40px;
-        line-height: 30px;
     }
 
     &:focus {
         outline: none;
+    }
+
+    &__icon {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-left: 10px;
+        color: inherit;
+
+        &_times {
+        }
+
+        &_plus {
+            transform: rotateZ(45deg);
+        }
     }
 
     &_border {
@@ -252,26 +268,26 @@
 /* BUTTONS WITH ICONS OR IMAGES */
 
 .btn-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: normal;
     width: 100%;
     height: 100%;
+    will-change: transform;
+
 
     &:hover {
         box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-        transform: scale(1.05);
+        transform: scale(1.025);
     }
 
     &:active {
-        transform: scale(0.95);
+        transform: scale(0.975);
     }
 
     &__caption {
-        padding: 5px 10px;
         display: inline-block;
         text-align: center;
+        font-size: 22px;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.87);
     }
 
     &__icon {
@@ -301,6 +317,23 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+    }
+
+    &_wallet {
+
+        & .btn-icon__image {
+            position: absolute;
+            right: 5px;
+            background-image: url("./wallet.png");
+            height: 70px;
+            width: 80px;
+        }
+
+        & .btn-icon__caption {
+            text-align: left;
+            margin-right: 50px;
+        }
+
     }
 
     &_mts {
@@ -355,8 +388,8 @@
 
         & .btn-icon__image {
             background-image: svg-load("../../../svg/logo-webmoney.svg");
-            height: 80px;
-            width: 160px;
+            height: 90px;
+            width: 230px;
         }
     }
 
@@ -364,7 +397,7 @@
 
         & .btn-icon__image {
             background-image: url("./logo-qiwi.png");
-            height: 80px;
+            height: 90px;
             width: 160px;
         }
     }
@@ -375,6 +408,33 @@
 
         &:hover {
             background-color: $white;
+        }
+    }
+
+    &_euroset {
+
+        & .btn-icon__image {
+            background-image: url("./logo-euroset.png");
+            height: 60px;
+            width: 180px;
+        }
+    }
+
+    &_svyaznoi {
+
+        & .btn-icon__image {
+            background-image: url("./logo-svyaznoi.png");
+            height: 60px;
+            width: 180px;
+        }
+    }
+
+    &_operators {
+
+        & .btn-icon__image {
+            background-image: url("./logo-operators.png");
+            height: 60px;
+            width: 180px;
         }
     }
 }
@@ -404,29 +464,57 @@
 
         &_visa {
             background-image: url("./logo-visa.png");
-            height: 34px;
-            width: 70px;
+            height: 70px;
+            width: 90px;
         }
 
         &_mastercard {
             background-image: url("./logo-mastercard.png");
-            height: 34px;
-            width: 70px;
+            height: 70px;
+            width: 80px;
+        }
+    }
+}
+
+
+.icon {
+    display: inline-block;
+    size: 16px;
+    vertical-align: baseline;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    top: center;
+    right: 0;
+
+    &_help {
+        background-image: svg-load("../../../svg/iconmonstr-help.svg", fill=rgba(255, 255, 255, 0.3));
+        margin-left: 10px;
+
+        @media (--mobile) {
+            margin-left: 0;
+            margin-right: 10px;
         }
 
-        &_operators {
-            background-image: svg-load("../../../svg/iconmonstr-download.svg");
-            height: 34px;
-            width: 70px;
+        &:hover {
+            background-image: svg-load("../../../svg/iconmonstr-help.svg", fill=rgba(255, 255, 255, 0.8));
         }
+    }
+}
 
-        &_euroset {
+.go-back {
+    display: none;
+    border: solid rgba(255, 255, 255, 0.5);
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    transform: rotate(135deg);
+    transition: $transition-delay;
+    margin-right: 15px;
 
-        }
-
-        &_svyaznoy {
-
-        }
+    &:active {
+        border-width: 0 3px 3px 0;
+        border: solid rgba(255, 255, 255, 0.9);
     }
 }
 
