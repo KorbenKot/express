@@ -8,4 +8,12 @@
             display: none;
         }
     }
+
+    & .navigation {
+        width: auto;
+
+        &__list {
+            justify-content: flex-start;
+        }
+    }
 }

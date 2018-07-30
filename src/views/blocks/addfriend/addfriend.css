@@ -1,9 +1,35 @@
 .addfriend {
+    position: relative;
 
     & .main-wrapper {
+        margin-top: 0;
 
         @media (--mobile) {
             margin-top: 20px;
+        }
+    }
+
+    & .navigation {
+        margin-top: 0;
+        width: auto;
+
+        &:after {
+            position: absolute;
+            height: 1px;
+            background-color: rgb(222, 222, 223);
+            content: "";
+            width: 100%;
+            left: 0;
+        }
+
+        &__list {
+            justify-content: flex-start;
+        }
+
+        &__link {
+            padding-left: 0;
+            padding-right: 0;
+            margin-right: 60px;
         }
     }
 
@@ -11,8 +37,55 @@
         margin: 0 auto;
     }
 
+    & .title {
+
+        &_primary {
+            margin-top: 60px;
+        }
+
+    }
+
     & .page-header {
-        padding-bottom: 75px;
+
+        &__wrapper {
+            position: relative;
+            padding-bottom: 75px;
+
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                bottom: 0;
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 2;
+                pointer-events: none;
+
+                @media (--mobile) {
+                    display: none;
+                }
+            }
+
+            &:before {
+                size: 145px 239px;
+                left: 0;
+                background-image: url("./man-2.png");
+
+                @media (--tablet) {
+                    size: 160px 200px;
+                }
+            }
+
+            &:after {
+                size: 228px 302px;
+                right: 0;
+                background-image: url("./man-1.png");
+
+                @media (--tablet) {
+                    size: 160px 200px;
+                }
+            }
+        }
 
         &__main-title {
             margin-top: 10px;
@@ -33,9 +106,5 @@
                 margin-bottom: 20px;
             }
         }
-    }
-
-    & .navigation {
-        margin-top: 10px;
     }
 }

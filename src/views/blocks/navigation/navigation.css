@@ -59,3 +59,37 @@
     }
 }
 
+.navigation_light {
+
+    & .navigation {
+
+        &__link {
+            padding: 10px 17px 15px;
+            display: inline-block;
+            color: rgb(72, 72, 72);
+
+            &:hover,
+            &:active {
+                color: $primary;
+            }
+
+            &:focus {
+                outline: none;
+
+                &::after {
+                    background-color: $primary;
+                }
+            }
+
+            &_active {
+                color: $primary;
+
+                &::after {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+
+}
+
