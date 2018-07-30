@@ -19,26 +19,13 @@
         margin-right: 10px;
     }
 
-    &__social-link-bar {
-        margin-top: 10px;
+    & .social-links {
 
         @media (--desktop) {
             display: none;
         }
     }
 
-    &__social-link {
-        line-height: 30px;
-        vertical-align: middle;
-        display: inline-block;
-        padding-left: 5px;
-        padding-right: 5px;
-
-        @media (--desktop-large) {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-    }
 
     &__order-btn {
         width: auto;

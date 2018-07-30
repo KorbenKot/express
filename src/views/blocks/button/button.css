@@ -10,20 +10,21 @@
     font-family: $opensans;
     font-weight: 600;
     font-size: 16px;
-    padding-left: 25px;
-    padding-right: 25px;
     line-height: normal;
     text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
     transition: $transition-delay;
 
-    @media (--desktop) {
-        padding-left: 15px;
-        padding-right: 15px;
+    @media (--desktop-extra) {
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     @media (--mobile) {
         font-size: 14px;
-        padding: 5px 18px;
+        padding-left: 8px;
+        padding-right: 8px;
         min-height: 40px;
     }
 

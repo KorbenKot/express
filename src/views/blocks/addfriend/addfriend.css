@@ -1,0 +1,41 @@
+.addfriend {
+
+    & .main-wrapper {
+
+        @media (--mobile) {
+            margin-top: 20px;
+        }
+    }
+
+    & .widget-promocode {
+        margin: 0 auto;
+    }
+
+    & .page-header {
+        padding-bottom: 75px;
+
+        &__main-title {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            line-height: 50px;
+            text-align: center;
+            color: rgb(254, 254, 254);
+
+            @media (--mobile) {
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+        }
+
+        &__col-info {
+
+            @media (--mobile) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    & .navigation {
+        margin-top: 10px;
+    }
+}

@@ -21,6 +21,7 @@
         font-weight: normal;
         line-height: 24px;
         white-space: nowrap;
+        padding-left: 20px;
 
         @media (--tablet) {
             font-size: 22px;
@@ -30,14 +31,10 @@
             content: "";
             display: block;
             size: 9px;
-            left: -16px;
+            left: 0;
             top: center;
             border-radius: 50%;
             background-color: $primary;
-
-            @media (--tablet) {
-                left: -16px;
-            }
         }
 
         &_prepay {
@@ -97,10 +94,6 @@
         @media (--tablet) {
             margin: 0;
         }
-
-        @media (--mobile) {
-            flex-direction: row-reverse;
-        }
     }
 
     &__header-icon {
@@ -130,6 +123,10 @@
                 background-image: svg-load("../../../svg/iconmonstr-help.svg", fill=rgba(255, 255, 255, 0.8));
             }
         }
+    }
+
+    &__btn {
+        width: 100%;
     }
 
     &__detail {

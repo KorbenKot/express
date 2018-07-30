@@ -278,6 +278,13 @@
         }
     }
 
+    & .widget-files {
+
+        @media (--desktop-large) {
+            margin-left: 20px;
+        }
+    }
+
     & .breadcrumbs {
 
         @media (--mobile) {

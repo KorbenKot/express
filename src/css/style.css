@@ -27,6 +27,9 @@
 @import "../views/blocks/page-header/page-header.css";
 @import "../views/blocks/order-detail/order-detail.css";
 @import "../views/blocks/file-card/file-card.css";
+@import "../views/blocks/info-card/info-card.css";
+@import "../views/blocks/share/share.css";
+@import "../views/blocks/social-links/social-links.css";
 
 /* MENUS */
 @import "../views/blocks/dropdown-menu/dropdown-menu.css";
@@ -38,6 +41,7 @@
 @import "../views/blocks/widget-price/widget-price.css";
 @import "../views/blocks/widget-files/widget-files.css";
 @import "../views/blocks/widget-countdown/widget-countdown.css";
+@import "../views/blocks/widget-promocode/widget-promocode.css";
 
 /* LAYOUTS */
 @import "../views/blocks/index/index.css";
@@ -45,6 +49,10 @@
 @import "../views/blocks/messages/messages.css";
 @import "../views/blocks/settings/settings.css";
 @import "../views/blocks/balance/balance.css";
+@import "../views/blocks/addfriend/addfriend.css";
+
+/* COMPLEX LAYOUTS */
+@import "../views/blocks/order/order.css";
 
 @font-face {
     font-family: "Gotham Pro Regular";
@@ -138,11 +146,24 @@ a {
     padding: * 15px;
 }
 
-.text_accent {
-    color: $primary;
+/* TEMPONARY - потом переименую-перемещу */
+
+.text {
 
     &_underline {
         text-decoration: underline;
+    }
+
+    &_primary {
+        color: $primary;
+    }
+
+    &_secondary {
+        color: $secondary;
+    }
+
+    &_error {
+        color: $error;
     }
 }
 
@@ -155,6 +176,8 @@ a {
     font-size: 12px;
     transition: all $transition-delay;
 }
+
+
 
 /* SCROLLBAR */
 

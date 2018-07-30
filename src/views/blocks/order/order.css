@@ -1,0 +1,11 @@
+/* Стили для комплекта шаблонов для какого-нибудь заказа */
+
+[data-template="order"] {
+
+    & .breadcrumbs {
+
+        @media (--mobile) {
+            display: none;
+        }
+    }
+}

@@ -143,22 +143,10 @@
     }
 
     & .subject {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         color: rgba(255, 255, 255, 0.3);
         font-size: 13px;
         line-height: normal;
         font-weight: 300;
-    }
-
-    & .btn {
-        padding: 5px 20px;
-
-        @media (--desktop) {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
     }
 
     & .progress-bar {
@@ -202,16 +190,13 @@
 
         &__value {
             margin: 0;
+            margin-left: 16px;
+            margin-top: 10px;
+            margin-bottom: 33px;
 
-            &_price {
-                margin-left: 16px;
-                margin-top: 10px;
-                margin-bottom: 33px;
-
-                @media (--tablet) {
-                    margin-top: 0;
-                    margin-bottom: 20px;
-                }
+            @media (--tablet) {
+                margin-top: 0;
+                margin-bottom: 20px;
             }
         }
     }

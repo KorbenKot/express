@@ -1,160 +1,164 @@
 {{> head }}
 
-<div class="page-header">
-    <div class="wrapper">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-12 col-md-5">
-                    <div class="row">
-                        <div class="breadcrumbs">
-                            <ul class="breadcrumbs__list">
-                                <li class="breadcrumbs__item">
-                                    <a href="/" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Главная</span></a>
-                                </li>
-                                <li class="breadcrumbs__item">
-                                    <a href="/my-orders" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Мои заказы</span></a>
-                                </li>
-                                <li class="breadcrumbs__item">
-                                    <a href="" class="breadcrumbs__ancor breadcrumbs__ancor_current"><span class="breadcrumbs__text">Заказ №100101010</span></a>
-                                </li>
-                            </ul>
+<div class="files" data-template="order">
+
+    <div class="page-header">
+        <div class="wrapper">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-6 col-lg-5">
+                        <div class="row">
+                            <div class="breadcrumbs">
+                                <ul class="breadcrumbs__list">
+                                    <li class="breadcrumbs__item">
+                                        <a href="/" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Главная</span></a>
+                                    </li>
+                                    <li class="breadcrumbs__item">
+                                        <a href="/my-orders" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Мои заказы</span></a>
+                                    </li>
+                                    <li class="breadcrumbs__item">
+                                        <a href="" class="breadcrumbs__ancor breadcrumbs__ancor_current"><span class="breadcrumbs__text">Заказ №100101010</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="#" class="go-back"></a>
                         </div>
                     </div>
+                    <div class="col-12 col-md-6 col-lg-5 fx fx-justify-between fx-align-center page-header__col-progress">
+                        <a href="#" class="go-back"></a>
+                        {{> progress-bar_filled type="dark" icon="dot" caption="Ожидаем предоплату" }}
+                    </div>
                 </div>
-                <div class="col-12 col-md-5 fx fx-justify-between fx-align-center page-header__col-progress">
-                    <a href="#" class="go-back"></a>
-                    {{> progress-bar_filled type="dark" icon="dot" caption="Ожидаем предоплату" }}
+                <div class="row fx-justify-between">
+                    <div class="col-12 col-lg-5 page-header__col-info">
+                        <div class="row fx-col">
+                            <div class="order-number">Заказ #{{ orderNumber }}</div>
+                            <div class="page-header__main-title">{{ worktype }}</div>
+                            <div class="subject">По предмету: &laquo;{{ subject }}&raquo;</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-auto col-lg-5">
+                        <div class="row fx-nowrap page-header__row-widget">
+                            <div class="col page-header__col-widget">
+                                <div class="widget-price">
+                                    <h2 class="widget-price__header">Цена<span class="widget-price__price-old">20 000 Р</span></h2>
+                                    <h2 class="widget-price__value widget-price__value_price">19 332 Р</h2>
+                                    {{> button type="std" theme="transp" border="bright" caption="Оплатить полностью" addClass="widget-price__btn" }}
+                                </div>
+                            </div>
+                            <div class="col page-header__col-widget">
+                                <div class="widget-price">
+                                    <h2 class="widget-price__header">Предоплата 25%</h2>
+                                    <h2 class="widget-price__value widget-price__value_prepay">803 Р</h2>
+                                    {{> button type="std" theme="secondary" caption="Внести предоплату" addClass="widget-price__btn" }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-2">
+                        <div class="widget-countdown">
+                            <h3 class="widget-countdown__header">Работа будет готова</h3>
+                            <div class="widget-countdown__calendar">
+                                <div class="widget-countdown__date">
+                                    <span class="widget-countdown__day">3</span>
+                                    <span class="widget-countdown__month">&nbsp;Сентября</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row fx-justify-between">
-                <div class="col-12 col-lg-5 page-header__col-info">
-                    <div class="row fx-col">
-                        <div class="order-number">Заказ #{{ orderNumber }}</div>
-                        <div class="page-header__main-title">{{ worktype }}</div>
-                        <div class="subject">По предмету: &laquo;{{ subject }}&raquo;</div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-auto col-lg-5">
-                    <div class="row fx-nowrap page-header__row-widget">
-                        <div class="col-auto page-header__col-widget">
-                            <div class="widget-price">
-                                <h2 class="widget-price__header">Цена<span class="widget-price__price-old">20 000 Р</span></h2>
-                                <h2 class="widget-price__price widget-price__price_{{ type }}">19 332 Р</h2>
-                            </div>
-                            {{> button type="std" theme="transp" border="bright" caption="Оплатить полностью" addClass="page-header__btn" }}
-                        </div>
-                        <div class="col-auto page-header__col-widget">
-                            <div class="widget-price">
-                                <h2 class="widget-price__header">Предоплата 25%</h2>
-                                <h2 class="widget-price__price widget-price__price_prepay">803 Р</h2>
-                            </div>
-                            {{> button type="std" theme="secondary" caption="Внести предоплату" addClass="page-header__btn" }}
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-lg-2">
-                    <div class="fx fx-col fx-align-center widget-countdown">
-                        <h3 class="widget-price__header">Работа будет готова</h3>
-                        <div class="widget-countdown__calendar">
-                            <div class="fx widget-countdown__date">
-                                <span class="widget-countdown__day">13</span>
-                                <span class="widget-countdown__mounth">&nbsp;дек</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="navigation">
+                <nav class="navigation__row">
+                    <ul class="navigation__list">
+                        <li><a href="/order123" class="navigation__link">Сообщения</a></li>
+                        <li><a href="/order123/details" class="navigation__link">Подробности</a></li>
+                        <li><a href="/order123/files" class="navigation__link navigation__link_active">Файлы</a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-        <div class="navigation">
-            <nav class="navigation__row">
-                <ul class="navigation__list">
-                    <li><a href="/order123" class="navigation__link">Сообщения</a></li>
-                    <li><a href="/order123/details" class="navigation__link">Подробности</a></li>
-                    <li><a href="/order123/files" class="navigation__link navigation__link_active">Файлы</a></li>
-                </ul>
-            </nav>
         </div>
     </div>
-</div>
 
-<div class="wrapper main-wrapper">
+    <div class="wrapper main-wrapper">
 
-    <div class="row fx fx-justify-center fx-align-stretch">
-        <div class="col">
-            <div class="file-card">
-                <h2 class="file-card__title">Файлы квитанции</h2>
-                <ul class="file-card__list">
-                    <li class="fx fx-justify-between fx-align-center file-card__item">
-                        <a href="#" class="file-card__file-name">Оплата.docx</a>
-                        <span class="file-card__date">03.06.2016</span>
-                        <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
-                    </li>
-                    <li class="fx fx-justify-between fx-align-center file-card__item">
-                        <span class="file-card__file-name">Оплата.docx</span>
-                        <span class="file-card__date">03.06.2016</span>
-                        <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
-                    </li>
-                    <li class="fx fx-justify-between fx-align-center file-card__item">
-                        <span class="file-card__file-name">Оплата.docx</span>
-                        <span class="file-card__date">03.06.2016</span>
-                        <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
-                    </li>
-                </ul>
-                <div id="dropZone" class="fx fx-col drop-area file-card__drop-area">
-                    <h2 class="drop-area__header">Перетащите файлы сюда</h2>
-                    <p class="center drop-area__caption">При оплате заказа через банк прикрепите, пожалуйста, квитанцию, чтобы мы могли продолжить работу над вашим заказом.</p>
+        <div class="row fx fx-justify-center fx-align-stretch">
+            <div class="col">
+                <div class="file-card">
+                    <h2 class="file-card__title">Файлы квитанции</h2>
+                    <ul class="file-card__list">
+                        <li class="fx fx-justify-between fx-align-center file-card__item">
+                            <a href="#" class="file-card__file-name">Оплата.docx</a>
+                            <span class="file-card__date">03.06.2016</span>
+                            <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
+                        </li>
+                        <li class="fx fx-justify-between fx-align-center file-card__item">
+                            <span class="file-card__file-name">Оплата.docx</span>
+                            <span class="file-card__date">03.06.2016</span>
+                            <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
+                        </li>
+                        <li class="fx fx-justify-between fx-align-center file-card__item">
+                            <span class="file-card__file-name">Оплата.docx</span>
+                            <span class="file-card__date">03.06.2016</span>
+                            <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
+                        </li>
+                    </ul>
+                    <div id="dropZone" class="fx fx-col drop-area file-card__drop-area">
+                        <h2 class="drop-area__header">Перетащите файлы сюда</h2>
+                        <p class="center drop-area__caption">При оплате заказа через банк прикрепите, пожалуйста, квитанцию, чтобы мы могли продолжить работу над вашим заказом.</p>
+                    </div>
+                    {{> button type="std"  theme="disabled" caption="Прикрепить файл" addClass="file-card__btn"}}
                 </div>
-                {{> button type="std"  theme="disabled" caption="Прикрепить файл" addClass="file-card__btn"}}
             </div>
-        </div>
-        <div class="col">
-            <div class="file-card">
-                <h2 class="file-card__title">Файлы условия</h2>
-                <ul class="file-card__list">
-                    <li class="fx fx-justify-between fx-align-center file-card__item">
-                        <a href="#" class="file-card__file-name">Оплата.docx</a>
-                        <span class="file-card__date">03.06.2016</span>
-                        <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
-                    </li>
-                    <li class="fx fx-justify-between fx-align-center file-card__item">
-                        <span class="file-card__file-name">Оплата.docx</span>
-                        <span class="file-card__date">03.06.2016</span>
-                        <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
-                    </li>
-                    <li class="fx fx-justify-between fx-align-center file-card__item">
-                        <span class="file-card__file-name">Олооло ололол лоло.docx</span>
-                        <span class="file-card__date">03.06.2016</span>
-                        <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
-                    </li>
-                </ul>
-                <div class="fx fx-col drop-area file-card__drop-area">
-                    <h2 class="drop-area__header">Перетащите файлы сюда</h2>
-                    <p class="center drop-area__caption">Если у вас есть файлы задания, пожалуйста, прикрепите их для точной оценки стоимости вашей работы.</p>
+            <div class="col">
+                <div class="file-card">
+                    <h2 class="file-card__title">Файлы условия</h2>
+                    <ul class="file-card__list">
+                        <li class="fx fx-justify-between fx-align-center file-card__item">
+                            <a href="#" class="file-card__file-name">Оплата.docx</a>
+                            <span class="file-card__date">03.06.2016</span>
+                            <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
+                        </li>
+                        <li class="fx fx-justify-between fx-align-center file-card__item">
+                            <span class="file-card__file-name">Оплата.docx</span>
+                            <span class="file-card__date">03.06.2016</span>
+                            <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
+                        </li>
+                        <li class="fx fx-justify-between fx-align-center file-card__item">
+                            <span class="file-card__file-name">Олооло ололол лоло.docx</span>
+                            <span class="file-card__date">03.06.2016</span>
+                            <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
+                        </li>
+                    </ul>
+                    <div class="fx fx-col drop-area file-card__drop-area">
+                        <h2 class="drop-area__header">Перетащите файлы сюда</h2>
+                        <p class="center drop-area__caption">Если у вас есть файлы задания, пожалуйста, прикрепите их для точной оценки стоимости вашей работы.</p>
+                    </div>
+                    {{> button type="std"  theme="secondary" caption="Прикрепить файл" addClass="file-card__btn"}}
                 </div>
-                {{> button type="std"  theme="secondary" caption="Прикрепить файл" addClass="file-card__btn"}}
             </div>
-        </div>
-        <div class="col">
-            <div class="file-card">
-                <h2 class="file-card__title">Файлы решения</h2>
-                <ul class="file-card__list">
-                    <li class="fx fx-justify-between fx-align-center file-card__item">
-                        <a href="#" class="file-card__file-name">Оплата.docx</a>
-                        <span class="file-card__date">03.06.2016</span>
-                        <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
-                    </li>
-                    <li class="fx fx-justify-between fx-align-center file-card__item">
-                        <span class="file-card__file-name">Оплата.docx</span>
-                        <span class="file-card__date">03.06.2016</span>
-                        <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
-                    </li>
-                    <li class="fx fx-justify-between fx-align-center file-card__item">
-                        <span class="file-card__file-name">Оплата.docx</span>
-                        <span class="file-card__date">03.06.2016</span>
-                        <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
-                    </li>
-                </ul>
-                {{> button type="std"  theme="primary" caption="Прикрепить файл" addClass="file-card__btn"}}
+            <div class="col">
+                <div class="file-card">
+                    <h2 class="file-card__title">Файлы решения</h2>
+                    <ul class="file-card__list">
+                        <li class="fx fx-justify-between fx-align-center file-card__item">
+                            <a href="#" class="file-card__file-name">Оплата.docx</a>
+                            <span class="file-card__date">03.06.2016</span>
+                            <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
+                        </li>
+                        <li class="fx fx-justify-between fx-align-center file-card__item">
+                            <span class="file-card__file-name">Оплата.docx</span>
+                            <span class="file-card__date">03.06.2016</span>
+                            <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
+                        </li>
+                        <li class="fx fx-justify-between fx-align-center file-card__item">
+                            <span class="file-card__file-name">Оплата.docx</span>
+                            <span class="file-card__date">03.06.2016</span>
+                            <button class="btn btn_round btn_round_small btn_close btn_close_primary btn_primary_invert"></button>
+                        </li>
+                    </ul>
+                    {{> button type="std"  theme="primary" caption="Прикрепить файл" addClass="file-card__btn"}}
+                </div>
             </div>
         </div>
     </div>
