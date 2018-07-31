@@ -59,7 +59,7 @@
     &__content-block {
 
         @media (--mobile) {
-            margin-right: 50px;
+            margin-right: 20px;
         }
     }
 

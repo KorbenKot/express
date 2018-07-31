@@ -1,12 +1,8 @@
 var closeBtn = document.getElementsByClassName("btn_close");
-console.log("worked!");
 
 for (var i = 0; i < closeBtn.length; i++) {
 
-    console.log(closeBtn[1]);
-
-
-    closeBtn[i].onclick = function () {
+    closeBtn[i].addEventListener('click', function () {
         console.log("click");
 
         var parent = this.parentElement;
@@ -16,7 +12,7 @@ for (var i = 0; i < closeBtn.length; i++) {
         parent.style.opacity = "0";
 
         setTimeout(function () {
-            parent.style.display = "none";
+            parent.hidden = true;
         }, 300);
-    }
+    })
 }
