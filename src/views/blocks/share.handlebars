@@ -1,15 +1,25 @@
 <div class="share">
 
     <div class="share__controls">
-        <div class="share__title">Поделиться</div>
-        {{> social-links }}
 
-        <span>SMS-кой на номер телефона:</span>
-        <input type="text" class="phone">
+        <div class="share__row share__row_socials">
+            <span class="share__title">Поделиться</span>
+            {{> social-links }}
+        </div>
 
-        <a href="#" class="link link_underline text text_primary">Скопировать ссылку в буфер</a>
-        <input type="text" class="link">
+        <div class="share__row share__row_phone">
+            <span class="share__title">SMS-кой на номер телефона:</span>
+            <input type="text" class="share__input-phone">
+        </div>
+
+        <div class="share__row">
+            <span class="share__title">
+            <a href="#" class="link link_underlined text text_primary">Скопировать ссылку </a>в буфер</span>
+            <input type="text" class="share__input-link">
+        </div>
+
     </div>
 
+    <div class="share__img"></div>
 
 </div>

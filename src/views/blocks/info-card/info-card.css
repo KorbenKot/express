@@ -1,24 +1,88 @@
 .info-card {
     position: relative;
-    border: 1px solid $primary;
-    width: 50%;
+    border: solid 1px rgb(220, 220, 220);
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px 30px;
+
+    @media (--mobile) {
+        overflow: hidden;
+        padding: 20px;
+    }
 
     &__content {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: rgb(51, 51, 51);
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 44px;
 
+        @media (--mobile) {
+            font-size: 16px;
+            line-height: 35px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
     }
 
     &__link {
-        color: rgba(0, 0, 0, 0.4);
-        text-decoration: underline;
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.54);
     }
 
-    &__picture {
-        size: 300px 240px;
+    &__img {
+        position: relative;
+        right: -20px;
+        float: right;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        background-image: url("./woman.png");
+    }
+
+    &__price {
+        font-weight: 600;
+        color: $secondary;
     }
 }
+
+.info-card_booktower {
+
+    @media (--mobile) {
+        padding-right: 50px;
+    }
+
+    & .info-card {
+
+        &__img {
+            background-image: url("./booktower.png");
+            bottom: 80px;
+            size: 105px 290px;
+
+            @media (--mobile) {
+                size: 90px 240px;
+                bottom: 0;
+                right: -35px;
+                position: absolute;
+            }
+        }
+    }
+}
+
+.info-card_hat {
+
+    & .info-card {
+
+        &__img {
+            background-image: url("./hat.png");
+            size: 195px 130px;
+
+            @media (--mobile) {
+                size: 110px 75px;
+                right: -12px;
+                top: -10px;
+            }
+        }
+    }
+}
+

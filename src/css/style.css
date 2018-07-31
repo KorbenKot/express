@@ -18,6 +18,7 @@
 @import "../views/blocks/slide-toggle/slide-toggle.css";
 @import "../views/blocks/title/title.css";
 @import "../views/blocks/text/text.css";
+@import "../views/blocks/promocode/promocode.css";
 
 /* FORM ELEMENTS */
 @import "../views/blocks/checkbox/checkbox.css";
@@ -42,6 +43,7 @@
 @import "../views/blocks/widget-files/widget-files.css";
 @import "../views/blocks/widget-countdown/widget-countdown.css";
 @import "../views/blocks/widget-promocode/widget-promocode.css";
+@import "../views/blocks/widget-achievements/widget-achievements.css";
 
 /* LAYOUTS */
 @import "../views/blocks/index/index.css";

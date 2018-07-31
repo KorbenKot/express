@@ -57,6 +57,14 @@
         }
     }
 
+    &_underlined {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     &__icon {
         position: absolute;
         left: 0;

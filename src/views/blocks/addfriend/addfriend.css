@@ -1,8 +1,31 @@
 .addfriend {
     position: relative;
 
+    &__description {
+        text-align: center;
+        max-width: 655px;
+        margin: 22px auto;
+        font-size: 18px;
+        line-height: 30px;
+        color: rgba(0, 0, 0, 0.87);
+
+        @media (--mobile) {
+            font-size: 16px;
+        }
+    }
+
+    &__btn-primary {
+        margin: auto;
+        padding: 0 30px;
+
+        @media (--mobile) {
+            padding: 0 40px;
+        }
+    }
+
     & .main-wrapper {
-        margin-top: 0;
+        max-width: 1040px;
+        margin-top: 8px;
 
         @media (--mobile) {
             margin-top: 20px;
@@ -37,12 +60,25 @@
         margin: 0 auto;
     }
 
+    .widget-achievements {
+        margin: 0 auto;
+
+        @media (--tablet) {
+            margin-bottom: 20px;
+        }
+    }
+
     & .title {
 
         &_primary {
-            margin-top: 60px;
-        }
+            margin-top: 50px;
+            margin-bottom: 12px;
 
+            @media (--mobile) {
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+        }
     }
 
     & .page-header {
@@ -106,5 +142,10 @@
                 margin-bottom: 20px;
             }
         }
+    }
+
+    & .info-card {
+        max-width: 500px;
+        margin: 20px auto;
     }
 }
