@@ -287,14 +287,20 @@
         display: inline-block;
         text-align: center;
         font-size: 22px;
+        line-height: 24px;
         font-weight: 300;
-        color: rgba(0, 0, 0, 0.87);
+        color: $black;
+
+        @media (--mobile) {
+            font-size: 18px;
+        }
     }
 
     &__icon {
         display: inline-block;
         size: 30px;
         min-size: 30px;
+        margin-right: 15px;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -308,7 +314,7 @@
         }
 
         &_info {
-            background-image: svg-load("../../../svg/iconmonstr-info.svg", fill=$white);
+            background-image: svg-load("../../../svg/iconmonstr-info.svg", fill=$error);
         }
     }
 
@@ -334,7 +340,6 @@
             text-align: left;
             margin-right: 50px;
         }
-
     }
 
     &_mts {
@@ -477,6 +482,55 @@
     }
 }
 
+/* btn with spinner */
+
+.btn-icon_wait {
+    background-color: #e8ebee;
+
+    &:hover {
+        background-color: rgba(69, 93, 121, 0.8);
+    }
+
+    &:hover .btn-icon__caption {
+        color: $white;
+    }
+
+    &:hover .spinner div {
+        background: $white;
+    }
+
+    &:active {
+        background-color: rgba(69, 93, 121, 0.5);
+    }
+
+    & .btn-icon {
+
+        &__caption {
+            color: rgba(69, 93, 121, 0.7);
+            font-weight: normal;
+        }
+    }
+}
+
+.btn-icon_info {
+    background-color: rgb(238, 232, 232);
+
+    &:hover {
+        background-color: $secondary;
+    }
+
+    &:hover .btn-icon__caption {
+        color: $white;
+    }
+
+    & .btn-icon {
+
+        &__caption {
+            color: rgba(246, 71, 68, 0.7);
+            font-weight: normal;
+        }
+    }
+}
 
 .icon {
     display: inline-block;
@@ -502,27 +556,4 @@
             background-image: svg-load("../../../svg/iconmonstr-help.svg", fill=rgba(255, 255, 255, 0.8));
         }
     }
-}
-
-.go-back {
-    display: none;
-    border: solid rgba(255, 255, 255, 0.5);
-    border-width: 0 3px 3px 0;
-    padding: 3px;
-    transform: rotate(135deg);
-    transition: $transition-delay;
-    margin-right: 15px;
-
-    &:active {
-        border-width: 0 3px 3px 0;
-        border: solid rgba(255, 255, 255, 0.9);
-    }
-}
-
-/* HELPER */
-
-.margin-t-b-10 {
-    margin: 10px auto;
-    width: 300px;
-    height: 107px;
 }

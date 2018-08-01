@@ -23,7 +23,7 @@
     &_secondary {
         font-size: 28px;
         text-align: left;
-        color: rgba(0, 0, 0, 0.87);
+        color: $black;
 
         @media (--mobile) {
             font-size: 22px;

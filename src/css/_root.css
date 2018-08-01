@@ -3,7 +3,6 @@ $gotham: "Gotham Pro Regular", sans-serif;
 $gotham-light: "Gotham Pro Light", sans-serif;
 $gotham-bold: "Gotham Pro Bold", sans-serif;
 $white: #fff;
-$black: #333;
 $grey: #888;
 $main-fallback-color: #f5f9fe;
 $input-background: #fdfdfd;
@@ -16,6 +15,8 @@ $shadow: 0px 0px 35px 0px rgba(38, 137, 189, 0.5);
 $shadow-active: 0px 0px 10px 0px rgba(38, 137, 189, 0.5);
 
 /* PALETTE */
+
+$black: rgba(0, 0, 0, 0.87);
 
 $error: rgb(246, 71, 68);
 $error-hov: rgb(248, 126, 124);

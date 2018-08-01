@@ -18,6 +18,7 @@
 @import "../views/blocks/slide-toggle/slide-toggle.css";
 @import "../views/blocks/title/title.css";
 @import "../views/blocks/text/text.css";
+@import "../views/blocks/badge/badge.css";
 @import "../views/blocks/promocode/promocode.css";
 
 /* FORM ELEMENTS */
@@ -26,7 +27,7 @@
 /* COMPLEX BLOCKS */
 @import "../views/blocks/bar/bar.css";
 @import "../views/blocks/page-header/page-header.css";
-@import "../views/blocks/order-detail/order-detail.css";
+@import "../views/blocks/order-card/order-card.css";
 @import "../views/blocks/file-card/file-card.css";
 @import "../views/blocks/info-card/info-card.css";
 @import "../views/blocks/share/share.css";
@@ -143,9 +144,9 @@ a {
 }
 
 .wrapper {
-    max-width: 1310px;
+    max-width: 1240px;
     margin: * auto;
-    padding: * 15px;
+    padding: * 20px;
 }
 
 /* TEMPONARY - потом переименую-перемещу */

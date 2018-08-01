@@ -79,7 +79,7 @@
         font-size: 22px;
         text-align: center;
         line-height: normal;
-        color: rgba(0, 0, 0, 0.87);
+        color: $black;
         margin-bottom: 20px;
 
         @media (--mobile-small) {
@@ -90,7 +90,7 @@
     &__counter {
         font-size: 50px;
         line-height: normal;
-        color: rgba(0, 0, 0, 0.87);
+        color: $black;
     }
 
     &__currency {

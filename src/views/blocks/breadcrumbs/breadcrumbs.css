@@ -1,5 +1,9 @@
 .breadcrumbs {
 
+    @media (--mobile) {
+        display: none;
+    }
+
     &__list {
         position: relative;
         padding: 0;
@@ -65,5 +69,25 @@
         &:hover {
             border-color: rgba(254, 254, 254, 0.15);
         }
+    }
+}
+
+
+.go-back {
+    display: none;
+    border: solid rgba(255, 255, 255, 0.5);
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    transform: rotate(135deg);
+    transition: $transition-delay;
+    margin-right: 15px;
+
+    &:active {
+        border-width: 0 3px 3px 0;
+        border: solid rgba(255, 255, 255, 0.9);
+    }
+
+    @media (--mobile) {
+        display: block;
     }
 }

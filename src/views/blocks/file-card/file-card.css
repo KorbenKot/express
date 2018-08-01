@@ -16,7 +16,7 @@
         font-weight: normal;
         line-height: 24px;
         text-align: center;
-        color: rgba(0, 0, 0, 0.87);
+        color: $black;
     }
 
     &__list {
@@ -88,6 +88,6 @@
         font-size: 13px;
         line-height: 21px;
         text-align: center;
-        color: rgba(0, 0, 0, 0.87);
+        color: $black;
     }
 }
