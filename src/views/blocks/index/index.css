@@ -1,6 +1,6 @@
 [data-template="index"] {
 
-    & .notify-widget {
+    & .widget-notify {
         margin-top: 10px;
         margin-bottom: 30px;
     }

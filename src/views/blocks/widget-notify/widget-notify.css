@@ -1,4 +1,4 @@
-.notify-widget {
+.widget-notify {
     position: relative;
     padding-left: 27px;
     padding-right: 27px;
@@ -190,7 +190,7 @@
 
 [data-template = "new-order-notify"] {
 
-    .notify-widget {
+    .widget-notify {
 
         &__content-col {
 

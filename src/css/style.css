@@ -20,18 +20,18 @@
 @import "../views/blocks/text/text.css";
 @import "../views/blocks/badge/badge.css";
 @import "../views/blocks/promocode/promocode.css";
+@import "../views/blocks/social-links/social-links.css";
 
 /* FORM ELEMENTS */
 @import "../views/blocks/checkbox/checkbox.css";
 
 /* COMPLEX BLOCKS */
-@import "../views/blocks/bar/bar.css";
+@import "../views/blocks/toolbar/toolbar.css";
 @import "../views/blocks/page-header/page-header.css";
 @import "../views/blocks/order-card/order-card.css";
 @import "../views/blocks/file-card/file-card.css";
 @import "../views/blocks/info-card/info-card.css";
 @import "../views/blocks/share/share.css";
-@import "../views/blocks/social-links/social-links.css";
 
 /* MENUS */
 @import "../views/blocks/dropdown-menu/dropdown-menu.css";
@@ -39,7 +39,7 @@
 @import "../views/blocks/news/news.css";
 
 /* WIDGETS */
-@import "../views/blocks/notify-widget/notify-widget.css";
+@import "../views/blocks/widget-notify/widget-notify.css";
 @import "../views/blocks/widget-price/widget-price.css";
 @import "../views/blocks/widget-files/widget-files.css";
 @import "../views/blocks/widget-countdown/widget-countdown.css";

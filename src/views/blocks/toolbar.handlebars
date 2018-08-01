@@ -1,0 +1,35 @@
+<div class="toolbar">
+
+    <a href="/" class="logo logo_com bar__logo"></a>
+
+    {{> social-links addClass="toolbar__social-links" }}
+
+    <a class="toolbar__phone" href="tel:88003338544">8-800-333-85-44</a>
+
+    {{> button type="std" theme="primary" caption="Хочу новый заказ" addClass="toolbar__order-btn" }}
+
+    <!-- USER PANEL BLOCK -->
+    <div class="user-panel">
+        <div class="user-panel__btn-group">
+            <div class="dropdown-btn dropdown-btn_msg user-panel__dropdown-btn js-dropdown-btn" data-jq-dropdown="#jq-dropdown-1">
+                <span class="badge badge_secondary dropdown-btn__badge">3</span>
+            </div>
+            <div class="dropdown-btn dropdown-btn_notify user-panel__dropdown-btn js-dropdown-btn" data-jq-dropdown="#jq-dropdown-2">
+                <span class="badge badge_primary dropdown-btn__badge">5</span>
+            </div>
+        </div>
+        <div class="user-panel__ava-group">
+            <div class="user-panel__hello">Привет, <span class="user-panel__username">{{ username }}</span></div>
+            <div class="user-panel__avatar-container" data-jq-dropdown="#jq-dropdown-3">
+                <div class="avatar user-panel__avatar"></div>
+                <span class="arrow-down arrow-down_primary user-panel__arrow-down"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MENU LIST -->
+{{> dropdown-notifications }}
+{{> dropdown-messages }}
+{{> dropdown-user-menu }}
+

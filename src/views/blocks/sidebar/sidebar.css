@@ -11,6 +11,8 @@
     }
 
     &__inner {
+        display: flex;
+        flex-direction: column;
         margin-top: 38px;
         position: fixed;
         top: 90px;
@@ -31,11 +33,12 @@
         font-weight: 600;
     }
 
-    hr {
+    &__divider {
         margin-right: 10%;
         margin-top: 40px;
         margin-bottom: 40px;
-        background-color: $black;
-        width: 90%;
+        background-color: rgba(0, 0, 0, 0.15);
+        height: 1px;
+        width: 225px;
     }
 }

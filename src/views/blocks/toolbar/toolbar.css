@@ -1,4 +1,8 @@
-.bar {
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
     max-height: 90px;
     background-color: $white;
@@ -19,7 +23,7 @@
         margin-right: 10px;
     }
 
-    & .social-links {
+    &__social-links {
 
         @media (--desktop) {
             display: none;
@@ -35,14 +39,26 @@
         }
     }
 
-    &__phone-number {
+    &__phone {
         color: $black;
+        padding-left: 20px;
+        line-height: 20px;
         font-size: 18px;
         font-weight: 600;
         text-decoration: none;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: svg-load("../../../svg/iconmonstr-phone.svg", fill=$primary);
+        transition: $transition-delay;
 
         @media (--desktop) {
             display: none;
+        }
+
+        &:hover {
+            color: $primary-hov;
+            background-image: svg-load("../../../svg/iconmonstr-phone.svg", fill=$primary-hov);
         }
     }
 }
@@ -68,11 +84,32 @@
 }
 
 .user-panel {
+    display: flex;
     position: relative;
     font-size: 18px;
     font-weight: 600;
 
+    &__btn-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 80px;
+
+        @media (--desktop) {
+            margin-right: 10px;
+        }
+    }
+
+    &__ava-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     &__avatar-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         cursor: pointer;
     }
@@ -99,22 +136,6 @@
         }
     }
 
-    &__controls {
-        margin-right: 80px;
-
-        @media (--desktop) {
-            margin-right: 10px;
-        }
-    }
-
-    &__arrow-down {
-        margin-right: 5px;
-
-        @media (--mobile) {
-            display: none;
-        }
-    }
-
     &__hello {
         color: rgba(119, 119, 119, 0.87);
 
@@ -125,6 +146,14 @@
 
     &__username {
         color: $black;
+    }
+
+    &__arrow-down {
+        margin-right: 5px;
+
+        @media (--mobile) {
+            display: none;
+        }
     }
 }
 
