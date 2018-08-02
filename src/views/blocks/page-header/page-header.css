@@ -1,9 +1,9 @@
 .page-header {
     position: relative;
     background-image: linear-gradient(to right, rgb(12, 15, 41), rgb(43, 58, 99) 50%, rgb(12, 15, 41));
-    color: $white;
+    color: rgba(255, 255, 255, 0.87);
     overflow: hidden;
-    padding-top: 23px;
+    padding-top: 20px;
 
     &__avatar {
         size: 84px;
@@ -19,52 +19,62 @@
         }
     }
 
-    &__col-progress {
-
-        @media (--mobile) {
-            margin-left: -15px;
-            margin-right: -15px;
-        }
-    }
-
-    &__row-widget {
+    &__top {
+        display: flex;
+        padding-bottom: 25px;
 
         @media (--tablet) {
-            border-top: 1px solid rgba(255, 255, 255, 0.5);
-            padding-top: 10px;
+            flex-direction: column;
+            align-items: flex-start;
         }
-    }
-
-    &__col-info {
-
-        @media (--tablet) {
-            margin-top: 10px;
-            margin-bottom: 40px;
-        }
-    }
-
-    &__col-widget {
-        padding-right: 28px;
-        padding-left: 0;
-
-        @media (--desktop) {
-            padding-right: 10px;
-        }
-    }
-    
-    &__main-title {
-        position: relative;
-        font-size: 40px;
-        font-weight: 300;
-        color: rgba(255, 255, 255, 0.87);
-        line-height: normal;
-        margin-top: 8px;
-        margin-bottom: 10px;
 
         @media (--mobile) {
-            font-size: 28px;
-            line-height: normal;
-            margin-top: 0;
+            padding-bottom: 10px;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__breadcrumbs {
+        flex: 0;
+        flex-basis: 40%;
+
+        @media (--tablet) {
+            flex-basis: 100%;
+        }
+
+        @media (--mobile) {
+            flex-basis: auto;
+        }
+    }
+
+    &__progress {
+        flex: 0;
+        flex-basis: 36%;
+
+        @media (--tablet) {
+            width: 50%;
+        }
+
+        @media (--mobile) {
+            flex-basis: auto;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__order-info {
+        display: flex;
+        flex-direction: column;
+        flex: 0;
+        flex-basis: 40%;
+
+        @media (--tablet) {
+            flex-basis: 100%;
+            margin-bottom: 20px;
         }
     }
 
@@ -137,20 +147,7 @@
         }
     }
 
-    & .order-number {
-        font-size: 14px;
-        color: rgba(254, 254, 254, 0.5);
-    }
-
-    & .subject {
-        color: rgba(255, 255, 255, 0.3);
-        font-size: 13px;
-        line-height: normal;
-        font-weight: 300;
-    }
-
     & .progress-bar {
-        margin-bottom: 20px;
 
         @media (--mobile) {
             min-width: auto;
@@ -174,7 +171,25 @@
         }
     }
 
+    &__widgets {
+        margin: 0 -15px;
+
+        @media (--mobile) {
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            padding-bottom: 10px;
+            margin: 0 -5px;
+            flex: 1;
+        }
+    }
+
     & .widget-price {
+        padding: 0 15px;
+
+        @media (--mobile) {
+           padding: 0 5px;
+            flex: 1;
+        }
 
         &__header {
             color: rgba(255, 255, 255, 0.5);
@@ -190,7 +205,6 @@
 
         &__value {
             margin: 0;
-            margin-left: 16px;
             margin-top: 10px;
             margin-bottom: 33px;
 
@@ -198,13 +212,48 @@
                 margin-top: 0;
                 margin-bottom: 20px;
             }
+
+            &_price {
+                color: rgba(255, 255, 255, 0.87);
+            }
         }
     }
 
     & .widget-countdown {
+        margin-left: auto;
+
+        @media (--desktop-extra) {
+            margin-right: 30px;
+        }
 
         @media (--mobile) {
             display: none;
         }
+    }
+}
+
+.order-info {
+
+    &__title {
+        text-align: left;
+        color: rgba(255, 255, 255, 0.87);
+        margin-top: 8px;
+        margin-bottom: 10px;
+
+        @media (--mobile) {
+            margin-top: 0;
+        }
+    }
+
+    &__number {
+        font-size: 14px;
+        color: rgba(254, 254, 254, 0.5);
+    }
+
+    &__subject {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 13px;
+        line-height: normal;
+        font-weight: 300;
     }
 }

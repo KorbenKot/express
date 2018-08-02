@@ -26,16 +26,17 @@
 
     &__calendar {
         position: relative;
-        background-size: 130px 118px;
-        size: 130px 118px;
-        background-image: svg-load("../../../svg/date-box.svg", fill=rgba(255, 255, 255, 0.15));
+        background-size: 109px 111px;
+        height: 110px;
+        width: 115px;
+        background: svg-load("../../../svg/date-box.svg", fill=rgba(255, 255, 255, 0.15)) no-repeat center;
     }
 
     &__date {
         display: flex;
         position: absolute;
-        left: 13px;
-        top: 52px;
+        left: 25px;
+        top: 55px;
         color: rgba(255, 255, 255, 0.5);
         line-height: normal;
     }

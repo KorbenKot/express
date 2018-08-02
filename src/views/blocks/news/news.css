@@ -1,14 +1,25 @@
 .news {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: $white;
 
-    @media (--mobile) {
-        border-radius: 0;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    &__main-title {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+
+        @media (--mobile) {
+            border-radius: 0;
+            flex-direction: column;
+        }
+    }
+
+    &__title {
         font-size: 28px;
         line-height: 28px;
         font-weight: normal;
@@ -36,6 +47,8 @@
     }
 
     &__card {
+        display: flex;
+        flex-direction: column;
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
         position: relative;
@@ -67,6 +80,8 @@
     }
 
     &__head {
+        display: flex;
+        justify-content: space-between;
         color: rgba(255, 255, 255, 0.5);
         padding-bottom: 6px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -89,12 +104,12 @@
     }
 
     &__go {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
         color: rgba(255, 255, 255, 0.5);
         transition: opacity $transition-delay;
         opacity: 0;
-    }
-
-    & .fx.news__go {
 
         @media (--mobile) {
             display: none;
