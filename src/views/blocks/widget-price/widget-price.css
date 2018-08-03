@@ -23,10 +23,15 @@
         white-space: nowrap;
         padding-left: 20px;
         color: $black;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 33px;
 
         @media (--tablet) {
-            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 20px;
             padding-left: 17px;
+            font-size: 22px;
         }
 
         &:before {
@@ -37,6 +42,10 @@
             top: center;
             border-radius: 50%;
             background-color: $primary;
+        }
+
+        &_price {
+            color: rgba(0, 0, 0, 0.87);
         }
 
         &_prepay {
@@ -74,6 +83,24 @@
             }
         }
 
+        &_promocode {
+
+            @media (--mobile) {
+                font-size: 34px;
+                margin-left: 15px;
+                margin-top: -10px;
+            }
+        }
+
+        &_discount {
+
+            @media (--mobile) {
+                position: absolute;
+                right: 25px;
+                top: -20px;
+            }
+        }
+
         &_sup {
             display: inline-block;
             font-size: 18px;
@@ -96,6 +123,13 @@
         @media (--tablet) {
             margin: 0;
         }
+
+        &_help {
+
+            @media (--mobile) {
+                padding-left: 20px;
+            }
+        }
     }
 
     &__header-icon {
@@ -115,10 +149,12 @@
         &_help {
             background-image: svg-load("../../../svg/iconmonstr-help.svg", fill=rgba(255, 255, 255, 0.3));
             margin-left: 20px;
+            transition: all $transition-delay;
 
             @media (--mobile) {
-                margin-left: 0;
-                margin-right: 10px;
+                position: absolute;
+                left: 0;
+                margin: 0;
             }
 
             &:hover {
@@ -163,7 +199,7 @@
 
         @media (--mobile) {
             margin-left: 19px;
-            margin-top: 10px;
+            margin-top: 0;
         }
 
         &:hover {

@@ -18,6 +18,16 @@
             margin-bottom: 10px;
         }
     }
+    
+    &__title {
+        text-align: left;
+        color: rgba(254, 254, 254, 0.7);
+
+        &_center {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
 
     &__top {
         display: flex;
@@ -62,8 +72,61 @@
     }
 
     &__body {
+        position: relative;
         display: flex;
         flex-flow: row wrap;
+
+        &_empty {
+            margin-bottom: 40px;
+            align-items: center;
+            justify-content: space-between;
+
+            @media (--mobile) {
+                margin-top: 20px;
+            }
+        }
+
+        &_friends {
+            margin: 0 auto;
+            flex-direction: column;
+            max-width: 1040px;
+            padding-bottom: 75px;
+
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                bottom: 0;
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 2;
+                pointer-events: none;
+
+                @media (--mobile) {
+                    display: none;
+                }
+            }
+
+            &:before {
+                size: 145px 239px;
+                left: 0;
+                background-image: url("./man-2.png");
+
+                @media (--tablet) {
+                    size: 160px 200px;
+                }
+            }
+
+            &:after {
+                size: 228px 302px;
+                right: 0;
+                background-image: url("./man-1.png");
+
+                @media (--tablet) {
+                    size: 160px 200px;
+                }
+            }
+        }
     }
 
     &__order-info {
@@ -75,19 +138,6 @@
         @media (--tablet) {
             flex-basis: 100%;
             margin-bottom: 20px;
-        }
-    }
-
-    &__title-currency {
-        font-weight: 300;
-    }
-
-    &__title-balance {
-        color: rgb(254, 254, 254);
-        font-weight: 600;
-
-        &_accent {
-            color: $secondary;
         }
     }
 
@@ -125,6 +175,37 @@
         }
     }
 
+    &__btn {
+
+        &:hover {
+            color: $primary;
+            box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        &:active {
+            color: $primary-hov;
+            box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+        }
+
+        &_find {
+            padding-left: 25px;
+            padding-right: 25px;
+
+            @media (--mobile) {
+                display: none;
+            }
+        }
+    }
+
+
+    &__icon_find {
+        display: none;
+
+        @media (--mobile) {
+            display: inline-block;
+        }
+    }
+
     &__btn-edit {
         display: none;
         position: absolute;
@@ -134,6 +215,7 @@
 
         @media (--mobile) {
             display: block;
+            right: 0;
         }
 
         &_icon {
@@ -144,6 +226,31 @@
             background-size: 14px;
             background-repeat: no-repeat;
             background-image: svg-load("../../../svg/iconmonstr-pencil.svg", fill=#1e284b);
+        }
+    }
+
+    &__btn-edit:hover &__btn-edit_icon{
+        background-image: svg-load("../../../svg/iconmonstr-pencil.svg", fill=$primary);
+    }
+
+    &__cash-row {
+        display: flex;
+
+        @media (--tablet) {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__widget-bonus {
+        margin-right: 60px;
+
+        @media (--desktop) {
+            margin-right: 30px;
+        }
+
+        @media (--tablet) {
+            margin-bottom: 10px;
         }
     }
 
@@ -191,6 +298,10 @@
             flex: 1;
         }
 
+        &__value_price {
+             color: hsla(0, 0%, 100%, .87);
+        }
+
         &__header {
             color: rgba(255, 255, 255, 0.5);
             font-size: 14px;
@@ -200,21 +311,6 @@
             @media (--tablet) {
                 font-size: 16px;
                 margin-bottom: 0;
-            }
-        }
-
-        &__value {
-            margin: 0;
-            margin-top: 10px;
-            margin-bottom: 33px;
-
-            @media (--tablet) {
-                margin-top: 0;
-                margin-bottom: 20px;
-            }
-
-            &_price {
-                color: rgba(255, 255, 255, 0.87);
             }
         }
     }

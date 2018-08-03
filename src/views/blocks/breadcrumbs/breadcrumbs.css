@@ -1,5 +1,9 @@
 .breadcrumbs {
 
+    @media (--mobile) {
+        display: inline-block;
+    }
+
     &__list {
         position: relative;
         padding: 0;

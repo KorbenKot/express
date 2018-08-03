@@ -38,9 +38,6 @@
         margin-left: 10px;
         color: inherit;
 
-        &_times {
-        }
-
         &_plus {
             transform: rotateZ(45deg);
         }
@@ -265,10 +262,11 @@
 /* BUTTONS WITH ICONS OR IMAGES */
 
 .btn-icon {
-    width: 100%;
     height: 100%;
+    width: auto;
+    white-space: nowrap;
+    flex: 1 0 auto;
     will-change: transform;
-
 
     &:hover {
         box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
@@ -478,6 +476,14 @@
     }
 }
 
+/* btn find */
+
+.btn-icon__icon_find {
+    size: 15px;
+    min-size: 15px;
+    background-image: svg-load("../../../svg/iconmonstr-magnifier.svg", fill=$primary);
+}
+
 /* btn with spinner */
 
 .btn-icon_wait {
@@ -531,12 +537,11 @@
 .icon {
     display: inline-block;
     size: 16px;
-    vertical-align: baseline;
+    vertical-align: middle;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     cursor: pointer;
-    top: center;
     right: 0;
 
     &_help {
@@ -550,6 +555,14 @@
 
         &:hover {
             background-image: svg-load("../../../svg/iconmonstr-help.svg", fill=rgba(255, 255, 255, 0.8));
+        }
+    }
+
+    &_find {
+        background-image: svg-load("../../../svg/iconmonstr-magnifier.svg", fill=rgba(255, 255, 255, 0.3));
+
+        &:hover {
+            background-image: svg-load("../../../svg/iconmonstr-magnifier.svg", fill=rgba(255, 255, 255, 0.8));
         }
     }
 }

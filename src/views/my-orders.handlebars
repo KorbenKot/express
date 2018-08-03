@@ -1,19 +1,13 @@
 {{> head }}
 <div class="my-orders" data-template="my-orders">
-    <div class="page-header">
-        <div class="wrapper">
-            {{> breadcrumbs }}
-            <div class="page-header__main-title">{{ pageTitle }}</div>
-            {{> navigation }}
-        </div>
-    </div>
 
-    <div data-template="my-orders">
-        <div class="wrapper main-wrapper">
+    {{> page-header_my-orders }}
 
-            {{> order-card }}
 
-        </div>
+    <div class="wrapper main-wrapper">
+
+        {{> order-card }}
+
     </div>
 </div>
 

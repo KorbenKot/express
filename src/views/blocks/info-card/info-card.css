@@ -1,17 +1,42 @@
 .info-card {
-    position: relative;
-    border: solid 1px rgb(220, 220, 220);
-    border-radius: 10px;
-    padding: 20px 30px;
+    display: flex;
+    flex: 1 0 50%;
+    min-height: 250px;
+    padding: 0 15px 30px;
+
+    @media (--tablet) {
+        flex-basis: 100%;
+    }
 
     @media (--mobile) {
-        overflow: hidden;
-        padding: 20px;
+        min-width: 320px;
+    }
+
+    &__inner {
+        position: relative;
+        padding: 20px 30px 25px;
+        border: solid 1px rgb(220, 220, 220);
+        border-radius: 10px;
+        height: auto;
+        flex: 1;
+
+        @media (--mobile) {
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        &_books {
+            padding-right: 100px;
+
+            @media (--mobile) {
+                padding-right: 80px;
+            }
+        }
     }
 
     &__content {
         margin-top: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
         color: rgb(51, 51, 51);
         font-size: 18px;
         font-weight: 300;
@@ -21,7 +46,7 @@
             font-size: 16px;
             line-height: 35px;
             margin-top: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 35px;
         }
     }
 
@@ -29,6 +54,11 @@
         font-size: 14px;
         font-weight: 300;
         color: rgba(0, 0, 0, 0.54);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-left: inherit;
+        padding-bottom: inherit;
     }
 
     &__img {
@@ -38,6 +68,36 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+
+        &_books {
+            position: absolute;
+            background-image: url("./booktower.png");
+            bottom: 10px;
+            right: 0;
+            size: 100px 245px;
+
+            @media (--mobile) {
+                size: 90px 240px;
+                bottom: 0;
+                right: -10px;
+                position: absolute;
+            }
+        }
+
+        &_hat {
+            background-image: url("./hat.png");
+            size: 195px 130px;
+
+            @media (--desktop) {
+                size: 150px 100px;
+                right: -12px;
+                top: -10px;
+            }
+
+            @media (--mobile) {
+                size: 110px 75px;
+            }
+        }
     }
 
     &__price {
@@ -45,44 +105,3 @@
         color: $secondary;
     }
 }
-
-.info-card_booktower {
-
-    @media (--mobile) {
-        padding-right: 50px;
-    }
-
-    & .info-card {
-
-        &__img {
-            background-image: url("./booktower.png");
-            bottom: 80px;
-            size: 105px 290px;
-
-            @media (--mobile) {
-                size: 90px 240px;
-                bottom: 0;
-                right: -35px;
-                position: absolute;
-            }
-        }
-    }
-}
-
-.info-card_hat {
-
-    & .info-card {
-
-        &__img {
-            background-image: url("./hat.png");
-            size: 195px 130px;
-
-            @media (--mobile) {
-                size: 110px 75px;
-                right: -12px;
-                top: -10px;
-            }
-        }
-    }
-}
-

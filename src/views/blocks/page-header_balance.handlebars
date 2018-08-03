@@ -1,0 +1,42 @@
+<div class="page-header" >
+    <div class="wrapper">
+
+        <div class="page-header__top">
+            <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="/" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Главная</span></a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="" class="breadcrumbs__ancor breadcrumbs__ancor_current"><span class="breadcrumbs__text">Баланс</span></a>
+                    </li>
+                </ul>
+                <a href="#" class="go-back"></a>
+            </div>
+        </div>
+
+        <div class="page-header__body page-header__body_empty">
+            <div class="page-header__cash-row">
+
+                {{> widget-bonus addClass="page-header__widget-bonus"}}
+
+            </div>
+
+            <a class="btn btn_std btn_bright page-header__btn">Пополнить баланс
+                <span class="btn__icon btn__icon_plus">&times;</span>
+            </a>
+        </div>
+
+        <div class="navigation">
+            <nav class="navigation__row">
+                <ul class="navigation__list">
+                    <li><a href="/balance/pay" class="navigation__link">К оплате</a></li>
+                    <li><a href="/balance/pay_history" class="navigation__link">История платежей</a></li>
+                    <li><a href="/balance/pay_out" class="navigation__link">Вывод средств</a></li>
+                    <li><a href="/balance/pay_help" class="navigation__link">Помощь по оплате</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+</div>

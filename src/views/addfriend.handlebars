@@ -1,115 +1,42 @@
 {{> head }}
 <div class="addfriend" data-template="addfriend">
 
-    <div class="page-header">
-        <div class="wrapper page-header__wrapper">
+    {{> page-header_friends }}
 
-            <div class="breadcrumbs">
-                <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__item">
-                        <a href="/" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Главная</span></a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a href="" class="breadcrumbs__ancor breadcrumbs__ancor_current"><span
-                            class="breadcrumbs__text">Приведи друга</span></a>
-                    </li>
-                </ul>
-            </div>
-
-            <h1 class="page-header__main-title">Помогай друьям и получай<br>работы бесплатно!</h1>
-
-            {{> widget-promocode }}
-
-        </div>
+    <div class="navigation navigation_light">
+        <nav class="navigation__row wrapper">
+            <ul class="navigation__list">
+                <li><a href="#" class="navigation__link navigation__link_active">Помогай друзьям</a></li>
+                <li><a href="#" class="navigation__link">Кто откликнулся</a></li>
+            </ul>
+        </nav>
     </div>
 
     <div class="wrapper main-wrapper">
-
-        <div class="navigation navigation_light">
-            <nav class="navigation__row">
-                <ul class="navigation__list">
-                    <li><a href="#" class="navigation__link navigation__link_active">Помогай друзьям</a></li>
-                    <li><a href="#" class="navigation__link">Кто откликнулся</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <h2 class="title title_primary">Как передать промо-код?</h2>
+        <div class="title title_primary addfriend__title-primary">Как передать промо-код?</div>
 
         {{> share }}
 
-        <h2 class="title title_primary">Ваши друзья пока не с нами</h2>
-        <p class="addfriend__description">Помогите друзьям сделать лучший выбор. Расскажите, за что вы сами любите Заочник, и заинтересуйте друзей бонусами.</p>
+        <div class="title title_primary addfriend__title-primary">Ваши друзья пока не с нами</div>
+        <p class="addfriend__description">
+            Помогите друзьям сделать лучший выбор. Расскажите, за что вы сами любите Заочник, и заинтересуйте друзей бонусами.
+        </p>
+        <div class="title title_primary addfriend__title-primary">Ваши друзья</div>
+        <div class="two-card-row">
 
-
-        <h2 class="title title_primary">Ваши друзья</h2>
-
-        <div class="row fx">
-
-            <div class="col-lg-6">
-                <div class="widget-achievements widget-achievements_friends">
-                    <div class="title widget-achievements__title">Друзей зарегистрировалось:</div>
-                    <div class="widget-achievements__info-row">
-                        <div class="widget-achievements__counter">4</div>
-                        <ul class="friends widget-achievements__friends">
-                            <li class="friends__item friends__item_1"></li>
-                            <li class="friends__item friends__item_2"></li>
-                            <li class="friends__item friends__item_3"></li>
-                            <li class="friends__item friends__item_4"></li>
-                        </ul>
-                        <button class="btn btn_std btn_bright btn_round btn_plus widget-achievements__btn"></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="widget-achievements widget-achievements_profit">
-                    <div class="title widget-achievements__title">Заработано:</div>
-                    <div class="widget-achievements__counter">1300&nbsp;<span class="widget-achievements__currency">Р</span></div>
-                </div>
-            </div>
+            {{> widget-achievements }}
 
         </div>
+        <div class="title title_primary addfriend__title-primary">Все очень просто!</div>
+        <div class="two-card-row">
 
-        <h2 class="title title_primary">Все очень просто!</h2>
-
-        <div class="row fx">
-
-            <div class="col-lg-6">
-                <div class="info-card info-card_hat info-card_secondary">
-                    <span class="info-card__img"></span>
-                    <p class="title title_minor info-card__title">Твой друг заказывает диплом</p>
-                    <p class="info-card__content">
-                        и получает <b class="text text_secondary info-card__price">
-                        2000 P</b> на счёт. Ты тоже получаешь <b class="text text_secondary info-card__price">
-                        2000 P</b> на счёт
-                    </p>
-                    <a href="" class="link link_underlined info-card__link">Начать зарабатывать</a>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="info-card info-card_booktower info-card_primary">
-                    <span class="info-card__img"></span>
-                    <p class="title title_minor info-card__title">Твой друг заказывает диплом</p>
-                    <p class="info-card__content">
-                        и получает <b class="text text_primary info-card__price">
-                        2000 P</b> на счёт. Ты тоже получаешь <b class="text text_primary info-card__price">
-                        2000 P</b> на счёт
-                    </p>
-                    <a href="" class="link link_underlined info-card__link">Начать зарабатывать</a>
-                </div>
-            </div>
+            {{> info-card }}
 
         </div>
-
-        <h2 class="title title_primary">Порекомендуй нас друзьям и передай свой промокод!</h2>
-
+        <div class="title title_primary addfriend__title-primary">Порекомендуй нас друзьям и передай свой промокод!</div>
         <div class="promocode">[ 222979 ]</div>
-
         <p class="addfriend__description">После того, как твой друг закажет работу, вы оба получите деньги на счет. Этими деньгами вы сможете оплатить свои заказы!</p>
         <button class="btn btn_std btn_primary addfriend__btn-primary">Передать промокод</button>
-
     </div>
 </div>
 

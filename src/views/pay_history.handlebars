@@ -1,41 +1,7 @@
 {{> head }}
 <div class="balance" data-template="pay-history">
-    <div class="page-header" >
-        <div class="wrapper page-header__wrapper">
-            {{> breadcrumbs }}
-            <a href="#" class="go-back"></a>
-            <div class="fx fx-justify-between fx-align-center">
-                <div class="fx fx-col fx-lg-row fx-align-start page-header__col-info">
-                    <div class="fx fx-nowrap fx-col fx-lg-row fx-align-start fx-lg-align-center">
-                        <h2 class="page-header__main-title">
-                            Ваш баланс:&nbsp;
-                            <span class="page-header__title-balance">200</span>
-                            <span class="page-header__title-currency">&nbsp;Р</span>
-                        </h2>
-                        <h2 class="page-header__main-title page-header__main-title_help">
-                            Бонус:&nbsp;
-                            <span class="page-header__title-balance page-header__title-balance_accent">500</span>
-                            <span class="page-header__title-currency">&nbsp;Р</span>
-                            <span class="icon icon_help"></span>
-                        </h2>
-                    </div>
-                </div>
-                <a href="/balance" class="btn btn_std btn_bright page-header__btn">Пополнить баланс
-                    <span class="btn__icon btn__icon_plus">&times;</span>
-                </a>
-            </div>
-            <div class="navigation">
-                <nav class="navigation__row">
-                    <ul class="navigation__list">
-                        <li><a href="/balance/pay" class="navigation__link">К оплате</a></li>
-                        <li><a href="/balance/pay_history" class="navigation__link navigation__link_active">История платежей</a></li>
-                        <li><a href="/balance/pay_out" class="navigation__link">Вывод средств</a></li>
-                        <li><a href="/balance/pay_help" class="navigation__link">Помощь по оплате</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
+
+    {{> page-header_balance }}
 
     <div class="wrapper main-wrapper">
 

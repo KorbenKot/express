@@ -1,0 +1,33 @@
+.widget-bonus {
+    display: inline-block;
+    white-space: nowrap;
+
+    &__title {
+        font-size: 40px;
+        font-weight: 300;
+        text-align: left;
+        line-height: normal;
+        color: rgba(254, 254, 254, 0.7);
+
+        @media (--tablet) {
+            font-size: 30px;
+        }
+
+        @media (--mobile) {
+            font-size: 28px;
+        }
+    }
+
+    &__currency {
+        font-weight: 300;
+    }
+
+    &__count {
+        color: rgb(254, 254, 254);
+        font-weight: normal;
+
+        &_secondary {
+            color: $secondary;
+        }
+    }
+}
