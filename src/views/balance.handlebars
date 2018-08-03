@@ -1,62 +1,110 @@
 {{> head }}
-
-<div class="page-header">
-    <div class="wrapper">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-12 col-md-5">
-                    <div class="row">
-                        {{> breadcrumbs }}
+<div class="balance" data-template="balance">
+    <div class="page-header" >
+        <div class="wrapper page-header__wrapper">
+            {{> breadcrumbs }}
+            <a href="#" class="go-back"></a>
+            <div class="fx fx-justify-between fx-align-center">
+                <div class="fx fx-col fx-lg-row fx-align-start page-header__col-info">
+                    <div class="fx fx-nowrap fx-col fx-lg-row fx-align-start fx-lg-align-center">
+                        <h2 class="page-header__main-title">
+                            Ваш баланс:&nbsp;
+                            <span class="page-header__title-balance">200</span>
+                            <span class="page-header__title-currency">&nbsp;Р</span>
+                        </h2>
+                        <h2 class="page-header__main-title page-header__main-title_help">
+                            Бонус:&nbsp;
+                            <span class="page-header__title-balance page-header__title-balance_accent">500</span>
+                            <span class="page-header__title-currency">&nbsp;Р</span>
+                            <span class="icon icon_help"></span>
+                        </h2>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 fx fx-justify-between fx-align-center page-header__col-progress">
-                    <a href="#" class="mobile-prev"></a>
-                    {{> progress-bar_filled type="dark" icon="dot" caption="Ожидаем предоплату" }}
-                </div>
+                <a class="btn btn_std btn_bright page-header__btn">Пополнить баланс
+                    <span class="btn__icon btn__icon_plus">&times;</span>
+                </a>
             </div>
-            <div class="row fx-justify-between">
-                <div class="col-12 col-lg-5 page-header__col-info">
-                    <div class="row fx-col">
-                        <div class="order-number">Заказ #{{ orderNumber }}</div>
-                        <div class="page-title">{{ worktype }}</div>
-                        <div class="subject">По предмету: &laquo;{{ subject }}&raquo;</div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-auto col-lg-5">
-                    <div class="row fx-nowrap page-header__row-widget">
-                        <div class="col-auto page-header__col-widget">
-                            <div class="widget-price">
-                                <div class="widget-price">     <h2 class="widget-price__header">Цена         <span class="widget-price__price-old">20 000 Р</span>     </h2>     <h2 class="widget-price__price widget-price__price_{{ type }}">19 332 Р</h2> </div>
-                            </div>
-                            {{> button type="std" theme="transp" border="bright" caption="Оплатить полностью" addClass="page-header__btn" }}
-                        </div>
-                        <div class="col-auto page-header__col-widget">
-                            <div class="widget-price">
-                                {{> widget-price type="prepay" heading="Предоплата" heading-part="25%" summ="803" oldPrice="hide" currency="Р" }}
-                            </div>
-                            {{> button type="std" theme="secondary" caption="Внести предоплату" addClass="page-header__btn" }}
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-lg-2">
-                    <div class="fx fx-col fx-align-center widget-countdown">
-                        <h3 class="widget-price__header">Работа будет готова</h3>
-                        <div class="widget-countdown__calendar">
-                            <div class="fx widget-countdown__date">
-                                <span class="widget-countdown__day">13</span>
-                                <span class="widget-countdown__mounth">&nbsp;дек</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="navigation">
+                <nav class="navigation__row">
+                    <ul class="navigation__list">
+                        <li><a href="/balance/pay" class="navigation__link">К оплате</a></li>
+                        <li><a href="/balance/pay_history" class="navigation__link">История платежей</a></li>
+                        <li><a href="/balance/pay_out" class="navigation__link">Вывод средств</a></li>
+                        <li><a href="/balance/pay_help" class="navigation__link">Помощь по оплате</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        {{> navigation }}
+    </div>
+
+    <div class="wrapper main-wrapper">
+        <h2 class="title title_secondary">Введите сумму пополнения</h2>
+
+                <input id="text" type="text" name="summToAdd">
+                <label for="text">Сумма пополнения</label>
+        
+        <h2 class="title title_secondary">Выберете способ оплаты без комиссии:</h2>
+
+        <div class="fx row__btn-container">
+            <div class="col__btn-container col__btn-container">
+                <button class="btn btn_rect btn_bright btn-icon">
+                    <span class="btn-icon__image btn-icon__image_visa"></span>
+                    <span class="btn-icon__image btn-icon__image_mastercard"></span>
+                </button>
+            </div>
+            <div class="col__btn-container">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_webmoney">
+                    <span class="btn-icon__image"></span>
+                </button>
+            </div>
+            <div class="col__btn-container">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_wallet">
+                    <span class="btn-icon__caption">Оплата c баланса</span>
+                    <span class="btn-icon__image"></span>
+                </button>
+            </div>
+        </div>
+
+        <h2 class="title title_secondary">Оплата с комиссией (4,5%):</h2>
+
+        <div class="fx row__btn-container">
+            <div class="col__btn-container">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_qiwi">
+                    <span class="btn-icon__image"></span>
+                </button>
+            </div>
+            <div class="col__btn-container">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_euroset">
+                    <span class="btn-icon__image"></span>
+                </button>
+            </div>
+            <div class="col__btn-container">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_svyaznoi">
+                    <span class="btn-icon__image"></span>
+                </button>
+            </div>
+            <div class="col__btn-container">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_yandex">
+                    <span class="btn-icon__image"></span>
+                </button>
+            </div>
+            <div class="col__btn-container">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_operators">
+                    <span class="btn-icon__image"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="checkbox">
+            <div class="checkbox-container">
+                <input id="checkbox" type="checkbox" name="checkbox" class="checkbox__input">
+                <span class="checkbox__checkmark"></span>
+            </div>
+            <label for="checkbox" class="checkbox__label">Я ознакомился с договором и политикой конфиденциальности.</label>
+        </div>
+
+        <button class="btn btn_std btn_primary balance__btn-main">Оплатить</button>
+        
     </div>
 </div>
-
-<div class="wrapper">
-<h1>Баланс</h1>
-</div>
-
 {{> footer }}

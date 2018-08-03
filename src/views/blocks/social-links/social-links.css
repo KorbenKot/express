@@ -1,0 +1,58 @@
+.social-links {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        margin: 0 5px;
+        overflow: hidden;
+        size: 30px;
+        border-radius: 50%;
+
+        &:hover {
+            box-shadow: 0 0 15px 0 rgba(100, 91, 148, 0.7);
+        }
+
+        &:active {
+            box-shadow: 0 0 5px 0 rgba(105, 45, 148, 0.5);
+        }
+
+        &_instagram {
+            background-image: linear-gradient(32deg, rgb(254, 194, 99), rgb(217, 77, 78) 34%, rgb(144, 35, 143) 69%, rgb(81, 98, 208));
+        }
+    }
+
+    &__img {
+        display: inline-block;
+        size: 30px;
+        background-size: 15px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &_vk {
+            background-color: rgb(80, 114, 153);
+            background-image: svg-load("../../../svg/vk.svg", fill=$white);
+        }
+
+        &_fb {
+            background-color: rgb(72, 98, 163);
+            background-image: svg-load("../../../svg/facebook.svg", fill=$white);
+            background-size: 9px;
+        }
+
+        &_youtube {
+            background-color: rgb(255, 0, 0);
+            background-image: svg-load("../../../svg/youtube.svg", fill=$white);
+        }
+
+        &_telegram {
+            background-size: 17px;
+            background-color: #0088cc;
+            background-image: svg-load("../../../svg/iconmonstr-telegram.svg", fill=$white);
+        }
+
+        &_instagram {
+            background-size: 20px;
+            background-image: svg-load("../../../svg/instagram.svg", fill=$white);
+        }
+    }
+}

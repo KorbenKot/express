@@ -2,7 +2,7 @@
     position: relative;
     display: inline-block;
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.87);
+    color: $black;
     transition: all $transition-delay;
 
     &:hover {
@@ -51,6 +51,18 @@
 
     &_active {
         color: $primary;
+
+        &:hover {
+            color: $primary-hov;
+        }
+    }
+
+    &_underlined {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     &__icon {

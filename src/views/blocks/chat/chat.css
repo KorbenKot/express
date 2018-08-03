@@ -1,0 +1,319 @@
+.chat {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+    max-height: 900px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @media (--mobile) {
+        padding-left: 23px;
+        padding-bottom: 80px;
+    }
+
+    &__input-container {
+        position: relative;
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 95px;
+        padding: 30px;
+        line-height: 27px;
+        font-size: 18px;
+        font-family: Open Sans, sans-serif;
+        color: rgba(0, 0, 0, 0.54);
+        border-radius: 10px;
+        background-color: $white;
+        border: solid 1px #dcdcdc;
+
+        @media (--mobile) {
+            padding: 13px 20px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+    }
+
+    &__send-btn {
+        position: absolute;
+        height: 44px;
+        min-height: 44px;
+        line-height: normal;
+        padding: 5px 50px;
+        bottom: 30px;
+        right: 30px;
+
+        @media (--mobile) {
+            left: center;
+            bottom: -50px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        color: $black;
+    }
+
+    &__msg {
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        @media (--mobile) {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        @media (--mobile-small) {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.msg_in {
+
+    & .msg {
+
+        &__avatar {
+            margin-right: 30px;
+            background-image: url("./manager-ava.png");
+
+            @media (--mobile) {
+                margin-right: 10px;
+                size: 42px;
+                flex-basis: 42px;
+            }
+        }
+
+        &__text {
+            background-color: rgb(241, 241, 241);
+            color: $black;
+        }
+
+        &__time {
+            margin-right: 27px;
+
+            @media (--mobile) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.msg_out {
+    margin-left: auto;
+    flex-direction: row-reverse;
+
+    @media (--mobile) {
+        flex-direction: column;
+    }
+
+    & .msg {
+
+        &__info, &__info-data {
+            flex-direction: row-reverse;
+
+            @media (--mobile) {
+                align-items: flex-start;
+            }
+        }
+
+        &__info {
+
+            @media (--mobile) {
+                left: 0;
+                top: 68px;
+            }
+        }
+
+        &__name {
+
+            @media (--mobile) {
+                position: absolute;
+                right: 0;
+                top: -13px;
+            }
+        }
+
+        &__info-data {
+
+            @media (--tablet) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        &__time {
+            margin-left: 20px;
+            margin-right: 0;
+
+            @media (--mobile) {
+                margin: 0;
+            }
+        }
+
+        &__text {
+            background-color: $primary;
+            color: rgba(255, 255, 255, 0.87);
+
+            @media (--mobile) {
+                margin-top: 15px;
+            }
+        }
+
+        &__avatar {
+            margin-top: 40px;
+            margin-left: 30px;
+            background-image: url("./user-ava.jpg");
+
+            @media (--mobile) {
+                position: relative;
+                margin-left: 0;
+                left: calc(100% - 60px);
+            }
+        }
+    }
+}
+
+.msg {
+    display: flex;
+    position: relative;
+    width: 87%;
+    transition: all $transition-delay;
+
+    @media (--tablet) {
+        width: 100%;
+    }
+
+    @media (--mobile) {
+        flex-direction: column;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+
+        @media (--mobile) {
+            position: absolute;
+            top: 17px;
+            left: 60px;
+            width: calc(100% - 60px);
+        }
+    }
+
+    &__info-data {
+        display: flex;
+
+        @media (--mobile) {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+    }
+
+    &__text {
+        padding: 17px 20px 17px 28px;
+        border-radius: 10px;
+        line-height: 24px;
+
+        @media (--mobile) {
+            font-size: 13px;
+            line-height: 21px;
+            margin-top: 12px;
+            padding: 12px 10px 12px 19px;
+        }
+    }
+
+    &__avatar {
+        size: 60px;
+        flex-basis: 60px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-top: 10px;
+    }
+
+    &__name {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        color: $black;
+
+        @media (--mobile) {
+            max-width: 180px;
+        }
+
+        @media (--mobile-small) {
+            max-width: 80px;
+        }
+    }
+
+    &__time {
+        margin-right: 18px;
+        margin-bottom: 5px;
+        font-size: 14px;
+
+        @media (--mobile) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__time, &__status {
+        color: rgba(0, 0, 0, 0.38);
+    }
+
+    &__status {
+        font-size: 13px;
+        position: relative;
+        padding-left: 17px;
+        margin-right: 18px;
+        margin-left: 18px;
+
+        @media (--mobile) {
+            font-size: 11px;
+            margin: 0;
+            margin-top: -5px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 0;
+            display: inline-block;
+            size: 15px;
+            background-size: 15px;
+            background-repeat: no-repeat;
+            background-image: svg-load("../../../svg/check.svg", fill=rgba(0, 0, 0, 0.28));
+
+            @media (--mobile) {
+                top: 6px;
+            }
+        }
+
+        &_new {
+            color: $primary;
+
+            @media (--mobile) {
+                position: absolute;
+                right: 0;
+                top: 30px;
+            }
+
+            &:before {
+                top: 6px;
+                background-image: svg-load("../../../svg/iconmonstr-speech-bubble.svg", fill=$primary);
+
+                @media (--mobile) {
+                    size: 10px;
+                    background-size: 10px;
+                }
+            }
+        }
+    }
+}

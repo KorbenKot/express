@@ -440,7 +440,7 @@
 
 /* FX MEDIA */
 
-.fx {display: flex;}
+.fx {display: flex; flex-wrap: wrap;}
 .fx-nowrap {flex-wrap: nowrap;}
 
 @media (--sm) {

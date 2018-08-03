@@ -1,62 +1,116 @@
 {{> head }}
+<div class="addfriend" data-template="addfriend">
 
-<div class="page-header">
-    <div class="wrapper">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-12 col-md-5">
-                    <div class="row">
-                        {{> breadcrumbs }}
-                    </div>
-                </div>
-                <div class="col-12 col-md-5 fx fx-justify-between fx-align-center page-header__col-progress">
-                    <a href="#" class="mobile-prev"></a>
-                    {{> progress-bar_filled type="dark" icon="dot" caption="Ожидаем предоплату" }}
-                </div>
+    <div class="page-header">
+        <div class="wrapper page-header__wrapper">
+
+            <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="/" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Главная</span></a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="" class="breadcrumbs__ancor breadcrumbs__ancor_current"><span
+                            class="breadcrumbs__text">Приведи друга</span></a>
+                    </li>
+                </ul>
             </div>
-            <div class="row fx-justify-between">
-                <div class="col-12 col-lg-5 page-header__col-info">
-                    <div class="row fx-col">
-                        <div class="order-number">Заказ #{{ orderNumber }}</div>
-                        <div class="page-title">{{ worktype }}</div>
-                        <div class="subject">По предмету: &laquo;{{ subject }}&raquo;</div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-auto col-lg-5">
-                    <div class="row fx-nowrap page-header__row-widget">
-                        <div class="col-auto page-header__col-widget">
-                            <div class="widget-price">
-                                <div class="widget-price">     <h2 class="widget-price__header">Цена         <span class="widget-price__price-old">20 000 Р</span>     </h2>     <h2 class="widget-price__price widget-price__price_{{ type }}">19 332 Р</h2> </div>
-                            </div>
-                            {{> button type="std" theme="transp" border="bright" caption="Оплатить полностью" addClass="page-header__btn" }}
-                        </div>
-                        <div class="col-auto page-header__col-widget">
-                            <div class="widget-price">
-                                {{> widget-price type="prepay" heading="Предоплата" heading-part="25%" summ="803" oldPrice="hide" currency="Р" }}
-                            </div>
-                            {{> button type="std" theme="secondary" caption="Внести предоплату" addClass="page-header__btn" }}
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-lg-2">
-                    <div class="fx fx-col fx-align-center widget-countdown">
-                        <h3 class="widget-price__header">Работа будет готова</h3>
-                        <div class="widget-countdown__calendar">
-                            <div class="fx widget-countdown__date">
-                                <span class="widget-countdown__day">13</span>
-                                <span class="widget-countdown__mounth">&nbsp;дек</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <h1 class="page-header__main-title">Помогай друьям и получай<br>работы бесплатно!</h1>
+
+            {{> widget-promocode }}
+
         </div>
-        {{> navigation }}
     </div>
-</div>
 
-<div class="wrapper">
-    <h1>Добавить друга</h1>
+    <div class="wrapper main-wrapper">
+
+        <div class="navigation navigation_light">
+            <nav class="navigation__row">
+                <ul class="navigation__list">
+                    <li><a href="#" class="navigation__link navigation__link_active">Помогай друзьям</a></li>
+                    <li><a href="#" class="navigation__link">Кто откликнулся</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h2 class="title title_primary">Как передать промо-код?</h2>
+
+        {{> share }}
+
+        <h2 class="title title_primary">Ваши друзья пока не с нами</h2>
+        <p class="addfriend__description">Помогите друзьям сделать лучший выбор. Расскажите, за что вы сами любите Заочник, и заинтересуйте друзей бонусами.</p>
+
+
+        <h2 class="title title_primary">Ваши друзья</h2>
+
+        <div class="row fx">
+
+            <div class="col-lg-6">
+                <div class="widget-achievements widget-achievements_friends">
+                    <div class="title widget-achievements__title">Друзей зарегистрировалось:</div>
+                    <div class="widget-achievements__info-row">
+                        <div class="widget-achievements__counter">4</div>
+                        <ul class="friends widget-achievements__friends">
+                            <li class="friends__item friends__item_1"></li>
+                            <li class="friends__item friends__item_2"></li>
+                            <li class="friends__item friends__item_3"></li>
+                            <li class="friends__item friends__item_4"></li>
+                        </ul>
+                        <button class="btn btn_std btn_bright btn_round btn_plus widget-achievements__btn"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="widget-achievements widget-achievements_profit">
+                    <div class="title widget-achievements__title">Заработано:</div>
+                    <div class="widget-achievements__counter">1300&nbsp;<span class="widget-achievements__currency">Р</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="title title_primary">Все очень просто!</h2>
+
+        <div class="row fx">
+
+            <div class="col-lg-6">
+                <div class="info-card info-card_hat info-card_secondary">
+                    <span class="info-card__img"></span>
+                    <p class="title title_minor info-card__title">Твой друг заказывает диплом</p>
+                    <p class="info-card__content">
+                        и получает <b class="text text_secondary info-card__price">
+                        2000 P</b> на счёт. Ты тоже получаешь <b class="text text_secondary info-card__price">
+                        2000 P</b> на счёт
+                    </p>
+                    <a href="" class="link link_underlined info-card__link">Начать зарабатывать</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="info-card info-card_booktower info-card_primary">
+                    <span class="info-card__img"></span>
+                    <p class="title title_minor info-card__title">Твой друг заказывает диплом</p>
+                    <p class="info-card__content">
+                        и получает <b class="text text_primary info-card__price">
+                        2000 P</b> на счёт. Ты тоже получаешь <b class="text text_primary info-card__price">
+                        2000 P</b> на счёт
+                    </p>
+                    <a href="" class="link link_underlined info-card__link">Начать зарабатывать</a>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="title title_primary">Порекомендуй нас друзьям и передай свой промокод!</h2>
+
+        <div class="promocode">[ 222979 ]</div>
+
+        <p class="addfriend__description">После того, как твой друг закажет работу, вы оба получите деньги на счет. Этими деньгами вы сможете оплатить свои заказы!</p>
+        <button class="btn btn_std btn_primary addfriend__btn-primary">Передать промокод</button>
+
+    </div>
 </div>
 
 {{> footer }}

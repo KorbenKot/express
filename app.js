@@ -4,7 +4,8 @@ const
         path = require('path'),
         app = express(),
         cabinetRouter = require('./cabinetRouter'),
-        orderRouter = require('./orderRouter');
+        orderRouter = require('./orderRouter'),
+        balanceRouter = require('./balanceRouter');
 
 // STATIC
 app.use('/static', express.static(path.join(__dirname, 'dest')));
@@ -36,7 +37,7 @@ app.set('view engine', 'html');
 // ROUTES
 app.use('/', cabinetRouter);
 app.use('/order123', orderRouter);
-
+app.use('/balance', balanceRouter);
 
 // 404
 /*app.use(function (req, res, next) {

@@ -1,13 +1,15 @@
 .breadcrumbs {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    list-style: none;
 
-    @media (--mobile) {
-        display: none;
+    &__list {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        @media (--mobile) {
+            display: none;
+        }
     }
-
 
     &__item {
         margin-right: 13px;
@@ -67,5 +69,27 @@
         &:hover {
             border-color: rgba(254, 254, 254, 0.15);
         }
+    }
+}
+
+.go-back {
+    display: none;
+    border: solid rgba(255, 255, 255, 0.5);
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(135deg);
+    transition: $transition-delay;
+    margin-right: 15px;
+
+    @media (--mobile) {
+        display: block;
+    }
+
+    &:hover {
+        border-color: rgba(255, 255, 255, 0.9);
+    }
+
+    &:active {
+        border-color: rgb(255, 255, 255);
     }
 }

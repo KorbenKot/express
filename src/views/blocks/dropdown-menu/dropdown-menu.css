@@ -29,6 +29,15 @@
         border-bottom-color: rgba(0, 0, 0, 0.25);
     }
 
+    &__theme {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        font-size: 13px;
+        line-height: 20px;
+        color: rgb(153, 153, 153);
+    }
+
     &_notify, &_msg {
         width: 370px;
     }
@@ -48,18 +57,18 @@
         border-top: 1px solid rgba(0, 0, 0, 0.24);
     }
 
-    &__vertical-dots {
-        position: relative;
+    &__dots {
         display: flex;
         flex-direction: column;
-        margin-right: -15px;
+        position: relative;
+        padding-left: 75px;
 
         &:before {
             content: "";
             position: absolute;
             top: 0;
             bottom: 0;
-            left: 25px;
+            left: 35px;
             width: 3px;
             border-left: 2px dotted rgb(202, 202, 202);
             height: 100%;
@@ -68,7 +77,18 @@
         }
     }
 
-    &__head-caption {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 30px 22px;
+
+        &_notify {
+            padding-left: 0;
+        }
+    }
+
+    &__title {
         display: inline-block;
         margin: 0;
         font-size: 26px;
@@ -78,30 +98,20 @@
         color: rgb(0, 0, 0);
     }
 
-    &__head-container {
-        padding: 30px 15px 22px;
-
-        &_notify {
-            padding: 26px 27px 14px 65px;
-        }
-    }
-
-    &__msg-container {
-        padding: 12px 15px 13px;
+    &__msg {
+        padding: 20px 30px 10px;
         background-color: $white;
+        border-top: solid 1px rgb(222, 222, 222);
 
         &_new {
             background-color: rgb(248, 248, 248);
-        }
-
-        &_msg {
-            border-top: solid 1px rgb(222, 222, 222);
         }
 
         &_notify {
             padding-left: 0;
             padding-top: 0;
             padding-bottom: 10px;
+            border-top: none;
         }
     }
 
@@ -109,7 +119,7 @@
         position: relative;
         font-size: 14px;
         line-height: 22px;
-        color: rgba(0, 0, 0, 0.87);
+        color: $black;
 
         &_notify {
 
@@ -146,9 +156,8 @@
         color: rgba(0, 0, 0, 0.54);
     }
 
-    & .day-container {
-        margin-left: 65px;
-        margin-top: 15px;
+    &__day-container {
+        padding-top: 8px;
     }
 
     &__status {

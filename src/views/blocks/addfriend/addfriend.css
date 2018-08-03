@@ -1,0 +1,151 @@
+.addfriend {
+    position: relative;
+
+    &__description {
+        text-align: center;
+        max-width: 655px;
+        margin: 22px auto;
+        font-size: 18px;
+        line-height: 30px;
+        color: $black;
+
+        @media (--mobile) {
+            font-size: 16px;
+        }
+    }
+
+    &__btn-primary {
+        margin: auto;
+        padding: 0 30px;
+
+        @media (--mobile) {
+            padding: 0 40px;
+        }
+    }
+
+    & .main-wrapper {
+        max-width: 1040px;
+        margin-top: 8px;
+
+        @media (--mobile) {
+            margin-top: 20px;
+        }
+    }
+
+    & .navigation {
+        margin-top: 0;
+        width: auto;
+
+        &:after {
+            position: absolute;
+            height: 1px;
+            background-color: rgb(222, 222, 223);
+            content: "";
+            width: 100%;
+            left: 0;
+        }
+
+        &__list {
+            justify-content: flex-start;
+        }
+
+        &__link {
+            padding-left: 0;
+            padding-right: 0;
+            margin-right: 60px;
+        }
+    }
+
+    & .widget-promocode {
+        margin: 0 auto;
+    }
+
+    .widget-achievements {
+        margin: 0 auto;
+
+        @media (--tablet) {
+            margin-bottom: 20px;
+        }
+    }
+
+    & .title {
+
+        &_primary {
+            margin-top: 50px;
+            margin-bottom: 12px;
+
+            @media (--mobile) {
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    & .page-header {
+
+        &__wrapper {
+            position: relative;
+            padding-bottom: 75px;
+
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                bottom: 0;
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 2;
+                pointer-events: none;
+
+                @media (--mobile) {
+                    display: none;
+                }
+            }
+
+            &:before {
+                size: 145px 239px;
+                left: 0;
+                background-image: url("./man-2.png");
+
+                @media (--tablet) {
+                    size: 160px 200px;
+                }
+            }
+
+            &:after {
+                size: 228px 302px;
+                right: 0;
+                background-image: url("./man-1.png");
+
+                @media (--tablet) {
+                    size: 160px 200px;
+                }
+            }
+        }
+
+        &__main-title {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            line-height: 50px;
+            text-align: center;
+            color: rgb(254, 254, 254);
+
+            @media (--mobile) {
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+        }
+
+        &__col-info {
+
+            @media (--mobile) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    & .info-card {
+        max-width: 500px;
+        margin: 20px auto;
+    }
+}

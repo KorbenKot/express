@@ -1,84 +1,11 @@
 {{> head }}
 
-<div class="page-header">
-    <div class="wrapper">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-12 col-md-5">
-                    <div class="row">
-                        <ul class="breadcrumbs">
-                            <li class="breadcrumbs__item">
-                                <a href="/" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Главная</span></a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <a href="/my-orders" class="breadcrumbs__ancor"><span class="breadcrumbs__text">Мои заказы</span></a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <a href="" class="breadcrumbs__ancor breadcrumbs__ancor_current"><span class="breadcrumbs__text">Заказ №100101010</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-md-5 fx fx-justify-between fx-align-center page-header__col-progress">
-                    <a href="#" class="mobile-prev"></a>
-                    {{> progress-bar_filled type="dark" icon="dot" caption="Ожидаем предоплату" }}
-                </div>
-            </div>
-            <div class="row fx-justify-between">
-                <div class="col-12 col-lg-5 page-header__col-info">
-                    <div class="row fx-col">
-                        <div class="order-number">Заказ #{{ orderNumber }}</div>
-                        <div class="page-title">{{ worktype }}</div>
-                        <div class="subject">По предмету: &laquo;{{ subject }}&raquo;</div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-auto col-lg-5">
-                    <div class="row fx-nowrap page-header__row-widget">
-                        <div class="col-auto page-header__col-widget">
-                            <div class="widget-price">
-                                <h2 class="widget-price__header">Цена<span class="widget-price__price-old">20 000 Р</span></h2>
-                                <h2 class="widget-price__price widget-price__price_{{ type }}">19 332 Р</h2>
-                            </div>
-                            {{> button type="std" theme="transp" border="bright" caption="Оплатить полностью" addClass="page-header__btn" }}
-                        </div>
-                        <div class="col-auto page-header__col-widget">
-                            <div class="widget-price">
-                                <h2 class="widget-price__header">Предоплата 25%</h2>
-                                <h2 class="widget-price__price widget-price__price_prepay">803 Р</h2>
-                            </div>
-                            {{> button type="std" theme="secondary" caption="Внести предоплату" addClass="page-header__btn" }}
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-lg-2">
-                    <div class="fx fx-col fx-align-center widget-countdown">
-                        <h3 class="widget-price__header">Работа будет готова</h3>
-                        <div class="widget-countdown__calendar">
-                            <div class="fx widget-countdown__date">
-                                <span class="widget-countdown__day">13</span>
-                                <span class="widget-countdown__mounth">&nbsp;дек</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="navigation container">
-            <nav class="row">
-                <ul class="col-12 col-md-4 fx fx-justify-between navigation__list">
-                    <li><a href="/order123" class="navigation__link">Сообщения</a></li>
-                    <li><a href="/order123/details" class="navigation__link navigation__link_active">Подробности</a></li>
-                    <li><a href="/order123/files" class="navigation__link">Файлы</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</div>
+<div data-template="order">
 
-<div class="wrapper">
-    <div class="details">
-        <h1>ORDER123 DETAILS</h1>
+    {{> page-header_order }}
+
+    <div class="wrapper main-wrapper">
+
     </div>
-</div>
 
 {{> footer }}

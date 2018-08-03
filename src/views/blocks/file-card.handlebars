@@ -1,0 +1,38 @@
+<div class="file-card {{addClass}}">
+    <div class="file-card__container" data-template="file-card" data-type="file-upload">
+        <div class="file-card__title">Файлы квитанции</div>
+        <ul class="file-card__list">
+            <li class="file-card__item">
+                <a href="#" class="file-card__file-name">Оплата.docx</a>
+                <span class="file-card__date">03.06.2016</span>
+                <button class="btn file-card__btn_del">&times;</button>
+            </li>
+            <li class="file-card__item">
+                <span class="file-card__file-name">Оплата.docx</span>
+                <span class="file-card__date">03.06.2016</span>
+                <button class="btn file-card__btn_del">&times;</button>
+            </li>
+            <li class="file-card__item">
+                <span class="file-card__file-name">Оплата.docx</span>
+                <span class="file-card__date">03.06.2016</span>
+                <button class="btn file-card__btn_del">&times;</button>
+            </li>
+        </ul>
+        <div id="dropZone" class="drop-area file-card__drop-area">
+            <div class="drop-area__title">Перетащите файлы сюда</div>
+            <p class="drop-area__caption">При оплате заказа через банк прикрепите, пожалуйста, квитанцию, чтобы мы могли
+                продолжить работу над вашим заказом.</p>
+        </div>
+        <button class="btn btn_std btn_disabled file-card__btn">Прикрепить файл</button>
+    </div>
+</div>
+
+{{!--
+
+ТИП КНОПКИ, DROP AREA => ПЕРЕКЛЮЧАТЬ ПО УСЛОВИЮ ТИПА КАРТОЧКИ
+
+    <button class="btn btn_std btn_disabled file-card__btn">Прикрепить файл</button>
+    <button class="btn btn_std btn_secondary file-card__btn">Прикрепить файл</button>
+    <button class="btn btn_std btn_primary file-card__btn">Скачать архивом</button>
+
+--}}

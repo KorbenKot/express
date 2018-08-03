@@ -1,62 +1,85 @@
 {{> head }}
 
-<div class="page-header">
-    <div class="wrapper">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-12 col-md-5">
-                    <div class="row">
-                        {{> breadcrumbs }}
+<div data-template="settings">
+    <div class="page-header" >
+        <div class="wrapper page-header__wrapper">
+            {{> breadcrumbs }}
+
+
+            <div class="page-header__profile">
+
+                <div class="page-header__col-info">
+
+                    <div class="page-header__user">
+                        <div class="avatar page-header__avatar"></div>
+                        <div class="title title_primary page-header__profile-name">Юзэрнэйм Юзэрнэймович Анонимус</div>
                     </div>
+
+                    <a href="#" class="link page-header__profile-edit">Редактировать профиль</a>
+                    <a href="#" class="btn btn_round btn_bright btn_pencil page-header__btn-edit">
+                        <span class="page-header__btn-edit page-header__btn-edit_icon"></span>
+                    </a>
                 </div>
-                <div class="col-12 col-md-5 fx fx-justify-between fx-align-center page-header__col-progress">
-                    <a href="#" class="mobile-prev"></a>
-                    {{> progress-bar_filled type="dark" icon="dot" caption="Ожидаем предоплату" }}
-                </div>
-            </div>
-            <div class="row fx-justify-between">
-                <div class="col-12 col-lg-5 page-header__col-info">
-                    <div class="row fx-col">
-                        <div class="order-number">Заказ #{{ orderNumber }}</div>
-                        <div class="page-title">{{ worktype }}</div>
-                        <div class="subject">По предмету: &laquo;{{ subject }}&raquo;</div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-auto col-lg-5">
-                    <div class="row fx-nowrap page-header__row-widget">
-                        <div class="col-auto page-header__col-widget">
-                            <div class="widget-price">
-                                <div class="widget-price">     <h2 class="widget-price__header">Цена         <span class="widget-price__price-old">20 000 Р</span>     </h2>     <h2 class="widget-price__price widget-price__price_{{ type }}">19 332 Р</h2> </div>
-                            </div>
-                            {{> button type="std" theme="transp" border="bright" caption="Оплатить полностью" addClass="page-header__btn" }}
+
+                <div class="page-header__row-widget">
+
+                    <div class="widget-price widget-price_promo" data-widget="promocode">
+                        <div class="widget-price__header widget-price__header_help">Ваш промокод
+                            <span class="widget-price__header-icon widget-price__header-icon_help"></span>
                         </div>
-                        <div class="col-auto page-header__col-widget">
-                            <div class="widget-price">
-                                {{> widget-price type="prepay" heading="Предоплата" heading-part="25%" summ="803" oldPrice="hide" currency="Р" }}
-                            </div>
-                            {{> button type="std" theme="secondary" caption="Внести предоплату" addClass="page-header__btn" }}
+                        <div class="widget-price__value widget-price__value_promocode">492758</div>
+                        <div>
+                            <span class="widget-price__detail widget-price__detail_share">Скопировать</span>
+                            <a class="widget-price__detail-share"></a>
                         </div>
                     </div>
-                </div>
-                <div class="col col-lg-2">
-                    <div class="fx fx-col fx-align-center widget-countdown">
-                        <h3 class="widget-price__header">Работа будет готова</h3>
-                        <div class="widget-countdown__calendar">
-                            <div class="fx widget-countdown__date">
-                                <span class="widget-countdown__day">13</span>
-                                <span class="widget-countdown__mounth">&nbsp;дек</span>
-                            </div>
-                        </div>
+
+                    <div class="widget-price widget-price_discount" data-widget="discount">
+                        <div class="widget-price__header">Ваша накопительная скидка</div>
+                        <div class="widget-price__value widget-price__value_discount">5<span class="widget-price__value_sup">%</span></div>
+                        <span class="widget-price__detail">Для получения 10% совершите<br> заказы на сумму 2 516,19 Р</span>
                     </div>
+
                 </div>
             </div>
         </div>
-        {{> navigation }}
+    </div>
+
+    <div class="wrapper main-wrapper">
+
+        <form action="" class="form">
+            <div class="form__frame">
+                <div class="form__header">Контактная информация</div>
+                <input type="text" title="field">
+                <input type="text" title="field">
+                <input type="text" title="field">
+                <div class="form__row">
+                    <span>Уведомление по заказам:</span>
+                    <span>E-mail</span>
+                    <label class="slide-toggle slide-toggle_primary slide-toggle_small">
+                        <input class="slide-toggle__input" type="checkbox">
+                        <span class="slide-toggle__slider">
+                            <span class="slide-toggle__bullet"></span>
+                        </span>
+                    </label>
+                    <span>СМС</span>
+                    <label class="slide-toggle slide-toggle_primary slide-toggle_small">
+                        <input class="slide-toggle__input" type="checkbox">
+                        <span class="slide-toggle__slider">
+                            <span class="slide-toggle__bullet"></span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form__frame">
+                <div class="form__header">Личные данные</div>
+                <div class="form form__row"></div>
+                <div class="form form__row"></div>
+                <div class="form form__row"></div>
+                <div class="form form__row"><div class="btn btn_std btn_secondary">Сохранить</div></div>
+            </div>
+        </form>
     </div>
 </div>
-
-<div class="wrapper">
-    <h1>Натройки</h1>
-</div>
-
 {{> footer }}

@@ -1,0 +1,148 @@
+.widget-achievements_friends {
+
+    &:before {
+        bottom: -17px;
+        left: -17px;
+        size: 130px 108px;
+        background-image: url("./hands-friends.png");
+    }
+
+    & .widget-achievements {
+
+        &__btn {
+            border-color: rgb(220, 220, 220);
+            position: absolute;
+            right: 0;
+            top: center;
+
+            &:before, &:after {
+                background-color: rgb(220, 220, 220);
+            }
+        }
+    }
+}
+
+.widget-achievements_profit {
+
+    &:before {
+        left: -30px;
+        size: 150px 200px;
+        background-image: url("./coins-1.png");
+
+        @media (--mobile) {
+            left: -80px;
+        }
+    }
+
+    &:after {
+        right: -20px;
+        size: 150px 200px;
+        background-image: url("./coins-2.png");
+
+        @media (--mobile) {
+            right: -50px;
+        }
+    }
+}
+
+.widget-achievements {
+    min-width: 320px;
+    max-width: 600px;
+    padding: 26px 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+
+    &:before, &:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+    }
+
+    &__info-row {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 22px;
+        text-align: center;
+        line-height: normal;
+        color: $black;
+        margin-bottom: 20px;
+
+        @media (--mobile-small) {
+            font-size: 18px;
+        }
+    }
+
+    &__counter {
+        font-size: 50px;
+        line-height: normal;
+        color: $black;
+    }
+
+    &__currency {
+        font-weight: 300;
+        color: rgba(171, 171, 171, 0.87);
+    }
+}
+
+.friends {
+    margin: 0;
+    margin-left: 45px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    @media (--mobile) {
+        margin-left: 20px;
+    }
+
+    &__item {
+        display: inline-block;
+        position: relative;
+        size: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        border: 2px solid $white;
+        margin-left: -10px;
+        transition: all 0.1s;
+
+        &:hover {
+            z-index: 2;
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+            transform: scale(1.2);
+        }
+
+        &_1 {
+            background-image: url("./manager-ava.png");
+        }
+
+        &_2 {
+            background-image: url("./user-ava.jpg");
+        }
+
+        &_3 {
+            background-image: url("./manager-ava.png");
+        }
+
+        &_4 {
+            background-image: url("./user-ava.jpg");
+        }
+    }
+}

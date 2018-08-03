@@ -1,0 +1,275 @@
+{{!-- TEMPLATE ОПЛАТИТЕ ГОТОВУЮ РАБОТУ --}}
+
+<div class="order-card">
+    <div class="order-card__head">
+        <div class="details order-card__details">
+            <div class="details__data">
+                <div class="details__title">Заказ</div>
+                <div class="details__number">№1 010 601</div>
+                <div class="details__data-in">от 01.08.2017</div>
+                <div class="details__deadline">Дата сдачи: 03.09.2017</div>
+            </div>
+            <div class="details__type">
+                <div class="details__title">Вид работы</div>
+                <div class="details__content">Дипломная работа
+                </div>
+            </div>
+            <div class="details__subject">
+                <div class="details__title">Предмет</div>
+                <div class="details__content">Экономическая социология</div>
+            </div>
+        </div>
+        <div class="widgets order-card__widgets">
+            <div class="widget-price widgets__widget-price">
+                <div class="widget-price__header">Цена<span class="widget-price__price-old">20 000 Р</span></div>
+                <div class="widget-price__value widget-price__value_price">19 332 Р</div>
+            </div>
+            <div class="widget-price widgets__widget-price">
+                <div class="widget-price__header">Предоплата 25%</div>
+                <div class="widget-price__value widget-price__value_prepay">803 Р</div>
+            </div>
+        </div>
+    </div>
+    <div class="order-card__footer order-card__footer_border">
+        <div class="order-card__status">
+            {{> progress-bar type="prepay" icon="card" caption="Ожидаем предоплаты (25%)" addClass="order-card__progress" }}
+            <a href="/order123" class="order-card__messages">
+                <span class="badge badge_primary order-card__badge">99</span>
+                <span class="text text_primary text_underline">Новое сообщение</span>&nbsp;от менеджера
+            </a>
+        </div>
+        <div class="order-card__controls">
+            <a href="/order123/files" class="btn btn_std btn_secondary order-card__btn">Внести предоплату</a>
+            <span class="order-card__price-total">Сумма к оплате: 1 803 Р</span>
+        </div>
+    </div>
+</div>
+
+{{!-- TEMPLATE ОЦЕНИВАЕМ СТОИМОСТЬ --}}
+
+<div class="order-card">
+    <div class="order-card__head">
+        <div class="details order-card__details">
+            <div class="details__data">
+                <div class="details__title">Заказ</div>
+                <div class="details__number">№1 010 601</div>
+                <div class="details__data-in">от 01.08.2017</div>
+                <div class="details__deadline">Дата сдачи: 03.09.2017</div>
+            </div>
+            <div class="details__type">
+                <div class="details__title">Вид работы</div>
+                <div class="details__content">Дипломная работа
+                </div>
+            </div>
+            <div class="details__subject">
+                <div class="details__title">Предмет</div>
+                <div class="details__content">Экономическая социология</div>
+            </div>
+        </div>
+        <div class="widgets order-card__widgets">
+            <button class="btn btn_rect btn_secondary btn-icon btn-icon_wait order-card__btn-big">
+                <span class="btn-icon__icon">{{> spinner }}</span>
+                <span class="btn-icon__caption">Оцениваем стоимость</span>
+            </button>
+        </div>
+    </div>
+    <div class="order-card__footer">
+        <div class="order-card__status">
+            {{> progress-bar type="wait" icon="clock" caption="Оценка работы" addClass="order-card__progress" }}
+            <a href="/order123" class="order-card__messages">
+                <span class="badge badge_primary order-card__badge">99</span>
+                <span class="text text_primary text_underline">Новое сообщение</span>&nbsp;от менеджера
+            </a>
+        </div>
+        <div class="order-card__controls">
+            <div class="order-card__small-caption">Оценка работы может занимать от&nbsp;5&nbsp;минут до&nbsp;1&nbsp;дня</div>
+        </div>
+    </div>
+</div>
+
+{{!-- TEMPLATE ПОЯСНИТЕ ЗАДАНИЕ --}}
+
+<div class="order-card">
+    <div class="order-card__head">
+        <div class="details order-card__details">
+            <div class="details__data">
+                <div class="details__title">Заказ</div>
+                <div class="details__number">№1 010 601</div>
+                <div class="details__data-in">от 01.08.2017</div>
+                <div class="details__deadline">Дата сдачи: 03.09.2017</div>
+            </div>
+            <div class="details__type">
+                <div class="details__title">Вид работы</div>
+                <div class="details__content">Дипломная работа
+                </div>
+            </div>
+            <div class="details__subject">
+                <div class="details__title">Предмет</div>
+                <div class="details__content">Экономическая социология</div>
+            </div>
+        </div>
+        <div class="widgets order-card__widgets">
+            <button class="btn btn_rect btn_secondary btn-icon btn-icon_info order-card__btn-big">
+                <span class="btn-icon__icon btn-icon__icon_info"></span>
+                <span class="btn-icon__caption">Поясните задание</span>
+            </button>
+        </div>
+    </div>
+    <div class="order-card__footer">
+        <div class="order-card__status">
+            {{> progress-bar type="specify" icon="info" caption="Поясните задание" addClass="order-card__progress"}}
+            <a href="/order123" class="order-card__messages">
+                <span class="badge badge_primary order-card__badge">99</span>
+                <span class="text text_primary text_underline">Новое сообщение</span>&nbsp;от менеджера
+            </a>
+        </div>
+        <div class="order-card__controls">
+            <div class="order-card__small-caption">
+                <a href="#" class="text text_primary text_underline">Добавьте описание</a>
+                для наиболее точной оценки вашего заказа
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- TEMPLATE РАБОТА ВЫПОЛНЯЕТСЯ --}}
+
+<div class="order-card">
+    <div class="order-card__head">
+        <div class="details order-card__details">
+            <div class="details__data">
+                <div class="details__title">Заказ</div>
+                <div class="details__number">№1 010 601</div>
+                <div class="details__data-in">от 01.08.2017</div>
+                <div class="details__deadline">Дата сдачи: 03.09.2017</div>
+            </div>
+            <div class="details__type">
+                <div class="details__title">Вид работы</div>
+                <div class="details__content">Дипломная работа
+                </div>
+            </div>
+            <div class="details__subject">
+                <div class="details__title">Предмет</div>
+                <div class="details__content">Экономическая социология</div>
+            </div>
+        </div>
+        <div class="widgets order-card__widgets">
+            <div class="widget-price widgets__widget-price">
+                <div class="widget-price__header">Цена<span class="widget-price__price-old">20 000 Р</span></div>
+                <div class="widget-price__value widget-price__value_price">19 332 Р</div>
+            </div>
+            <div class="widget-price widgets__widget-price">
+                <div class="widget-price__header">Срок готовности</div>
+                <div class="widget-price__value widget-price__value_ready-date">15.05.2017</div>
+            </div>
+        </div>
+    </div>
+    <div class="order-card__footer order-card__footer_border">
+        <div class="order-card__status">
+            {{> progress-bar_filled type="wip" icon="pencil" caption="Выполнение работы" addClass="order-card__progress"}}
+            <a href="/order123" class="order-card__messages">
+                <span class="badge badge_primary order-card__badge">99</span>
+                <span class="text text_primary text_underline">Новое сообщение</span>&nbsp;от менеджера
+            </a>
+        </div>
+        <div class="order-card__controls">
+            <div class="order-card__small-caption"><span>Ваша работа выполняется</span></div>
+        </div>
+    </div>
+</div>
+
+{{!-- TEMPLATE ОПЛАТИТЕ ГОТОВУЮ РАБОТУ --}}
+
+<div class="order-card">
+    <div class="order-card__head">
+        <div class="details order-card__details">
+            <div class="details__data">
+                <div class="details__title">Заказ</div>
+                <div class="details__number">№1 010 601</div>
+                <div class="details__data-in">от 01.08.2017</div>
+                <div class="details__deadline">Дата сдачи: 03.09.2017</div>
+            </div>
+            <div class="details__type">
+                <div class="details__title">Вид работы</div>
+                <div class="details__content">Дипломная работа
+                </div>
+            </div>
+            <div class="details__subject">
+                <div class="details__title">Предмет</div>
+                <div class="details__content">Экономическая социология</div>
+            </div>
+        </div>
+        <div class="widgets order-card__widgets">
+            <div class="widget-price widgets__widget-price">
+                <div class="widget-price__header">Цена<span class="widget-price__price-old">20 000 Р</span></div>
+                <div class="widget-price__value widget-price__value_price">19 332 Р</div>
+            </div>
+            <div class="widget-price widgets__widget-price">
+                <div class="widget-price__header">Доплатить</div>
+                <div class="widget-price__value widget-price__value_need-to-pay">1200 Р</div>
+            </div>
+        </div>
+    </div>
+    <div class="order-card__footer order-card__footer_border">
+        <div class="order-card__status">
+            {{> progress-bar_filled type="primary" icon="card" caption="Оплатите готовую работу" addClass="order-card__progress"}}
+            <a href="/order123" class="order-card__messages">
+                <span class="badge badge_primary order-card__badge">99</span>
+                <span class="text text_primary text_underline">Новое сообщение</span>&nbsp;от менеджера
+            </a>
+        </div>
+        <div class="order-card__controls">
+            <a href="/order123/files" class="btn btn_std btn_primary order-card__btn">Доплатить и скачать</a>
+            <span class="order-card__price-total">Сумма к оплате: 1 803 Р</span>
+        </div>
+    </div>
+</div>
+
+{{!-- TEMPLATE РАБОТА ГОТОВА --}}
+
+<div class="order-card">
+    <div class="order-card__head">
+        <div class="details order-card__details">
+            <div class="details__data">
+                <div class="details__title">Заказ</div>
+                <div class="details__number">№1 010 601</div>
+                <div class="details__data-in">от 01.08.2017</div>
+                <div class="details__deadline">Дата сдачи: 03.09.2017</div>
+            </div>
+            <div class="details__type">
+                <div class="details__title">Вид работы</div>
+                <div class="details__content">Дипломная работа
+                </div>
+            </div>
+            <div class="details__subject">
+                <div class="details__title">Предмет</div>
+                <div class="details__content">Экономическая социология</div>
+            </div>
+        </div>
+        <div class="widgets order-card__widgets">
+            <div class="widget-price widgets__widget-price">
+                <div class="widget-price__header">Цена<span class="widget-price__price-old">20 000 Р</span></div>
+                <div class="widget-price__value widget-price__value_price">19 332 Р</div>
+            </div>
+            <div class="widget-files widgets__widget-files">
+                <div class="widget-price__header">Файлы</div>
+                <ul class="widget-files__list">
+                    <li class="widget-files__item"><a href="#" class="widget-files__name">Дипломная работа.word</a></li>
+                    <li class="widget-files__item"><a href="#" class="widget-files__name">Курсовая работа.word</a></li>
+                    <li class="widget-files__item"><a href="#" class="widget-files__name">Научная работа.word</a></li>
+                    <li class="widget-files__item"><a href="#" class="widget-files__name">Диссер работа.word</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="order-card__footer order-card__footer_border">
+        <div class="order-card__status">
+            {{> progress-bar_filled type="ready" icon="check" caption="Ваша работа готова" addClass="order-card__progress"}}
+            <a href="/order123" class="order-card__messages">
+                <span class="badge badge_primary order-card__badge">99</span>
+                <span class="text text_primary text_underline">Новое сообщение</span>&nbsp;от менеджера
+            </a>
+        </div>
+        <a href="/order123/files" class="btn btn_std btn_primary order-card__btn">Скачать архивом</a>
+    </div>
+</div>

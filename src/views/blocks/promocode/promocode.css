@@ -1,0 +1,13 @@
+.promocode {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 3.6px;
+    line-height: normal;
+    text-align: center;
+    color: $primary;
+
+    @media (--mobile) {
+        font-size: 40px;
+        letter-spacing: 2.4px;
+    }
+}

@@ -1,83 +1,153 @@
 .page-header {
+    position: relative;
     background-image: linear-gradient(to right, rgb(12, 15, 41), rgb(43, 58, 99) 50%, rgb(12, 15, 41));
-    color: $white;
+    color: rgba(255, 255, 255, 0.87);
     overflow: hidden;
-    padding-top: 23px;
+    padding-top: 20px;
 
-    &__col-progress {
+    &__avatar {
+        size: 84px;
+        flex-basis: 84px;
+        background-image: url("./manager-ava.png");
+        margin-right: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
 
         @media (--mobile) {
-            margin-left: -15px;
-            margin-right: -15px;
+            margin-top: 7px;
+            margin-bottom: 10px;
         }
     }
 
-    &__row-widget {
+    &__top {
+        display: flex;
+        padding-bottom: 25px;
 
         @media (--tablet) {
-            border-top: 1px solid rgba(255, 255, 255, 0.5);
-            padding-top: 10px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @media (--mobile) {
+            padding-bottom: 10px;
+            flex-direction: row;
+            align-items: center;
         }
     }
 
-    &__col-info {
+    &__breadcrumbs {
+        flex: 0;
+        flex-basis: 40%;
 
         @media (--tablet) {
-            margin-top: 10px;
-            margin-bottom: 40px;
+            flex-basis: 100%;
+        }
+
+        @media (--mobile) {
+            flex-basis: auto;
         }
     }
 
-    &__col-widget {
-        padding-right: 28px;
-        padding-left: 0;
+    &__progress {
+        flex: 0;
+        flex-basis: 36%;
 
-        @media (--desktop) {
-            padding-right: 10px;
+        @media (--tablet) {
+            width: 50%;
+        }
+
+        @media (--mobile) {
+            flex-basis: auto;
         }
     }
-    
-    & .page-title {
-        font-size: 40px;
+
+    &__body {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__order-info {
+        display: flex;
+        flex-direction: column;
+        flex: 0;
+        flex-basis: 40%;
+
+        @media (--tablet) {
+            flex-basis: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title-currency {
         font-weight: 300;
-        color: rgba(255, 255, 255, 0.87);
-        line-height: normal;
-        margin-top: 8px;
-        margin-bottom: 10px;
+    }
 
-        @media (--mobile) {
-            font-size: 28px;
-            line-height: normal;
-            margin-top: 0;
+    &__title-balance {
+        color: rgb(254, 254, 254);
+        font-weight: 600;
+
+        &_accent {
+            color: $secondary;
         }
     }
 
-    & .order-number {
+    &__profile-edit {
+        display: inline-block;
         font-size: 14px;
-        color: rgba(254, 254, 254, 0.5);
+        color: rgba(254, 254, 254, 0.3);
+
+        @media (--mobile) {
+            display: none;
+        }
+
+        &:hover {
+            color: rgba(254, 254, 254, 0.8);
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            size: 14px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: svg-load("../../../svg/iconmonstr-pencil.svg", fill=rgba(254, 254, 254, 0.3));
+            transition: $transition-delay;
+        }
     }
 
-    & .subject {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: rgba(255, 255, 255, 0.3);
-        font-size: 13px;
-        line-height: normal;
-        font-weight: 300;
+    &__profile-edit:hover {
+
+        &:after {
+            background-image: svg-load("../../../svg/iconmonstr-pencil.svg", fill=rgba(254, 254, 254, 0.8));
+        }
     }
 
-    & .btn {
-        padding: 5px 20px;
+    &__btn-edit {
+        display: none;
+        position: absolute;
+        right: 15px;
+        top: 25px;
+        size: 48px;
 
-        @media (--desktop) {
-            padding-left: 10px;
-            padding-right: 10px;
+        @media (--mobile) {
+            display: block;
+        }
+
+        &_icon {
+            display: inline-block;
+            top: center;
+            left: center;
+            background-position: center;
+            background-size: 14px;
+            background-repeat: no-repeat;
+            background-image: svg-load("../../../svg/iconmonstr-pencil.svg", fill=#1e284b);
         }
     }
 
     & .progress-bar {
-        margin-bottom: 20px;
 
         @media (--mobile) {
             min-width: auto;
@@ -94,25 +164,6 @@
         }
     }
 
-    & .mobile-prev {
-        display: none;
-        border: solid rgba(255, 255, 255, 0.5);
-        border-width: 0 3px 3px 0;
-        padding: 3px;
-        transform: rotate(135deg);
-        transition: $transition-delay;
-        margin-right: 15px;
-
-
-        @media (--mobile) {
-            display: block;
-
-            &:active {
-                border: solid rgba(255, 255, 255, 0.9);
-            }
-        }
-    }
-
     & .navigation {
 
         @media (--desktop) {
@@ -120,7 +171,25 @@
         }
     }
 
+    &__widgets {
+        margin: 0 -15px;
+
+        @media (--mobile) {
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding-top: 15px;
+            padding-bottom: 10px;
+            margin: 0 -5px;
+            flex: 1;
+        }
+    }
+
     & .widget-price {
+        padding: 0 15px;
+
+        @media (--mobile) {
+           padding: 0 5px;
+            flex: 1;
+        }
 
         &__header {
             color: rgba(255, 255, 255, 0.5);
@@ -134,8 +203,8 @@
             }
         }
 
-        &__price {
-            margin-left: 16px;
+        &__value {
+            margin: 0;
             margin-top: 10px;
             margin-bottom: 33px;
 
@@ -143,13 +212,48 @@
                 margin-top: 0;
                 margin-bottom: 20px;
             }
+
+            &_price {
+                color: rgba(255, 255, 255, 0.87);
+            }
         }
     }
 
     & .widget-countdown {
+        margin-left: auto;
+
+        @media (--desktop-extra) {
+            margin-right: 30px;
+        }
 
         @media (--mobile) {
             display: none;
         }
+    }
+}
+
+.order-info {
+
+    &__title {
+        text-align: left;
+        color: rgba(255, 255, 255, 0.87);
+        margin-top: 8px;
+        margin-bottom: 10px;
+
+        @media (--mobile) {
+            margin-top: 0;
+        }
+    }
+
+    &__number {
+        font-size: 14px;
+        color: rgba(254, 254, 254, 0.5);
+    }
+
+    &__subject {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 13px;
+        line-height: normal;
+        font-weight: 300;
     }
 }

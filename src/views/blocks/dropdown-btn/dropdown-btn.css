@@ -27,38 +27,18 @@
         }
     }
 
-    &__label {
+    &__badge {
         position: absolute;
-        display: block;
         size: 18px;
-        border-radius: 50%;
         right: -19px;
         top: -17px;
+        font-size: 13px;
+        font-weight: bold;
 
         @media (--mobile) {
             size: 15px;
             right: -9px;
             top: -15px;
-        }
-
-        &_primary {
-            background-color: $primary;
-        }
-
-        &_secondary {
-            background-color: $secondary;
-        }
-    }
-
-    &__label-number {
-        font-size: 13px;
-        position: absolute;
-        top: center;
-        left: center;
-        color: $white;
-        font-weight: bold;
-
-        @media (--mobile) {
             font-size: 11px;
         }
     }
