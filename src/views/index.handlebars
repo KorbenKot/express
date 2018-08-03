@@ -47,150 +47,89 @@
             </span>
         </label>
 
-
-        <div class="row">
-            <div class="col">{{> button theme="primary" type="std" caption="Primary btn" }}</div>
-            <div class="col">{{> button theme="error" type="std" caption="Error btn" }}</div>
-            <div class="col">{{> button theme="secondary" type="std" caption="Secondary btn" }}</div>
-            <div class="col">{{> button theme="bright" type="std" caption="Bright btn" }}</div>
-            <div class="col">{{> button theme="primary" type="rect" caption="Primary btn" }}</div>
-        </div>
-        <div class="row">
-            <div class="col">{{> button theme="error" type="rect" caption="Error btn" }}</div>
-            <div class="col">{{> button theme="secondary" type="rect" caption="Secondary btn" }}</div>
-            <div class="col">{{> button theme="bright" type="rect" caption="Bright btn" }}</div>
-            <div class="col">{{> button theme="bright" type="round" icon="close"}}</div>
-            <div class="col">{{> button theme="secondary" type="round" icon="plus" }}</div>
-            <div class="col"><button class="btn btn_std btn_disabled ">disabled btn</button></div>
-        </div>
+        {{> button theme="primary" type="std" caption="Primary btn" }}
+        {{> button theme="error" type="std" caption="Error btn" }}
+        {{> button theme="secondary" type="std" caption="Secondary btn" }}
+        {{> button theme="bright" type="std" caption="Bright btn" }}
+        {{> button theme="primary" type="rect" caption="Primary btn" }}
+        {{> button theme="error" type="rect" caption="Error btn" }}
+        {{> button theme="secondary" type="rect" caption="Secondary btn" }}
+        {{> button theme="bright" type="rect" caption="Bright btn" }}
+        {{> button theme="bright" type="round" icon="close"}}
+        {{> button theme="secondary" type="round" icon="plus" }}
+        <button class="btn btn_std btn_disabled ">disabled btn</button>
 
         <h3>BTN REFERENCE</h3>
 
-        <div class="margin-t-b-10">
-            <button class="btn btn_std btn_bright">Пополнить баланс
-                <span class="btn__icon btn__icon_plus">&times;</span>
-            </button>
-        </div>
+        <button class="btn btn_std btn_bright">Пополнить баланс
+            <span class="btn__icon btn__icon_plus">&times;</span>
+        </button>
 
-        <div class="margin-t-b-10">
-            <button class="btn btn_std btn_bright">Закрыть
-                <span class="btn__icon btn__icon_times">&times;</span>
-            </button>
-        </div>
+        <button class="btn btn_std btn_bright">Закрыть
+            <span class="btn__icon btn__icon_times">&times;</span>
+        </button>
 
-        <div class="margin-t-b-10">
+        <button class="btn btn_rect btn_primary btn-icon">
+            <span class="btn-icon__caption">Загрузить бланк заявления на возврат.docx</span>
+            <span class="btn-icon__icon btn-icon__icon_download"></span>
+        </button>
 
-            <button class="btn btn_rect btn_primary btn-icon">
-                <span class="btn-icon__caption">Загрузить бланк заявления на возврат.docx</span>
-                <span class="btn-icon__icon btn-icon__icon_download"></span>
-            </button>
+        <button class="btn btn_rect btn_error btn-icon">
+            <span class="btn-icon__caption">Загрузить бланк заявления на возврат.docx</span>
+            <span class="btn-icon__icon btn-icon__icon_upload"></span>
+        </button>
 
-        </div>
+        <button class="btn btn_rect btn_secondary btn-icon">
+            <span class="btn-icon__caption">Загрузить бланк заявления на возврат.docx</span>
+            <span class="btn-icon__icon btn-icon__icon_info"></span>
+        </button>
 
-        <div class="margin-t-b-10">
+        <button class="btn btn_rect btn_bright btn-icon">
+            <span class="btn-icon__image btn-icon__image_visa"></span>
+            <span class="btn-icon__image btn-icon__image_mastercard"></span>
+        </button>
 
-            <button class="btn btn_rect btn_error btn-icon">
-                <span class="btn-icon__caption">Загрузить бланк заявления на возврат.docx</span>
-                <span class="btn-icon__icon btn-icon__icon_upload"></span>
-            </button>
+        <button class="btn btn_rect btn_bright btn-icon btn-icon_woman">
+            <span class="btn-icon__image"></span>
+            <span class="btn-icon__caption">На расчётный счет</span>
+        </button>
 
-        </div>
+        <button class="btn btn_rect btn_bright btn-icon btn-icon_hands">
+            <span class="btn-icon__image"></span>
+            <span class="btn-icon__caption">На Мобильный</span>
+        </button>
 
-            <div class="margin-t-b-10">
+        <button class="btn btn_rect btn_bright btn-icon btn-icon_webmoney">
+            <span class="btn-icon__image"></span>
+        </button>
 
-            <button class="btn btn_rect btn_secondary btn-icon">
-                <span class="btn-icon__caption">Загрузить бланк заявления на возврат.docx</span>
-                <span class="btn-icon__icon btn-icon__icon_info"></span>
-            </button>
+        <button class="btn btn_rect btn_bright btn-icon btn-icon_mts">
+            <span class="btn-icon__image"></span>
+        </button>
 
-        </div>
+        <button class="btn btn_rect btn_bright btn-icon btn-icon_beeline">
+            <span class="btn-icon__image"></span>
+        </button>
 
-            <div class="margin-t-b-10">
+        <button class="btn btn_rect btn_bright btn-icon btn-icon_qiwi">
+            <span class="btn-icon__image"></span>
+        </button>
 
-            <button class="btn btn_rect btn_bright btn-icon">
-                <span class="btn-icon__image btn-icon__image_visa"></span>
-                <span class="btn-icon__image btn-icon__image_mastercard"></span>
-            </button>
+        <button class="btn btn_rect btn_bright btn-icon btn-icon_megafon">
+            <span class="btn-icon__image"></span>
+        </button>
 
-        </div>
+        <button class="btn btn_rect btn_bright btn-icon btn-icon_tele2">
+            <span class="btn-icon__image"></span>
+        </button>
 
-        <div class="margin-t-b-10">
-
-            <button class="btn btn_rect btn_bright btn-icon btn-icon_woman">
-                <span class="btn-icon__image"></span>
-                <span class="btn-icon__caption">На расчётный счет</span>
-            </button>
-
-        </div>
-
-        <div class="margin-t-b-10">
-
-            <button class="btn btn_rect btn_bright btn-icon btn-icon_hands">
-                <span class="btn-icon__image"></span>
-                <span class="btn-icon__caption">На Мобильный</span>
-            </button>
-
-        </div>
-
-        <div class="margin-t-b-10">
-
-            <button class="btn btn_rect btn_bright btn-icon btn-icon_webmoney">
-                <span class="btn-icon__image"></span>
-            </button>
-
-        </div>
-
-        <div class="margin-t-b-10">
-
-            <button class="btn btn_rect btn_bright btn-icon btn-icon_mts">
-                <span class="btn-icon__image"></span>
-            </button>
-
-        </div>
-
-        <div class="margin-t-b-10">
-
-            <button class="btn btn_rect btn_bright btn-icon btn-icon_beeline">
-                <span class="btn-icon__image"></span>
-            </button>
-
-        </div>
-
-        <div class="margin-t-b-10">
-
-            <button class="btn btn_rect btn_bright btn-icon btn-icon_qiwi">
-                <span class="btn-icon__image"></span>
-            </button>
-
-        </div>
-
-        <div class="margin-t-b-10">
-
-            <button class="btn btn_rect btn_bright btn-icon btn-icon_megafon">
-                <span class="btn-icon__image"></span>
-            </button>
-
-        </div>
-
-        <div class="margin-t-b-10">
-
-            <button class="btn btn_rect btn_bright btn-icon btn-icon_tele2">
-                <span class="btn-icon__image"></span>
-            </button>
-
-        </div>
-
-        <div class="margin-t-b-10">
-
-            <button class="btn btn_rect btn_bright btn-icon btn-icon_yandex">
-                <span class="btn-icon__image"></span>
-            </button>
-
-        </div>
+        <button class="btn btn_rect btn_bright btn-icon btn-icon_yandex">
+            <span class="btn-icon__image"></span>
+        </button>
 
         {{> info-card }}
 
-        </div>
+    </div>
 </div>
 {{> footer }}
 

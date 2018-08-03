@@ -1,0 +1,79 @@
+.user-card {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+
+    @media (--tablet) {
+        text-align: center;
+        align-items: center;
+    }
+
+    @media (--mobile) {
+        text-align: center;
+        border: solid 1px #dcdcdc;
+        border-radius: 10px;
+    }
+
+    &__name-col {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+
+        @media (--tablet) {
+            margin-left: 0;
+        }
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+
+        @media (--tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__avatar {
+        size: 90px;
+        flex-basis: 90px;
+        background-color: #76ffd4;
+        background-image: url("./manager-ava.png");
+
+        @media (--tablet) {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        @media (--mobile) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__name, &__type {
+        line-height: normal;
+    }
+
+    &__type {
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    &__name {
+        font-size: 28px;
+        color: $black;
+
+        @media (--tablet) {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__contacts-bar {
+        margin-bottom: 20px;
+        margin-top: 10px;
+
+        @media (--tablet) {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+    }
+}

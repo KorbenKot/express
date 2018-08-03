@@ -1,4 +1,7 @@
 .widget-notify {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     padding-left: 27px;
     padding-right: 27px;
@@ -10,6 +13,11 @@
     overflow: hidden;
     transition: $transition-delay;
 
+    @media (--mobile) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
     &:hover {
         box-shadow: $gray-shadow;
         background-color: $white;
@@ -17,6 +25,10 @@
 
     &:hover &__controls-block_img:before {
         background-image: svg-load("../../../svg/wave.svg", fill=$white);
+    }
+
+    &_new-order {
+        align-items: stretch;
     }
 
     &__content-col,
@@ -28,48 +40,80 @@
         }
     }
 
-    & h2, h3 {
+    &__title {
         font-weight: 600;
         color: $black;
-    }
-
-    & h2 {
-        font-size: 24px;
-        line-height: 1.25;
-
-        @media (--mobile) {
-            font-size: 18px;
-        }
-    }
-
-    & h3 {
-        font-size: 18px;
-        line-height: 1.5;
-    }
-
-    &__head {
-        margin-top: 10px;
-        margin-bottom: 10px;
 
         @media (--tablet) {
+            margin-top: 5px;
             margin-bottom: 5px;
+        }
+
+        &_primary {
+            font-size: 24px;
+            line-height: 1.25;
+
+            @media (--mobile) {
+                font-size: 18px;
+            }
+        }
+
+        &_secondary {
+            font-size: 18px;
+            line-height: 1.5;
         }
     }
 
-    &__content-block {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        flex-basis: 60%;
 
         @media (--mobile) {
             margin-right: 20px;
         }
+
+        &_new-order {
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
+
+    &__controls {
+        flex: 1;
+        flex-basis: 40%;
+        display: flex;
+        align-items: center;
+        background-color: inherit;
     }
 
     &__controls-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         background-color: inherit;
 
         @media (--mobile) {
             margin-top: 5px;
             position: static;
+            justify-content: space-between;
+        }
+
+        &_background {
+            padding-right: 27px;
+            margin-right: -27px;
+            background-color: $primary;
+            background: url('./new-order.png') no-repeat center;
+            background-size: cover;
+            height: 100%;
+
+            @media (--mobile) {
+                margin-left: -27px;
+            }
         }
 
         &_img {
@@ -104,7 +148,7 @@
         flex: 1 1 auto;
     }
 
-    &__content {
+    &__text {
         margin-top: 5px;
         margin-bottom: 5px;
         font-size: 15px;
@@ -114,6 +158,27 @@
         @media (--mobile) {
             font-size: 13px;
             line-height: 21px;
+        }
+
+        &_no-order {
+            color: rgba(28, 37, 69, 0.54);
+            font-size: 18px;
+            line-height: 27px;
+
+            @media (--mobile) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        size: 40px 45px;
+        background: url("./widget-notify.png") no-repeat center;
+        background-size: contain;
+
+        @media (--mobile) {
+            display: none;
         }
     }
 
@@ -131,6 +196,16 @@
         }
     }
 
+    &__btn-plus {
+        border: 2px solid #f3f3f3;
+
+        @media (--mobile) {
+            position: absolute;
+            right: 7px;
+            top: 10px;
+        }
+    }
+
     &__btn-close {
 
         @media (--mobile) {
@@ -142,37 +217,44 @@
 
     &__img {
         position: relative;
-        size: 157px 96px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-        background-color: inherit;
-        background-size: cover;
-        background: url('./3@2x.jpg') no-repeat center;
 
-        @media (--tablet) {
-            display: none;
+        &_flat {
+
         }
 
-        &:before, &:after {
-            position: absolute;
-            content: "";
-            display: block;
-        }
-
-        &:before {
-            width: 4px;
-            left: 27px;
-            height: 100%;
-            background-color: transparent;
-            border-left: 1px dashed #f9f9f9;
-        }
-
-        &:after {
+        &_mans {
+            size: 157px 96px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            background: url('./3@2x.jpg') no-repeat center;
             background-color: inherit;
-            border-radius: 50%;
-            size: 88px;
-            right: -60px;
-            top: center;
+            background-size: cover;
+
+            @media (--tablet) {
+                display: none;
+            }
+
+            &:before, &:after {
+                position: absolute;
+                content: "";
+                display: block;
+            }
+
+            &:before {
+                width: 4px;
+                left: 27px;
+                height: 100%;
+                background-color: transparent;
+                border-left: 1px dashed #f9f9f9;
+            }
+
+            &:after {
+                background-color: inherit;
+                border-radius: 50%;
+                size: 88px;
+                right: -60px;
+                top: center;
+            }
         }
     }
 
@@ -185,47 +267,5 @@
 
     &__controls-block {
         flex: 1 1 auto;
-    }
-}
-
-[data-template = "new-order-notify"] {
-
-    .widget-notify {
-
-        &__content-col {
-
-            @media (--mobile) {
-                padding-left: 12px;
-                padding-right: 12px;
-            }
-        }
-
-        &__content {
-            font-size: 18px;
-
-            @media (--mobile) {
-                font-size: 14px;
-            }
-        }
-
-        &__controls-block_img {
-            height: 100%;
-        }
-
-        &__btn-close {
-            border: 2px solid #f3f3f3;
-        }
-
-        &__controls-block {
-            padding-right: 27px;
-            margin-right: -27px;
-            background-color: $primary;
-            background: url('./new-order.png') no-repeat center;
-            background-size: cover;
-
-            @media (--mobile) {
-                margin-left: -27px;
-            }
-        }
     }
 }

@@ -92,20 +92,6 @@
             }
         }
     }
-
-    & .breadcrumbs {
-
-        @media (--mobile-small) {
-            display: none;
-        }
-    }
-
-    & .go-back {
-
-        @media (--mobile-small) {
-            display: inline-block;
-        }
-    }
 }
 
 

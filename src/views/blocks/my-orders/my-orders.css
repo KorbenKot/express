@@ -1,12 +1,5 @@
 [data-template="my-orders"] {
 
-    & .breadcrumbs {
-
-        @media (--mobile-small) {
-            display: none;
-        }
-    }
-
     & .order-card {
         margin-top: 30px;
         margin-bottom: 30px;

@@ -32,6 +32,8 @@
 @import "../views/blocks/file-card/file-card.css";
 @import "../views/blocks/info-card/info-card.css";
 @import "../views/blocks/share/share.css";
+@import "../views/blocks/user-card/user-card.css";
+@import "../views/blocks/chat/chat.css";
 
 /* MENUS */
 @import "../views/blocks/dropdown-menu/dropdown-menu.css";
@@ -55,7 +57,6 @@
 @import "../views/blocks/addfriend/addfriend.css";
 
 /* COMPLEX LAYOUTS */
-@import "../views/blocks/order/order.css";
 
 @font-face {
     font-family: "Gotham Pro Regular";
