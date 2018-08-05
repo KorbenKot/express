@@ -15,7 +15,8 @@
     }
 
     &__btn-primary {
-        margin: auto;
+        display: block;
+        margin: 0 auto;
         padding: 0 30px;
 
         @media (--mobile) {
@@ -55,10 +56,6 @@
             padding-right: 0;
             margin-right: 60px;
         }
-    }
-
-    & .widget-promocode {
-        margin: 0 auto;
     }
 }
 

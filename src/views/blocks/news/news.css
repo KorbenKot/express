@@ -66,6 +66,7 @@
         }
 
         @media (--mobile) {
+            flex: 1;
             border-radius: 10px;
             padding: 10px 20px 17px;
         }

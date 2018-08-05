@@ -1,42 +1,47 @@
 {{!-- ПРИГЛАСИТЬ ДРУГА --}}
-
 <div class="widget-notify" data-template="invite-friends">
-    <div class="widget-notify__content">
-        <div class="widget-notify__title widget-notify__title_secondary">По <span class="text text_primary">2 бесплатной</span> курсовой вам и друзьям</div>
-        <div class="widget-notify__text">Зовите к нам друзей! Дарим по 2 курсовой вам и другу после первой оплаты работы</div>
-    </div>
-    <div class="widget-notify__controls">
-        <div class="widget-notify__controls-block widget-notify__controls-block_img">
-            <div class="widget-notify__img widget-notify__img_mans"></div>
-            <a href="/addfriend" class="btn btn_bright btn_std widget-notify__btn center">Пригласить друга</a>
-            {{> button type="round" theme="bright" icon="close" addClass="widget-notify__btn-close" }}
+    <div class="widget-notify__inner">
+        <div class="widget-notify__content">
+            <div class="widget-notify__title widget-notify__title_secondary">По <span class="text text_primary">2 бесплатной</span> курсовой вам и друзьям</div>
+            <div class="widget-notify__text">Зовите к нам друзей! Дарим по 2 курсовой вам и другу после первой оплаты работы</div>
+        </div>
+        <div class="widget-notify__controls">
+            <div class="widget-notify__controls-block widget-notify__controls-block_img">
+                <div class="widget-notify__img widget-notify__img_mans"></div>
+                <a href="/addfriend" class="btn btn_bright btn_std widget-notify__btn center">Пригласить друга</a>
+                {{> button type="round" theme="bright" icon="close" addClass="widget-notify__btn-close" }}
+            </div>
         </div>
     </div>
 </div>
 
 {{!-- ПРИВЕТСТВИЕ --}}
-
 <div class="widget-notify" data-template="hello-user">
-    <div class="widget-notify__content">
-        <div class="widget-notify__title widget-notify__title_primary">Виталий, добрый вечер!</div>
-        <div class="widget-notify__text">Пятничная музыкальная подборка от Zaochnik. И пусть выходные пройдут
-            отлично!
+    <div class="widget-notify__inner">
+        <div class="widget-notify__content">
+            <div class="widget-notify__title widget-notify__title_primary">Виталий, добрый вечер!</div>
+            <div class="widget-notify__text">Пятничная музыкальная подборка от Zaochnik. И пусть выходные пройдут
+                отлично!
+            </div>
+        </div>
+        <div class="widget-notify__controls widget-notify__controls_btn">
+            {{> button type="round" theme="bright" icon="close" addClass="widget-notify__btn-close" }}
         </div>
     </div>
-    {{> button type="round" theme="bright" icon="close" addClass="widget-notify__btn-close" }}
 </div>
 
 {{!-- НЕТ ЗАКАЗОВ --}}
-
-<div class="widget-notify widget-notify_new-order" data-template="new-order-notify">
-    <div class="widget-notify__content widget-notify__content_new-order">
-        <div class="widget-notify__icon"></div>
-        <div class="widget-notify__text widget-notify__text_no-order">В данный момент активных заказов нет.</div>
-    </div>
-    <div class="widget-notify__controls">
-        <div class="widget-notify__controls-block widget-notify__controls-block_background widget-notify__controls-block_img">
-            <div class="center widget-notify__controls-caption">Оформить новый заказ</div>
-            {{> button type="round" theme="primary" icon="plus" addClass="widget-notify__btn-plus" }}
+<div class="widget-notify" data-template="new-order-notify">
+    <div class="widget-notify__inner widget-notify__inner_new-order">
+        <div class="widget-notify__content widget-notify__content_new-order">
+            <div class="widget-notify__icon"></div>
+            <div class="widget-notify__text widget-notify__text_no-order">В данный момент активных заказов нет.</div>
+        </div>
+        <div class="widget-notify__controls">
+            <div class="widget-notify__controls-block widget-notify__controls-block_background widget-notify__controls-block_img">
+                <div class="center widget-notify__controls-caption">Оформить новый заказ</div>
+                {{> button type="round" theme="primary" icon="plus" addClass="widget-notify__btn-plus" }}
+            </div>
         </div>
     </div>
 </div>

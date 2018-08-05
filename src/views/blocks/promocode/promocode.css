@@ -5,6 +5,9 @@
     line-height: normal;
     text-align: center;
     color: $primary;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 
     @media (--mobile) {
         font-size: 40px;

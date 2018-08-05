@@ -22,6 +22,10 @@
 /* FORM ELEMENTS */
 @import "../views/blocks/checkbox/checkbox.css";
 
+/* TABLES */
+
+@import "../views/blocks/table/table.css";
+
 /* COMPLEX BLOCKS */
 @import "../views/blocks/toolbar/toolbar.css";
 @import "../views/blocks/page-header/page-header.css";
