@@ -1,6 +1,10 @@
 .widget-notify {
     display: flex;
 
+    &:not(:last-child) {
+        margin: 10px 0 30px;
+    }
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -20,6 +24,7 @@
         @media (--mobile) {
             flex-direction: column;
             justify-content: center;
+            padding: 12px 20px;
         }
 
         &:hover {
@@ -128,6 +133,11 @@
 
         &_img {
 
+            @media (--mobile) {
+                padding: 0;
+                margin-bottom: -15px;
+            }
+
             &:before {
                 position: absolute;
                 content: "";
@@ -213,32 +223,27 @@
         }
     }
 
-    &__btn-plus {
-        border: 2px solid #f3f3f3;
-        margin-left: auto;
-
-        @media (--mobile) {
-            position: absolute;
-            right: 7px;
-            top: 10px;
-        }
-    }
-
+    &__btn-plus,
     &__btn-close {
 
         @media (--mobile) {
             position: absolute;
-            right: 7px;
-            top: 10px;
+            right: 10px;
+            top: 20px;
         }
+    }
+
+    &__btn-plus {
+        border: 2px solid #f3f3f3;
+        margin-left: auto;
+    }
+
+    &__btn-close {
+
     }
 
     &__img {
         position: relative;
-
-        &_flat {
-
-        }
 
         &_mans {
             size: 157px 96px;

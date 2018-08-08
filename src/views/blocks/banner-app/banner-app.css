@@ -1,0 +1,91 @@
+.banner-app {
+    position: relative;
+    border-radius: 10px;
+    border: solid 1px rgb(220, 220, 220);
+    max-width: 400px;
+    padding: 30px;
+    padding-right: 20px;
+    background-image: url("./phone.png");
+    background-repeat: no-repeat;
+    background-position: 94% 170%;
+    background-size: 96px 169px;
+    
+    @media (--mobile) {
+        padding: 15px;
+        padding-left: 20px;
+        min-height: 240px;
+    }
+
+    &__text {
+        width: 70%;
+        color: $black;
+    }
+
+    &__title {
+        display: block;
+        font-size: 24px;
+        font-style: italic;
+        line-height: 48px;
+
+        @media (--mobile) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__content {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    &__rate {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: inherit;
+        padding-right: inherit;
+    }
+
+    &__google-badge {
+        margin-top: 20px;
+        display: block;
+        size: 190px 74px;
+        background-image: url("./google-play-badge.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (--mobile) {
+            width: 150px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.rate {
+
+    &__stars {
+        display: inline-block;
+        size: 61px 12px;
+        background-position: right center;
+        background-image: url("./rate-stars.png");
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    }
+
+    &__count {
+        vertical-align: middle;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: bold;
+        padding-right: 15px;
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 12px;
+        background-image: svg-load("../../../svg/iconmonstr-user.svg", fill=rgba(0, 0, 0, 0.5));
+
+        @media (--mobile) {
+            background-image: none;
+            padding-right: 0;
+        }
+    }
+}

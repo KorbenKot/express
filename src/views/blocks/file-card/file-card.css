@@ -13,6 +13,7 @@
         background-color: $white;
         box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
         height: 100%;
+        min-height: 360px;
     }
 
     &__title {
@@ -29,86 +30,23 @@
         }
     }
 
-    &__list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        flex-grow: 1;
-    }
-
-    &__item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        font-size: 18px;
-        line-height: 24px;
-        text-align: left;
-
-        @media (--mobile) {
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-    }
-
-    &__file-name {
-        color: $primary;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 35%;
-
-        @media (--mobile) {
-            font-size: 14px;
-        }
-    }
-
-    &__item:not(:last-child) {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    }
-
-    &__date {
-        font-size: 13px;
-        line-height: 24px;
-        text-align: left;
-        color: rgba(0, 0, 0, 0.54);
-
-        @media (--desktop-large) {
-            margin-left: -30px;
-        }
+    &__file-list {
+        margin-bottom: 10px;
     }
 
     &__drop-area {
-        margin-top: 10px;
+        margin-bottom: 30px;
     }
 
     &__btn {
         display: block;
         min-height: 45px;
         font-weight: 600;
-        margin-top: 30px;
+        margin-top: auto;
         margin-left: auto;
         margin-right: auto;
         padding-left: 20px;
         padding-right: 20px;
-    }
-
-    &__btn_del {
-        line-height: 20px;
-        min-height: 20px;
-        padding: 0;
-        font-size: 25px;
-        color: rgba(0, 0, 0, 0.38);
-
-        @media (--tablet) {
-            font-size: 22px;
-        }
-
-        &:hover {
-            color: rgba(0, 0, 0, 0.68);
-        }
     }
 }
 

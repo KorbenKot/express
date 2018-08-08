@@ -7,9 +7,108 @@
     <div class="wrapper main-wrapper">
         <div class="file-card-container">
 
-            {{> file-card }}
-            {{> file-card }}
-            {{> file-card }}
+            <div class="file-card">
+                <div class="file-card__container" data-template="file-card" data-type="file-upload">
+                    <div class="file-card__title">Файлы квитанции</div>
+                    <div class="file-list file-card__file-list">
+                        <ul class="file-list__list">
+                            <li class="file-list__item">
+                                <a href="#" class="file-list__file-name">Оплата-1.docx</a>
+                                <span class="file-list__date">03.06.2016</span>
+                                <button class="btn file-list__btn">&times;</button>
+                            </li>
+                            <li class="file-list__item">
+                                <a href="#" class="file-list__file-name">Оплата-2.docx</a>
+                                <span class="file-list__date">04.06.2016</span>
+                                <button class="btn file-list__btn">&times;</button>
+                            </li>
+                            <li class="file-list__item">
+                                <a href="#" class="file-list__file-name">Ололооолололоол.3ds</a>
+                                <span class="file-list__date">05.06.2016</span>
+                                <button class="btn file-list__btn">&times;</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="dropZone" class="drop-area file-card__drop-area">
+                        <div class="drop-area__title">Перетащите файлы сюда</div>
+                        <p class="drop-area__caption">При оплате заказа через банк прикрепите, пожалуйста, квитанцию, чтобы мы могли
+                            продолжить работу над вашим заказом.</p>
+                    </div>
+                    <button class="btn btn_std btn_disabled file-card__btn">Прикрепить файл</button>
+                </div>
+            </div>
+            <div class="file-card">
+                <div class="file-card__container" data-template="file-card" data-type="file-upload">
+                    <div class="file-card__title">Файлы условия</div>
+                    <div class="file-list file-card__file-list">
+                        <ul class="file-list__list">
+                            <li class="file-list__item">
+                                <a href="#" class="file-list__file-name">Оплата-1.docx</a>
+                                <span class="file-list__date">03.06.2016</span>
+                                <button class="btn file-list__btn">&times;</button>
+                            </li>
+                            <li class="file-list__item">
+                                <a href="#" class="file-list__file-name">Оплата-2.docx</a>
+                                <span class="file-list__date">04.06.2016</span>
+                                <button class="btn file-list__btn">&times;</button>
+                            </li>
+                            <li class="file-list__item">
+                                <a href="#" class="file-list__file-name">Ололооолололоол.3ds</a>
+                                <span class="file-list__date">05.06.2016</span>
+                                <button class="btn file-list__btn">&times;</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="dropZone" class="drop-area file-card__drop-area">
+                        <div class="drop-area__title">Перетащите файлы сюда</div>
+                        <p class="drop-area__caption">При оплате заказа через банк прикрепите, пожалуйста, квитанцию, чтобы мы могли
+                            продолжить работу над вашим заказом.</p>
+                    </div>
+                    <button class="btn btn_std btn_primary file-card__btn">Прикрепить файл</button>
+                </div>
+            </div>
+
+            <div class="file-card">
+                <div class="file-card__container" data-template="file-card" data-type="file-upload">
+                    <div class="file-card__title">Промежуточные файлы решения</div>
+                    <div class="file-list file-card__file-list">
+                        <ul class="file-list__list">
+                            <li class="file-list__item">
+                                <a href="#" class="file-list__file-name">Оплата-1.docx</a>
+                                <span class="file-list__date">03.06.2016</span>
+                                <button class="btn file-list__btn">&times;</button>
+                            </li>
+                            <li class="file-list__item">
+                                <a href="#" class="file-list__file-name">Оплата-2.docx</a>
+                                <span class="file-list__date">04.06.2016</span>
+                                <button class="btn file-list__btn">&times;</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn btn_std btn_secondary file-card__btn">Скачать архивом</button>
+                </div>
+            </div>
+
+            <div class="file-card">
+                <div class="file-card__container" data-template="file-card" data-type="file-upload">
+                    <div class="file-card__title">Файлы решения</div>
+                    <div class="file-list file-card__file-list">
+                        <ul class="file-list__list">
+                            <li class="file-list__item">
+                                <a href="#" class="file-list__file-name">Оплата-1.docx</a>
+                                <span class="file-list__date">03.06.2016</span>
+                                <button class="btn file-list__btn">&times;</button>
+                            </li>
+                            <li class="file-list__item">
+                                <a href="#" class="file-list__file-name">Оплата-2.docx</a>
+                                <span class="file-list__date">04.06.2016</span>
+                                <button class="btn file-list__btn">&times;</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn btn_std btn_primary file-card__btn">Скачать архивом</button>
+                </div>
+            </div>
 
         </div>
     </div>

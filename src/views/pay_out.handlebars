@@ -5,7 +5,162 @@
 
     <div class="wrapper main-wrapper">
 
-    </div>
+        <div class="alert balance__alert">
+            <div class="alert__content">* вывести средства можно только 1 раз в неделю</div>
+            <div class="alert__content">* оформление возврата осуществляется в течении 5 (рабочих) дней</div>
+        </div>
 
+        <div class="title title_secondary balance__title_secondary">Выберите способ вывода:</div>
+
+        <div class="btn-group">
+            <div class="btn-group__btn">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_woman">
+                    <span class="btn-icon__image"></span>
+                    <span class="btn-icon__caption">На расчётный счет</span>
+                </button>
+            </div>
+            <div class="btn-group__btn">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_webmoney">
+                    <span class="btn-icon__image"></span>
+                </button>
+            </div>
+            <div class="btn-group__btn">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_qiwi">
+                    <span class="btn-icon__image"></span>
+                </button>
+            </div>
+            <div class="btn-group__btn">
+                <button class="btn btn_rect btn_bright btn-icon btn-icon_hands">
+                    <span class="btn-icon__image"></span>
+                    <span class="btn-icon__caption">На Мобильный</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="title title_secondary balance__title_secondary">Введите сумму вывода</div>
+
+        <form action="" class="balance__form">
+            <div class="balance__input-container">
+                <div class="text-field">
+                    <input type="number"
+                           class="text-field__input"
+                           pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+                           step="0.01"
+                           placeholder="Сумма вывода..."
+                           name="summ"
+                           maxlength="8"/>
+                    <label class="text-field__label" for="order.pagesAll">Сумма вывода</label>
+                </div>
+            </div>
+
+            <div class="balance__checking-account">
+                <div class="title title_secondary balance__title_secondary">Загрузите бланк заявления на возврат</div>
+
+
+                <div class="btn-group btn-group_download">
+                    <div class="btn-group__btn">
+                        <button class="btn btn_rect btn-icon btn-download">
+                            <span class="btn-download__caption">Загрузить бланк заявления на возврат.docx</span>
+                            <span class="btn-download__icon btn-download__icon_upload"></span>
+                        </button>
+                    </div>
+
+                    <div class="btn-group__btn">
+                        <button class="btn btn_rect btn-icon btn-download">
+                            <span class="btn-download__caption">Скачать бланк заявления на возврат.docx</span>
+                            <span class="btn-download__icon btn-download__icon_download"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="file-list balance__file-list">
+                    <ul class="file-list__list">
+                        <li class="file-list__item">
+                            <a href="#" class="file-list__file-name">Оплата.docx</a>
+                            <button class="btn file-list__btn">&times;</button>
+                        </li>
+                        <li class="file-list__item">
+                            <a href="#" class="file-list__file-name">Оплата.docx</a>
+                            <button class="btn file-list__btn">&times;</button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="balance__webmoney">
+                <div class="title title_secondary balance__title_secondary">Введите номер счёта</div>
+                <div class="balance__input-container">
+                    <div class="text-field">
+                        <input type="number"
+                               class="text-field__input"
+                               pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+                               step="0.01"
+                               placeholder="Сумма вывода..."
+                               name="summ"
+                               maxlength="8"/>
+                        <label class="text-field__label" for="order.pagesAll">Номер счёта...</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="balance__qiwi">
+                <div class="title title_secondary balance__title_secondary">Введите номер счёта</div>
+                <div class="balance__input-container">
+                    <div class="text-field">
+                        <input type="number"
+                               class="text-field__input"
+                               pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+                               step="0.01"
+                               placeholder="Сумма вывода..."
+                               name="summ"
+                               maxlength="8"/>
+                        <label class="text-field__label" for="order.pagesAll">Номер счёта...</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="balance__phone">
+                <div class="title title_secondary balance__title_secondary balance__title_secondary">Выберите оператора</div>
+                <div class="btn-group">
+                    <div class="btn-group__btn">
+                        <button class="btn btn_rect btn_bright btn-icon btn-icon_mts">
+                            <span class="btn-icon__image"></span>
+                        </button>
+                    </div>
+                    <div class="btn-group__btn">
+                        <button class="btn btn_rect btn_bright btn-icon btn-icon_beeline">
+                            <span class="btn-icon__image"></span>
+                        </button>
+                    </div>
+                    <div class="btn-group__btn">
+                        <button class="btn btn_rect btn_bright btn-icon btn-icon_megafon">
+                            <span class="btn-icon__image"></span>
+                        </button>
+                    </div>
+                    <div class="btn-group__btn">
+                        <button class="btn btn_rect btn_bright btn-icon btn-icon_tele2">
+                            <span class="btn-icon__image"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="title title_secondary balance__title_secondary balance__title_secondary">Введите номер телефона</div>
+                <div class="balance__input-container">
+                    <div class="text-field">
+                        <input type="number"
+                               class="text-field__input"
+                               pattern="/^[0-9]+(\.[0-9]{1,2})?$/"
+                               step="0.01"
+                               placeholder="Сумма вывода..."
+                               name="summ"
+                               maxlength="8"/>
+                        <label class="text-field__label" for="order.pagesAll">Номер телефона...</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn_std btn_primary balance__btn-return">Оформить возврат</button>
+        </form>
+    </div>
 </div>
 {{> footer }}

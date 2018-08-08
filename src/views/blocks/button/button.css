@@ -3,14 +3,12 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    height: 50px;
-    line-height: 50px;
     font-family: $opensans;
     font-weight: 600;
     font-size: 16px;
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px 20px;
+    min-height: 50px;
     transition: $transition-delay;
 
     @media (--desktop-extra) {
@@ -20,10 +18,8 @@
 
     @media (--mobile) {
         font-size: 14px;
-        padding-left: 8px;
-        padding-right: 8px;
-        height: 40px;
-        line-height: 40px;
+        padding: 5px 8px;
+        min-height: 40px;
     }
 
     &:focus {
@@ -31,7 +27,9 @@
     }
 
     &__icon {
-        font-size: 1.5em;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1em;
         font-weight: bold;
         margin-left: 10px;
         color: inherit;
@@ -260,24 +258,25 @@
 /* BUTTONS WITH ICONS OR IMAGES */
 
 .btn-icon {
+    width: 285px;
     height: 100%;
-    width: auto;
-    white-space: nowrap;
-    flex: 1 0 auto;
-    will-change: transform;
+    min-height: 110px;
+    overflow: hidden;
+    background-color: rgb(249, 249, 249);
 
     &:hover {
         box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-        transform: scale(1.025);
+        background-color: $white;
     }
 
     &:active {
-        transform: scale(0.975);
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
     }
 
     &__caption {
         display: inline-block;
         text-align: center;
+        vertical-align: middle;
         font-size: 22px;
         line-height: 24px;
         font-weight: 300;
@@ -290,6 +289,7 @@
 
     &__icon {
         display: inline-block;
+        vertical-align: middle;
         size: 30px;
         min-size: 30px;
         margin-right: 15px;
@@ -311,11 +311,44 @@
     }
 
     &__image {
+        display: inline-block;
         pointer-events: none;
         position: relative;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+    }
+
+    &_hands {
+
+        & .btn-icon__image {
+            position: absolute;
+            background-image: url("./hands.png");
+            bottom: 0;
+            height: 90px;
+            right: -20px;
+            width: 115px;
+        }
+
+        & .btn-icon__caption {
+            padding-right: 50px;
+        }
+    }
+
+    &_woman {
+
+        & .btn-icon__image {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-image: url("./woman.png");
+            height: 105px;
+            width: 158px;
+        }
+
+        & .btn-icon__caption {
+            padding-left: 50px;
+        }
     }
 
     &_wallet {
@@ -442,24 +475,6 @@
 
     &__image {
 
-        &_hands {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            background-image: url("./hands.png");
-            height: 105px;
-            width: 158px;
-        }
-
-        &_woman {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            background-image: url("./woman.png");
-            height: 105px;
-            width: 158px;
-        }
-
         &_visa {
             background-image: url("./logo-visa.png");
             height: 70px;
@@ -562,5 +577,92 @@
         &:hover {
             background-image: svg-load("../../../svg/iconmonstr-magnifier.svg", fill=rgba(255, 255, 255, 0.8));
         }
+    }
+}
+
+.btn-download {
+    max-width: 375px;
+    width: 100%;
+    height: 110px;
+    background-color: $white;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+
+    &:hover {
+        background-color: $primary;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &:hover &__caption {
+        color: $white;
+    }
+
+    &:hover &__icon_download {
+        background-image: svg-load("../../../svg/iconmonstr-download.svg", fill=$white);
+    }
+
+    &:hover &__icon_upload {
+        background-image: svg-load("../../../svg/iconmonstr-upload.svg", fill=$white);
+    }
+
+    &__caption {
+        display: inline-block;
+        white-space: normal;
+        width: 90%;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+        color: $black;
+        transition: all $transition-delay;
+
+        @media (--mobile) {
+            font-size: 18px;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        vertical-align: middle;
+        size: 30px;
+        min-size: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: $transition-delay;
+
+        &_download {
+            background-image: svg-load("../../../svg/iconmonstr-download.svg", fill=$primary);
+        }
+
+        &_upload {
+            background-image: svg-load("../../../svg/iconmonstr-upload.svg", fill=$primary);
+        }
+
+    }
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+
+    @media (--tablet) {
+        justify-content: center;
+    }
+
+    &_download {
+        width: 70%;
+        justify-content: space-between;
+
+        @media (--desktop) {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__btn {
+        padding: 10px;
     }
 }

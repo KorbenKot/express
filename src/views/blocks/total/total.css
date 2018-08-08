@@ -1,0 +1,51 @@
+.total {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        background-color: rgb(249, 249, 249);
+        border: solid 1px rgb(220, 220, 220);
+        padding: 25px 30px;
+        width: 100%;
+
+        @media (--mobile) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        color: $black;
+        margin-right: 20px;
+        vertical-align: middle;
+    }
+
+    &__chips-container {
+        flex: 1 0 50%;
+
+        @media (--mobile) {
+            flex-basis: auto;
+            text-align: center;
+        }
+    }
+
+    &__summ {
+        color: $black;
+        font-size: 24px;
+        vertical-align: middle;
+    }
+
+    &__currency {
+        font-weight: 300;
+    }
+
+    &__btn {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+}

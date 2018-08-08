@@ -1,0 +1,126 @@
+.banner-survey {
+    position: relative;
+    font-family: 'Open Sans',sans-serif;
+    border: solid 1px rgb(220, 220, 220);
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+
+    &__main:hover &__btn {
+        background-color: $primary-hov;
+        color: $white;
+    }
+
+    &__wrapper {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        background: url("./banner-survey-bg.png") no-repeat $white;
+        background-size: cover;
+    }
+
+    &__left-side {
+        padding: 25px 0 25px 30px;
+
+        @media (--mobile) {
+            padding: 10px 20px;
+            width: 70%;
+        }
+    }
+
+    &__right-side {
+        width: 200px;
+        background: url("./banner-survey-right-side.png") no-repeat center left;
+
+        @media (--mobile) {
+
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        color: $black;
+        font-size: 24px;
+        line-height: 36px;
+        max-width: 190px;
+
+        @media (--mobile) {
+            font-size: 26px;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        color: $black;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 20px;
+    }
+
+    &__btn {
+        width: 190px;
+        margin-top: 25px;
+        padding: 5px;
+
+        @media (--mobile) {
+            margin-top: 37px;
+            min-height: 50px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    }
+
+    &__num-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        right: 0;
+        width: 80px;
+        height: 100%;
+        border-right: 2px dotted #b9b9b9;
+        margin-right: 15px;
+        padding: 10px 0;
+    }
+
+    &__num {
+        color: rgba(0, 0, 0, 0.26);
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 50px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: transparent;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 9px;
+            width: 9px;
+            background-color: rgb(202, 202, 202);
+            border-radius: 50%;
+            right: -40%;
+            top: 21px;
+        }
+
+        &_highlight {
+            color: #fff;
+            background: url("./banner-survey-percent.png") no-repeat center $primary;
+
+            &::after {
+                background-color: $primary;
+            }
+        }
+    }
+}

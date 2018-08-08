@@ -1,76 +1,13 @@
 {{> head }}
-<div class="balance" data-template="balance">
+<div class="balance" data-template="pay">
 
     {{> page-header_balance }}
 
     <div class="wrapper main-wrapper">
-        <div class="title title_secondary">Введите сумму пополнения</div>
 
-        <input id="text" type="text" name="summToAdd">
-        <label for="text">Сумма пополнения</label>
-        
-        <div class="title title_secondary">Выберете способ оплаты без комиссии:</div>
+        {{> table-pay }}
 
-        <div class="row__btn-container">
-            <div class="col__btn-container col__btn-container">
-                <button class="btn btn_rect btn_bright btn-icon">
-                    <span class="btn-icon__image btn-icon__image_visa"></span>
-                    <span class="btn-icon__image btn-icon__image_mastercard"></span>
-                </button>
-            </div>
-            <div class="col__btn-container">
-                <button class="btn btn_rect btn_bright btn-icon btn-icon_webmoney">
-                    <span class="btn-icon__image"></span>
-                </button>
-            </div>
-            <div class="col__btn-container">
-                <button class="btn btn_rect btn_bright btn-icon btn-icon_wallet">
-                    <span class="btn-icon__caption">Оплата c баланса</span>
-                    <span class="btn-icon__image"></span>
-                </button>
-            </div>
-        </div>
-
-        <div class="title title_secondary">Оплата с комиссией (4,5%):</div>
-
-        <div class="row__btn-container">
-            <div class="col__btn-container">
-                <button class="btn btn_rect btn_bright btn-icon btn-icon_qiwi">
-                    <span class="btn-icon__image"></span>
-                </button>
-            </div>
-            <div class="col__btn-container">
-                <button class="btn btn_rect btn_bright btn-icon btn-icon_euroset">
-                    <span class="btn-icon__image"></span>
-                </button>
-            </div>
-            <div class="col__btn-container">
-                <button class="btn btn_rect btn_bright btn-icon btn-icon_svyaznoi">
-                    <span class="btn-icon__image"></span>
-                </button>
-            </div>
-            <div class="col__btn-container">
-                <button class="btn btn_rect btn_bright btn-icon btn-icon_yandex">
-                    <span class="btn-icon__image"></span>
-                </button>
-            </div>
-            <div class="col__btn-container">
-                <button class="btn btn_rect btn_bright btn-icon btn-icon_operators">
-                    <span class="btn-icon__image"></span>
-                </button>
-            </div>
-        </div>
-
-        <div class="checkbox">
-            <div class="checkbox-container">
-                <input id="checkbox" type="checkbox" name="checkbox" class="checkbox__input">
-                <span class="checkbox__checkmark"></span>
-            </div>
-            <label for="checkbox" class="checkbox__label">Я ознакомился с договором и политикой конфиденциальности.</label>
-        </div>
-
-        <button class="btn btn_std btn_primary balance__btn-main">Оплатить</button>
-        
     </div>
+
 </div>
 {{> footer }}

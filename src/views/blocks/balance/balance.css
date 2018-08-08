@@ -1,9 +1,5 @@
 .balance {
 
-    & .btn {
-        padding: 0 20px;
-    }
-
     & .balance__btn-main {
         width: 252px;
         height: 66px;
@@ -47,6 +43,67 @@
                 padding: 0;
                 width: 100%;
             }
+        }
+    }
+}
+
+.alert {
+    position: relative;
+    padding-left: 50px;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: center;
+        size: 36px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: svg-load("../../../svg/iconmonstr-warning.svg" fill=$error);
+    }
+
+    &__content {
+        line-height: normal;
+        font-size: 14px;
+        color: $black;
+    }
+}
+
+.balance {
+
+    &__btn-return {
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 66px;
+        border-radius: 33px;
+        font-weight: normal;
+        margin-top: 30px;
+    }
+
+
+    &__input-container {
+        max-width: 300px;
+    }
+
+    &__title_secondary {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__file-list {
+        margin-top: 30px;
+        max-width: 375px;
+        flex: 1;
+
+        @media (--desktop) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (--mobile) {
+            max-width: 100%;
         }
     }
 }

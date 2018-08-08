@@ -60,9 +60,11 @@
 
 .slide-toggle_small {
     size: 52px 26px;
+    min-width: 52px;
 
     & .slide-toggle__bullet {
         size: 22px;
+        min-width: 22px;
         left: 2px;
         bottom: 2px;
         border-radius: 50%;
@@ -81,9 +83,11 @@
 
 .slide-toggle_round {
     size: 124px 36px;
+    min-width: 124px;
 
     & .slide-toggle__bullet {
         size: 60px 30px;
+        min-width: 60px;
         left: 3px;
         bottom: 3px;
         border-radius: 13px;
@@ -102,6 +106,7 @@
 
 .slide-toggle_rect {
     size: 170px 50px;
+    min-width: 170px;
 
     & .slide-toggle__text-back {
 
@@ -116,6 +121,7 @@
 
     & .slide-toggle__bullet {
         size: 73px 30px;
+        min-width: 73px;
         border-radius: 15px;
         bottom: 9px;
         left: 10px;

@@ -8,22 +8,23 @@
 @import "../views/blocks/dropdown-btn/dropdown-btn.css";
 @import "../views/blocks/logo/logo.css";
 @import "../views/blocks/link/link.css";
-@import "../views/blocks/navigation/navigation.css";
+@import "../views/blocks/tabs/tabs.css";
 @import "../views/blocks/progress-bar/progress-bar.css";
 @import "../views/blocks/contacts-bar/contacts-bar.css";
 @import "../views/blocks/spinner/spinner.css";
-@import "../views/blocks/slide-toggle/slide-toggle.css";
 @import "../views/blocks/title/title.css";
 @import "../views/blocks/text/text.css";
-@import "../views/blocks/badge/badge.css";
 @import "../views/blocks/promocode/promocode.css";
 @import "../views/blocks/social-links/social-links.css";
+@import "../views/blocks/badge/badge.css";
+@import "../views/blocks/chips/chips.css";
 
 /* FORM ELEMENTS */
 @import "../views/blocks/checkbox/checkbox.css";
+@import "../views/blocks/text-field/text-field.css";
+@import "../views/blocks/slide-toggle/slide-toggle.css";
 
 /* TABLES */
-
 @import "../views/blocks/table/table.css";
 
 /* COMPLEX BLOCKS */
@@ -31,10 +32,15 @@
 @import "../views/blocks/page-header/page-header.css";
 @import "../views/blocks/order-card/order-card.css";
 @import "../views/blocks/file-card/file-card.css";
+@import "../views/blocks/file-list/file-list.css";
 @import "../views/blocks/info-card/info-card.css";
 @import "../views/blocks/share/share.css";
 @import "../views/blocks/user-card/user-card.css";
 @import "../views/blocks/chat/chat.css";
+@import "../views/blocks/total/total.css";
+@import "../views/blocks/blog-card/blog-card.css";
+@import "../views/blocks/banner-app/banner-app.css";
+@import "../views/blocks/banner-survey/banner-survey.css";
 
 /* MENUS */
 @import "../views/blocks/dropdown-menu/dropdown-menu.css";
@@ -51,14 +57,12 @@
 @import "../views/blocks/widget-bonus/widget-bonus.css";
 
 /* LAYOUTS */
-@import "../views/blocks/index/index.css";
+@import "../views/blocks/main/main.css";
 @import "../views/blocks/my-orders/my-orders.css";
 @import "../views/blocks/messages/messages.css";
 @import "../views/blocks/settings/settings.css";
 @import "../views/blocks/balance/balance.css";
 @import "../views/blocks/addfriend/addfriend.css";
-
-/* COMPLEX LAYOUTS */
 
 @font-face {
     font-family: "Gotham Pro Regular";

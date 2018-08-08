@@ -2,9 +2,11 @@
     border: 1px solid rgba(0, 0, 0, 0.24);
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
 
     @media (--mobile) {
         border: none;
+        box-shadow: none;
     }
 
     &__body {
@@ -122,10 +124,21 @@
             }
         }
 
-        &_price {
+        &_price-history {
             font-weight: 600;
             font-size: 16px;
             text-align: right;
+
+            @media (--mobile) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding-top: inherit;
+                padding-right: inherit;
+            }
+        }
+
+        &_checkbox {
 
             @media (--mobile) {
                 position: absolute;
@@ -162,6 +175,11 @@
             }
         }
 
+        &_subject {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.54);
+        }
+
         &_status {
 
             @media (--mobile) {
@@ -175,6 +193,17 @@
 
         &_date {
             color: rgba(0, 0, 0, 0.54);
+        }
+    }
+
+    &__price-old {
+        font-size: 13px;
+        margin-left: 10px;
+        text-decoration:line-through;
+        color: rgba(0, 0, 0, 0.38);
+
+        @media (--mobile) {
+            font-size: 14px;
         }
     }
 
@@ -193,7 +222,7 @@
 
         &__data {
 
-            &_price {
+            &_price-history {
                 color: $primary;
             }
 
@@ -221,7 +250,7 @@
 
         &__data {
 
-            &_price {
+            &_price-history {
                 color: $secondary;
             }
         }
@@ -241,7 +270,7 @@
 
         &__data {
 
-            &_price {
+            &_price-history {
                 color: rgb(168, 168, 168);
             }
 
@@ -259,6 +288,112 @@
         &__icon {
             background-image: svg-load("../../../svg/iconmonstr-arrow.svg", fill=rgb(168, 168, 168));
             transform: rotateZ(180deg);
+        }
+    }
+}
+
+.table_pay {
+
+    .table {
+
+        &__row:nth-child(2n + 1) {
+            background-color: rgb(249, 249, 249);
+        }
+
+        &__data {
+
+            &_checkbox {
+
+                @media (--mobile) {
+                    padding-right: inherit;
+                    padding-top: inherit;
+                }
+            }
+
+            &_work {
+
+                @media (--mobile) {
+                    order: 1;
+                    margin: 0;
+                    font-size: 16px;
+                }
+            }
+
+            &_number {
+
+                @media (--mobile) {
+                    order: 2;
+                    position: relative;
+                    padding: 0;
+                    margin-bottom: 10px;
+                    line-height: normal;
+                }
+            }
+
+            &_subject {
+
+                @media (--mobile) {
+                    order: 3;
+                    line-height: 20px;
+                }
+
+            }
+
+            &_price {
+
+                @media (--mobile) {
+                    position: relative;
+                    order: 4;
+                    font-size: 25px;
+                    font-weight: 500;
+                    padding-left: 10px;
+                }
+
+                &:before {
+
+                    @media (--mobile) {
+                        content: "";
+                        display: inline-block;
+                        top: center;
+                        left: 0;
+                        size: 5px;
+                        background-color: $primary;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            &_toggle {
+
+                @media (--mobile) {
+                    order: 5;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.status {
+    display: flex;
+    justify-content: flex-end;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+
+        @media (--mobile) {
+            flex-direction: column-reverse;
+            margin-top: 10px;
+        }
+    }
+
+    &__caption {
+        margin-right: 25px;
+
+        @media (--mobile) {
+            margin-right: 0;
+            margin-top: 5px;
         }
     }
 }

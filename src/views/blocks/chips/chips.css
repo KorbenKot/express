@@ -1,0 +1,57 @@
+.chips {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    border-radius: 19px;
+    background-color: rgba(0, 230, 118, 0.3);
+    line-height: normal;
+    min-width: 100px;
+    margin: 5px 0;
+    padding: 5px;
+    color: $black;
+
+
+    &__caption {
+        display: inline-block;
+        color: rgba(0, 0, 0, 0.54);
+        vertical-align: middle;
+        line-height: normal;
+        padding: 0 5px;
+    }
+
+    &__btn {
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        size: 28px;
+        line-height: 26px;
+        font-size: 28px;
+        text-align: center;
+        background-color: rgb(249, 249, 249);
+        color: rgba(0, 0, 0, 0.54);
+        cursor: pointer;
+        transition: $transition-delay;
+
+        &:hover {
+            color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        &:active {
+            color: $black;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+
+        }
+    }
+}
+
+
+
+.chips_btn {
+
+    .chips {
+
+    }
+
+}

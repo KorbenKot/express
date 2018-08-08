@@ -271,7 +271,7 @@
         }
     }
 
-    & .navigation {
+    & .tabs {
 
         @media (--desktop) {
             margin-top: 10px;

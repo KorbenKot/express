@@ -1,0 +1,62 @@
+.text-field {
+    position: relative;
+    background-color: #f9f9f9;
+    border: solid 1px #dcdcdc;
+    border-radius: 10px;
+
+    &__input {
+        display: block;
+        width: 100%;
+        min-height: 66px;
+        margin: 0;
+        padding: 28px 15px 10px;
+        font-family: var(--opensans);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: left;
+        border: none;
+        border-radius: 10px;
+        background-color: inherit;
+
+        &:focus {
+            outline: none;
+
+            &::placeholder {
+                color: var(--black);
+                opacity: 0.25;
+            }
+        }
+
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        top: center;
+        left: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        z-index: 1;
+        transition: all .3s;
+    }
+
+    &.focus {
+        background-color: var(--white);
+    }
+
+    &.focus .text-field__label,
+    &.not-empty .text-field__label,
+    &.success .text-field__label,
+    & *:focus + .text-field__label,
+    & *.open + .text-field__label,
+    &.focus textarea.text-field__input + .text-field__label,
+    &.not-empty  textarea.text-field__input + .text-field__label,
+    &.success textarea.text-field__input + .text-field__label {
+        top: 10px;
+        font-size: 13px;
+        transform: none;
+    }
+}

@@ -1,0 +1,273 @@
+.blog-card {
+    display: flex;
+
+    @media (--tablet) {
+        flex-direction: column;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        padding: 40px 32px 32px;
+        border-radius: 10px;
+        overflow: hidden;
+        min-height: 320px;
+        width: 100%;
+
+        @media (--mobile) {
+            text-align: left;
+            padding: 15px 15px 32px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @media (--tablet) {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__inner:hover &__image:before {
+        opacity: 0.4;
+    }
+
+    &__link {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: $white;
+        overflow: hidden;
+    }
+
+    &__image {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url("./test-img.jpg");
+
+        &:before {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            content: "";
+            background-image: linear-gradient(160deg, #000, #fff);
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+    }
+
+    &__tags {
+        width: 100%;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 30px;
+        color: $white;
+        z-index: 2;
+        width: 100%;
+
+        @media (--mobile) {
+            line-height: normal;
+        }
+    }
+
+    &__author {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 150px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 30px;
+        color: $white;
+
+        @media (--mobile) {
+            font-size: 14px;
+        }
+    }
+
+    &__avatar {
+        display: inline-block;
+        size: 40px;
+        vertical-align: middle;
+        background-image: url("./manager-ava.png");
+    }
+
+    &__name {
+        padding-left: 10px;
+        vertical-align: middle;
+
+        @media (--mobile) {
+            padding-left: 0;
+        }
+    }
+
+    &__date {
+        margin-right: 10px;
+    }
+
+    &__date,
+    &__views,
+    &__comments {
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &__views,
+    &__comments {
+        padding-left: 20px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 15px;
+    }
+
+    &__views {
+        background-image: svg-load("../../../svg/iconmonstr-eye.svg", fill=rgba(255, 255, 255, 0.5));
+        margin-right: 10px;
+    }
+
+    &__comments {
+        background-image: svg-load("../../../svg/iconmonstr-speech-bubble.svg", fill=rgba(255, 255, 255, 0.5));
+
+        @media (--mobile) {
+            display: none;
+        }
+    }
+
+    & .chips {
+        font-size: 12px;
+        background-color: $white;
+
+        &:hover {
+            background-color: $primary-hov;
+        }
+    }
+}
+
+.blog-link {
+    text-align: left;
+
+    &__articles {
+        font-size: 14px;
+        line-height: 22px;
+        columns: 3;
+
+        @media (--tablet) {
+            columns: 1;
+        }
+    }
+
+    &__item:not(:first-child) {
+        position: relative;
+        margin-left: 30px;
+
+        @media (--tablet) {
+            margin-left: 0;
+            padding-top: 20px;
+        }
+
+        &:before {
+            left: -20px;
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            background-color: rgb(220, 220, 220);
+
+            @media (--tablet) {
+                width: 100%;
+                height: 1px;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    &__item:not(:last-child) {
+
+        @media (--tablet) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        color: $black;
+        margin-top: 20px;
+        margin-bottom: 15px;
+
+        @media (--tablet) {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        color: $black;
+        cursor: pointer;
+        display: block;
+        max-height: 65px;
+        overflow: hidden;
+        transition: all $transition-delay;
+        font-weight: bold;
+
+        &:hover {
+            color: $primary;
+            text-decoration: underline;
+        }
+    }
+
+    &__stats {
+        margin-top: 5px;
+    }
+
+    &__views,
+    &__comments {
+        padding-left: 20px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 15px;
+    }
+
+    &__views {
+        background-image: svg-load("../../../svg/iconmonstr-eye.svg", fill=rgba(0, 0, 0, 0.3));
+    }
+
+    &__comments {
+        background-image: svg-load("../../../svg/iconmonstr-speech-bubble.svg", fill=rgba(0, 0, 0, 0.3));
+        margin-right: 10px;
+
+        @media (--mobile) {
+            display: none;
+        }
+    }
+}

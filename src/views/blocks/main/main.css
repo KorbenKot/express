@@ -1,0 +1,49 @@
+.main {
+
+    &__columns {
+        display: flex;
+        position: relative;
+
+        @media (--tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__column-left {
+        flex: 0 0 70%;
+        max-width: 70%;
+        padding-right: 30px;
+
+        @media (--tablet) {
+            padding-right: 0;
+        }
+    }
+
+    &__column-right {
+        flex: 0 0 30%;
+        max-width: 30%;
+        margin-top: 25px;
+
+        @media (--tablet) {
+            margin-top: 15px;
+        }
+    }
+
+    &__column-left,
+    &__column-right {
+
+        @media (--tablet) {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__banner {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        @media (--tablet) {
+            margin: 30px auto;
+        }
+    }
+}
