@@ -1,0 +1,95 @@
+$select-color: $black;
+$select-background: rgb(249, 249, 249);
+$select-border: rgb(220, 220, 220);
+
+
+.select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+}
+
+.select {
+    position: relative;
+    background-color: #f9f9f9;
+    border: solid 1px #dcdcdc;
+    border-radius: 10px;
+    cursor: pointer;
+    color: $black;
+    width: 100%;
+    height: 50px;
+    display: block;
+    min-height: 66px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 28px 15px 10px;
+    transition: $transition-delay ease-in;
+
+    &:after {
+        content:"";
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        border-color: rgb(220, 220, 220) transparent transparent transparent;
+        position: absolute;
+        top: 30px;
+        right: 10px;
+    }
+
+    &:hover {
+
+    }
+
+    &:active, &.active {
+
+
+        &:after {
+            top: 20px;
+            border-color: transparent transparent rgb(220, 220, 220) transparent;
+        }
+    }
+}
+
+.select-options {
+    display: none;
+    position: absolute;
+    top: calc(100% - 10px);
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: inherit;
+    border: inherit;
+    border-top: none;
+
+    li {
+        margin: 0;
+        padding: 12px 0;
+        text-indent: 15px;
+        transition: $transition-delay ease-in;
+
+
+        &:hover {
+            color: $select-background;
+            background: $select-color;
+        }
+
+        &[rel="hide"] {
+            display: none;
+        }
+    }
+}

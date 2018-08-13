@@ -156,15 +156,15 @@
     &_primary {
         background-color: $primary;
         color: $white;
-        box-shadow: $gray-shadow;
 
         &:hover {
             background-color: $primary-hov;
-            box-shadow: $gray-shadow-hov;
+            box-shadow: $gray-shadow;
         }
 
         &:active {
             background-color: $primary-act;
+            box-shadow: $gray-shadow-hov;
         }
 
         &:before, &:after {
@@ -175,15 +175,15 @@
     &_error {
         background-color: $error;
         color: $white;
-        box-shadow: $gray-shadow;
 
         &:hover {
             background-color: $error-hov;
-            box-shadow: $gray-shadow-hov;
+            box-shadow: $gray-shadow;
         }
 
         &:active {
             background-color: $error-act;
+            box-shadow: $gray-shadow-hov;
         }
 
         &:before, &:after {
@@ -194,15 +194,15 @@
     &_secondary {
         background-color: $secondary;
         color: $white;
-        box-shadow: $gray-shadow;
 
         &:hover {
             background-color: $secondary-hov;
-            box-shadow: $gray-shadow-hov;
+            box-shadow: $gray-shadow;
         }
 
         &:active {
             background-color: $secondary-act;
+            box-shadow: $gray-shadow-hov;
         }
 
         &:before, &:after {
@@ -307,6 +307,10 @@
 
         &_info {
             background-image: svg-load("../../../svg/iconmonstr-info.svg", fill=$error);
+        }
+
+        &_spinner {
+            background-image:url("./spinner.gif");
         }
     }
 
@@ -497,6 +501,31 @@
     background-image: svg-load("../../../svg/iconmonstr-magnifier.svg", fill=$primary);
 }
 
+/* btn find-white */
+
+.btn-icon__icon_find {
+
+    &_white {
+        background-image: svg-load("../../../svg/iconmonstr-magnifier.svg", fill=$white);
+        margin-right: 0;
+        margin-left: 10px;
+
+        @media (--mobile) {
+            background-image: svg-load("../../../svg/iconmonstr-magnifier.svg", fill=$secondary);
+            margin: 0;
+        }
+    }
+}
+
+/* btn download */
+
+.btn-icon__icon_download {
+    size: 15px;
+    min-size: 15px;
+    margin-right: 0;
+    background-image: svg-load("../../../svg/iconmonstr-download-2.svg", fill=$white);
+}
+
 /* btn with spinner */
 
 .btn-icon_wait {
@@ -508,10 +537,6 @@
 
     &:hover .btn-icon__caption {
         color: $white;
-    }
-
-    &:hover .spinner div {
-        background: $white;
     }
 
     &:active {
@@ -585,7 +610,6 @@
     width: 100%;
     height: 110px;
     background-color: $white;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
     white-space: nowrap;
 
     &:hover {

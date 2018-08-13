@@ -43,7 +43,7 @@ router.get('/addfriend', (req, res) => res.render('addfriend',
     }
 ));
 
-router.get('/shpory', (req, res) => res.render('shpory',
+router.get('/cribs', (req, res) => res.render('cribs',
     {
         pageTitle: 'Шпоры',
         username: 'Sasha'

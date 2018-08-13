@@ -1,0 +1,119 @@
+<div class="form form_settings">
+    <form name="settingsForm" class="form__fields" novalidate>
+        <div class="form__frame">
+            <div class="form__header">Контактная информация</div>
+            <div class="form__row">
+                <div class="form__col form__col_fluid">
+                    <div class="text-field">
+                        <input type="text"
+                               class="text-field__input"
+                               placeholder=""
+                               id="settings.name" />
+                        <label class="text-field__label" for="settings.name">Ваше Имя</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form__col form__col_fluid">
+                    <div class="text-field">
+                        <input type="text"
+                               class="text-field__input"
+                               placeholder=""
+                               id="settings.phone" />
+                        <label class="text-field__label" for="settings.phone">Телефон</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form__col form__col_fluid">
+                    <div class="text-field">
+                        <input type="text"
+                               class="text-field__input"
+                               placeholder=""
+                               id="settings.mail" />
+                        <label class="text-field__label" for="settings.mail">E-mail</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__controls">
+                <span class="form__controls-caption">Уведомление по заказам:</span>
+                <div class="form__toggle-wrap">
+                    <div class="form__toggle">
+                        <span class="slide-toggle__caption">E-mail</span>
+                        <label for="settings.notifySMS" class="slide-toggle slide-toggle_primary slide-toggle_small">
+                            <input id="settings.notifySMS" class="slide-toggle__input" type="checkbox">
+                            <span class="slide-toggle__slider">
+                            <span class="slide-toggle__bullet"></span>
+                        </span>
+                        </label>
+                    </div>
+
+                    <div class="form__toggle">
+                        <span class="slide-toggle__caption">СМС</span>
+                        <label for="settings.notifyMail" class="slide-toggle slide-toggle_primary slide-toggle_small">
+                            <input id="settings.notifyMail" class="slide-toggle__input" type="checkbox">
+                            <span class="slide-toggle__slider">
+                            <span class="slide-toggle__bullet"></span>
+                        </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__frame">
+            <div class="form__header">Личные данные</div>
+            <div class="form__row">
+                <div class="form__col form__col_fluid">
+                    <div class="text-field">
+                        <input type="text"
+                               class="text-field__input"
+                               placeholder=""
+                               id="settings.birthday" />
+                        <label class="text-field__label" for="settings.birthday">День Рождения</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__col form__col_fluid">
+                    <div class="text-field">
+                        <input type="text"
+                               class="text-field__input"
+                               placeholder=""
+                               id="settings.speciality" />
+                        <label class="text-field__label" for="settings.speciality">Специальность</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__col form__col_fluid">
+                    <div class="text-field">
+                        <input type="text"
+                               class="text-field__input"
+                               placeholder=""
+                               id="settings.institution" />
+                        <label class="text-field__label" for="settings.institution">Учебное заведение</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form__row">
+                <div class="form__col form__col_fluid">
+                    <select id="settings.course" class="text-field">
+                        <option value="hide">Курс</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <label class="text-field__label" for="settings.course">Курс</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn_std btn_secondary form__btn">Сохранить</button>
+        </div>
+    </form>
+</div>

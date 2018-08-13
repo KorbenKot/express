@@ -1,6 +1,7 @@
 .slide-toggle {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
 
     &__input {
         display: none;
@@ -53,6 +54,21 @@
         -webkit-transition: .4s;
         transition: .4s;
         z-index: 1;
+    }
+
+    &__caption {
+        vertical-align: middle;
+        font-size: 14px;
+        line-height: 24px;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        color: rgb(85, 85, 85);
+
+        @media (--desktop-extra) {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
     }
 }
 

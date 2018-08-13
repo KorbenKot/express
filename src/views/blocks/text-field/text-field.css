@@ -4,13 +4,33 @@
     border: solid 1px #dcdcdc;
     border-radius: 10px;
 
+    &_error {
+        border-color: $error;
+    }
+
+    &_success {
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 26px;
+            right: 15px;
+            bottom: auto;
+            background-size: 16px;
+            background-image: svg-load("../../../svg/check.svg", fill=#00d600);
+            background-repeat: no-repeat;
+            background-position: center;
+            size: 16px;
+            z-index: 1;
+        }
+    }
+
     &__input {
         display: block;
         width: 100%;
         min-height: 66px;
         margin: 0;
         padding: 28px 15px 10px;
-        font-family: var(--opensans);
         font-size: 16px;
         font-weight: 400;
         line-height: 1.2;

@@ -197,17 +197,6 @@
         }
     }
 
-    &__icon {
-        display: inline-block;
-        size: 40px 45px;
-        background: url("./widget-notify.png") no-repeat center;
-        background-size: contain;
-
-        @media (--mobile) {
-            display: none;
-        }
-    }
-
     &__btn {
         width: auto;
         margin-right: 10px;
@@ -282,10 +271,15 @@
     }
 
     &__icon {
+        display: inline-block;
         background: url('./new-order-icon.png') no-repeat center;
         background-size: 39px 48px;
         size: 39px 48px;
         margin-right: 30px;
+
+        @media (--mobile) {
+            display: none;
+        }
     }
 
     &__controls-block {

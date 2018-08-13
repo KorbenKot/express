@@ -78,3 +78,37 @@
         }
     }
 }
+
+.title-sub {
+    text-align: center;
+
+    &__main-text {
+        font-size: 28px;
+        font-weight: normal;
+        text-align: center;
+        color: $black;
+
+        @media (--mobile) {
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+
+    &__small-text {
+        font-size: 14px;
+        color: rgb(168, 168, 168);
+    }
+}
+
+.drop-container {
+    size: 400px;
+    border: 2px dashed blueviolet;
+    border-radius: 20px;
+    padding: 30px;
+    transition: all $transition-delay;
+}
+
+.obj {
+    background-color: darkcyan;
+    size: 50px;
+}

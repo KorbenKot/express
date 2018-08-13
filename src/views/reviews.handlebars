@@ -1,15 +1,16 @@
-{{> head }}
-
-<div class="page-header">
-    <div class="wrapper">
-
-        {{> tabs }}
-
-    </div>
-</div>
+{{> page-header_reviews }}
 
 <div class="wrapper main-wrapper">
-    <h1>Отзывы</h1>
-</div>
 
-{{> footer }}
+    <div class="title title_secondary">Отзывы</div>
+
+
+    <div id="containerId" class="drop-container" ondrop="ondropThis(event)" ondragover="ondragoverThis(event)">
+
+    </div>
+
+    <div id="testId" class="obj" draggable="true" ondragstart="dragstart(event)">
+        LOREM
+    </div>
+
+</div>
