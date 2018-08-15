@@ -12,6 +12,7 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11",
+    "intl-tel-input": "^13.0.2",
     "mongoose": "^5.2.3",
     "nodemon": "^1.18.2",
     "npm": "^6.1.0"

@@ -346,6 +346,108 @@
     }
 }
 
+.page-header_user {
+    padding-bottom: 25px;
+
+    & .page-header {
+
+        &__profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media (--mobile) {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            @media (--desktop-large) {
+                align-items: flex-start;
+            }
+        }
+
+        &__profile-name {
+            margin: 20px 0;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.87);
+
+            @media (--mobile) {
+                font-size: 28px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__col-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            flex-basis: auto;
+            flex-grow: 1;
+            max-width: 100%;
+            padding-right: 20px;
+
+            @media (--tablet) {
+                margin: 0;
+            }
+
+            @media (--mobile) {
+                padding: 0;
+            }
+        }
+
+        &__user {
+            display: flex;
+            align-items: center;
+
+            @media (--tablet) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        &__row-widget {
+            display: flex;
+            justify-content: space-between;
+            flex-basis: auto;
+            flex-grow: 1;
+            max-width: 100%;
+            border: none;
+
+            @media (--tablet) {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    & .widget-price {
+
+        @media (--mobile) {
+            padding: 0;
+        }
+
+        &_promo {
+            padding-right: 15px;
+
+            @media (--mobile) {
+                margin-right: 0;
+                padding-right: 0;
+            }
+        }
+
+        &__header {
+            font-size: 16px;
+            margin-bottom: 0;
+
+            @media (--mobile) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
 .order-info {
 
     &__title {

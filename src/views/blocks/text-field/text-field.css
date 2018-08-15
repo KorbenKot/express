@@ -1,14 +1,40 @@
+.alert-default_item {
+    display: none;
+    position: relative;
+    padding-left: 28px;
+    margin-left: 20px;
+    color: #ec7063;
+    font-style: italic;
+
+    & .active {
+        display: inline-block;
+    }
+}
+
 .text-field {
     position: relative;
     background-color: #f9f9f9;
     border: solid 1px #dcdcdc;
     border-radius: 10px;
 
-    &_error {
+    &.error {
         border-color: $error;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 28px;
+            right: 15px;
+            bottom: auto;
+            background-size: 14px;
+            background-image: svg-load("../../../svg/plus.svg", fill=gray);
+            transform: rotateZ(45deg);
+            size: 14px;
+            z-index: 1;
+        }
     }
 
-    &_success {
+    &.success {
 
         &:before {
             content: "";
@@ -23,6 +49,15 @@
             size: 16px;
             z-index: 1;
         }
+    }
+
+    &__invalid {
+        display: none;
+        position: absolute;
+        text-align: left;
+        padding: 3px 0 0 16px;
+        font-size: .6875rem;
+        color: $error;
     }
 
     &__input {
@@ -40,10 +75,11 @@
         background-color: inherit;
 
         &:focus {
+            background-color: $white;
             outline: none;
 
             &::placeholder {
-                color: var(--black);
+                color: $black;
                 opacity: 0.25;
             }
         }
@@ -59,12 +95,11 @@
         left: 15px;
         color: rgba(0, 0, 0, 0.5);
         cursor: pointer;
-        z-index: 1;
-        transition: all .3s;
+        transition: all $transition-delay;
     }
 
     &.focus {
-        background-color: var(--white);
+        background-color: $white;
     }
 
     &.focus .text-field__label,

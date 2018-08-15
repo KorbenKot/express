@@ -86,6 +86,14 @@
         &_fluid {
             width: 100%;
         }
+
+        &_70 {
+            width: 70%;
+        }
+
+        &_30 {
+            width: 30%;
+        }
     }
 
     &__controls {
@@ -120,6 +128,24 @@
                 border-bottom: 6px solid rgb(168, 168, 168);
                 border-top: none;
             }
+        }
+    }
+
+    &__datepicker-icon {
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        right: 10px;
+        top: center;
+        size: 16px;
+        background-image: svg-load("../../../svg/iconmonstr-calendar.svg", fill=$grey);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: $transition-delay;
+
+        &:hover {
+            background-image: svg-load("../../../svg/iconmonstr-calendar.svg", fill=$primary-hov);
         }
     }
 
@@ -227,3 +253,37 @@
         }
     }
 }
+
+.form .intl-tel-input .flag-container {
+    position: absolute;
+    right: 0;
+    display: none;
+    bottom: 14px;
+    top: auto;
+    left: 15px;
+    padding: 0;
+    height: 20px;
+    z-index: 999;
+}
+
+.intl-tel-input .selected-flag {
+    padding: 0;
+}
+
+.form .text-field.focus .intl-tel-input .flag-container {
+    display: block;
+}
+
+.form .text-field.error .intl-tel-input.allow-dropdown input,
+.form .text-field.not-empty .intl-tel-input.allow-dropdown input,
+.form .text-field.success .intl-tel-input.allow-dropdown input {
+    padding-left: 15px;
+}
+
+.form .intl-tel-input.allow-dropdown input,
+.form .text-field.focus .intl-tel-input.allow-dropdown input,
+.form .intl-tel-input.allow-dropdown input[type=tel],
+.form .intl-tel-input.allow-dropdown input[type=text] {
+    padding-left: 70px
+}
+
