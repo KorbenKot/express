@@ -156,6 +156,43 @@
     &__control_active:hover:before {
         border-bottom-color: $primary-hov;
     }
+
+    & .intl-tel-input {
+        display: block;
+        width: 100%;
+
+        & .flag-container {
+            position: absolute;
+            right: 0;
+            display: none;
+            bottom: 14px;
+            top: auto;
+            left: 15px;
+            padding: 0;
+            height: 20px;
+        }
+
+        & .selected-flag {
+            padding: 0;
+        }
+    }
+
+    & .text-field.focus .intl-tel-input .flag-container {
+        display: block;
+    }
+
+    & .text-field.error .intl-tel-input.allow-dropdown input,
+    & .text-field.not-empty .intl-tel-input.allow-dropdown input,
+    & .text-field.success .intl-tel-input.allow-dropdown input {
+        padding-left: 15px;
+    }
+
+    & .intl-tel-input.allow-dropdown input,
+    & .text-field.focus .intl-tel-input.allow-dropdown input,
+    & .intl-tel-input.allow-dropdown input[type=tel],
+    & .intl-tel-input.allow-dropdown input[type=text] {
+        padding-left: 70px
+    }
 }
 
 .form_settings {
@@ -246,43 +283,7 @@
                     display: none;
                 }
             }
-
-            & .btn__icon {
-
-            }
         }
     }
-}
-
-.form .intl-tel-input .flag-container {
-    position: absolute;
-    right: 0;
-    display: none;
-    bottom: 14px;
-    top: auto;
-    left: 15px;
-    padding: 0;
-    height: 20px;
-}
-
-.intl-tel-input .selected-flag {
-    padding: 0;
-}
-
-.form .text-field.focus .intl-tel-input .flag-container {
-    display: block;
-}
-
-.form .text-field.error .intl-tel-input.allow-dropdown input,
-.form .text-field.not-empty .intl-tel-input.allow-dropdown input,
-.form .text-field.success .intl-tel-input.allow-dropdown input {
-    padding-left: 15px;
-}
-
-.form .intl-tel-input.allow-dropdown input,
-.form .text-field.focus .intl-tel-input.allow-dropdown input,
-.form .intl-tel-input.allow-dropdown input[type=tel],
-.form .intl-tel-input.allow-dropdown input[type=text] {
-    padding-left: 70px
 }
 

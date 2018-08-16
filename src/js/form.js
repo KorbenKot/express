@@ -6,7 +6,6 @@
         /*                   DATEPICKER                   */
         /* ---------------------------------------------- */
 
-
         $.fn.datepicker.languages['ru-RU'] = {
             format: 'dd.mm.YYYY',
             days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
@@ -26,37 +25,33 @@
             autoHide: true,
         });
 
-        var datapickerBtn = $('.js-datepicker-icon');
-        var birthdayPicker = $('.text-field__input_birthday').eq(0
-        );
+        var datapickerBtn = $('.js-datepicker-icon'),
+            birthdayPicker = $('.text-field__input_birthday').eq(0),
+            birthdayPickerOptions = {
+                startView: 2,
+                date: new Date(1990, 1, 1),
+                endDate: '1.1.'+ new Date().getFullYear() - 10,
+                startDate: '1.1.1941',
+                trigger: datapickerBtn
+            }
 
         birthdayPicker.datepicker('update');
-
-        birthdayPicker.datepicker({
-            date: new Date(1990, 1, 1),
-            startView: 2,
-            endDate: '1.1.'+ new Date().getFullYear() - 10,
-            startDate: '1.1.1941',
-            trigger: datapickerBtn
-        });
+        birthdayPicker.datepicker(birthdayPickerOptions);
 
         birthdayPicker.on('pick.datepicker', function () {
             $(this).closest('.text-field').addClass('not-empty');
         });
 
-        $.fn.datepicker.noConflict();
-
-
         /* ---------------------------------------------- */
         /*                  PHONE INPUT                   */
         /* ---------------------------------------------- */
 
-        var options = {
-            onlyCountries: ["ru", "by", "ua", "kz", "il", "md", "kg", "de", "ge", "am", "az", "lt", "lv", "ee", "it", "bg", "th"],
-            preferredCountries: ["ru", "ua", "by", "kz"]
-        };
-
         var phoneInput = $('.text-field__input_phone');
+            options = {
+                onlyCountries: ["ru", "by", "ua", "kz", "il", "md", "kg", "de", "ge", "am", "az", "lt", "lv", "ee", "it", "bg", "th"],
+                preferredCountries: ["ru", "ua", "by", "kz"],
+                allowDropdown: true
+            };
 
         phoneInput.intlTelInput(options);
 
@@ -96,7 +91,7 @@
         /*                   VALIDATION                   */
         /* ---------------------------------------------- */
 
-        /*function validateForm(event) {
+        function validateForm(event) {
 
             console.log('VALIDATION!');
 
@@ -146,13 +141,47 @@
             } else {
                 return true;
             }
-        }*/
+        }
 
-/*        var errorClass = 'error',
+        /* FOCUS AND BLUR FIELDS */
+
+        var errorClass = 'error',
             successClass = 'success',
-            classActive = 'active';*/
+            focusClass = 'focus',
+            activeClass = 'active';
 
-       /* $('.form__fields').submit(function(e) {
+        $('.text-field__input').focus(function() {
+
+            var element = $(this),
+                elementName = $(this).attr('name'),
+                parent = $(this).closest('.text-field');
+
+                parent.removeClass(errorClass);
+                parent.addClass(focusClass);
+        });
+
+        $('.text-field__input').on('blur', function(e) {
+
+            var element = $(this),
+                parent = $(this).closest('.text-field'),
+                elementName = $(this).attr("name");
+
+            if (element.val()) {
+                parent.addClass('not-empty');
+            } else parent.removeClass('not-empty');
+
+            parent.on('click', function (e) {
+                if (!$(e.target).hasClass('selected-flag')) {
+                    parent.removeClass(focusClass);
+                } else element.focus();
+            })
+        });
+
+        /* ---------------------------------------------- */
+        /*                   SUBMIT                       */
+        /* ---------------------------------------------- */
+
+        $('.form__fields').submit(function(e) {
 
             e.preventDefault();
 
@@ -160,11 +189,13 @@
 
                 console.log('FORM SENDING');
 
+                var phone = parsePhone($('[name = phone]').val())
+
                 var
                     data_client = {
                         'name'      : $('[name = firstName]').val(),
                         'lastName'  : $('[name = lastName]').val(),
-                        'phone'     : $('[name = phone]').val(),
+                        'phone'     : phone,
                         'email'     : $('[name = email]').val(),
                         'notify'    : $('[name = notify]').prop('checked'),
                         'sms'         : $('[name = sms]').prop('checked'),
@@ -211,34 +242,7 @@
             }
 
             else console.log('SUBMIT STOPPED');
-        });*/
-
-        /* FOCUS AND BLUR FIELDS */
-
-/*        $('.text-field__input').focus(function() {
-
-            var elementName = $(this).attr('name');
-
-            if (elementName === 'phone') {
-                $(this).closest('.text-field').addClass('focus');
-            }
-
-            $(this).closest('.text-field').removeClass(errorClass);
         });
-
-        $('.text-field__input').on('blur', function() {
-
-            var element = $(this),
-                parent = $(this).closest('.text-field'),
-                elementName = $(this).attr("name");
-
-            if (element.val()) {
-                parent.addClass('not-empty');
-            } else parent.removeClass('not-empty');
-
-            parent.removeClass('focus');
-            parent.removeClass(successClass);
-        });*/
     });
 
     /* ---------------------------------------------- */

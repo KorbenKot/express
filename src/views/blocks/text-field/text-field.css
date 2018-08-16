@@ -1,16 +1,3 @@
-.alert-default_item {
-    display: none;
-    position: relative;
-    padding-left: 28px;
-    margin-left: 20px;
-    color: #ec7063;
-    font-style: italic;
-
-    & .active {
-        display: inline-block;
-    }
-}
-
 .text-field {
     position: relative;
     background-color: #f9f9f9;
