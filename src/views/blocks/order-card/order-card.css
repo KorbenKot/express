@@ -136,16 +136,14 @@
 
     &__btn {
         order: 2;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 13px 30px;
 
         @media (--tablet) {
             order: 1;
         }
 
         @media (--mobile) {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 8px 20px;
             margin: auto;
         }
     }

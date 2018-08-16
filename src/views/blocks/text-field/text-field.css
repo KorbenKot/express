@@ -18,7 +18,6 @@
     border-radius: 10px;
 
     &.error {
-        border-color: $error;
 
         &:before {
             content: "";
@@ -30,11 +29,11 @@
             background-image: svg-load("../../../svg/plus.svg", fill=gray);
             transform: rotateZ(45deg);
             size: 14px;
-            z-index: 1;
+            z-index: 2;
         }
     }
 
-    &.success {
+    /*&.success {
 
         &:before {
             content: "";
@@ -49,12 +48,13 @@
             size: 16px;
             z-index: 1;
         }
-    }
+    }*/
 
-    &__invalid {
+    &__error-msg {
         display: none;
         position: absolute;
         text-align: left;
+        transition: 0.2s;
         padding: 3px 0 0 16px;
         font-size: .6875rem;
         color: $error;
@@ -114,4 +114,8 @@
         font-size: 13px;
         transform: none;
     }
+}
+
+.text-field.error .text-field__error-msg {
+    display: block;
 }

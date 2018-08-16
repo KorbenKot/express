@@ -2,7 +2,6 @@ $select-color: $black;
 $select-background: rgb(249, 249, 249);
 $select-border: rgb(220, 220, 220);
 
-
 .select-hidden {
     display: none;
     visibility: hidden;
@@ -66,8 +65,9 @@ $select-border: rgb(220, 220, 220);
     display: none;
     position: absolute;
     top: calc(100% - 10px);
+    width: calc(100% + 2px);
     right: 0;
-    left: 0;
+    left: -1px;
     z-index: 999;
     margin: 0;
     padding: 0;

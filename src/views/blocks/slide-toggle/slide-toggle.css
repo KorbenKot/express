@@ -22,12 +22,11 @@
         }
     }
 
-
-/*
     &__input:checked + &__slider {
         background-color: $primary;
     }
 
+/*
     &__input:focus + &__slider {
         box-shadow: 0 0 3px $primary-hov;
     }
@@ -44,15 +43,14 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: $primary;
+        background-color: $grey;
         transition: .4s;
     }
 
     &__bullet {
         position: absolute;
         background-color: $white;
-        -webkit-transition: .4s;
-        transition: .4s;
+        transition: all 0.2s ease-in-out;
         z-index: 1;
     }
 
